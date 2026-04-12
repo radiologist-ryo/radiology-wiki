@@ -2,23 +2,32 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
+	site: 'https://radiologist-ryo.github.io',
+	base: '/radiology-wiki',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: '画像診断Wiki',
+			defaultLocale: 'ja',
+			locales: {
+				root: {
+					label: '日本語',
+					lang: 'ja',
+				},
+			},
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/radiologist-ryo/radiology-wiki' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: '疾患別',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'トップ', slug: 'diseases' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: '鑑別診断',
+					items: [
+						{ label: 'トップ', slug: 'differentials' },
+					],
 				},
 			],
 		}),
