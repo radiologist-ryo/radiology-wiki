@@ -2,37 +2,44 @@
 // PAGE_TITLE_ID は Starlight 内部定数。値は '_top' で固定。
 const PAGE_TITLE_ID = '_top';
 
-// パンくずリスト設定
-// キー: URLスラッグのプレフィックス（長いものを優先してマッチ）
-// 値: 中間カテゴリのラベル配列（ページタイトルは末尾に自動追加）
-const breadcrumbConfig: Record<string, string[]> = {
-  'diseases/ovary':    ['婦人科', '卵巣腫瘍'],
-  // 今後の追加例:
-  // 'diseases/brain':    ['中枢神経', '脳腫瘍'],
-  // 'diseases/chest':    ['呼吸器', '肺腫瘍'],
-  // 'diseases/bone':     ['骨軟部', '骨腫瘍'],
-  // 'diseases/abdomen':  ['腹部', '腹部疾患'],
-  'diseases':          ['疾患別'],
-  'differentials':     ['鑑別診断'],
+// URLセグメントからパンくずラベルへのマッピング
+// 'diseases' は疾患ルートとして非表示にし、配下のセグメントのみ表示する
+const segmentLabels: Record<string, string> = {
+  gynecology:      '婦人科',
+  ovary:           '卵巣腫瘍',
+  brain:           '中枢神経',
+  spine:           '脊椎・脊髄',
+  'head-neck':     '頭頸部',
+  musculoskeletal: '骨・関節・軟部',
+  chest:           '呼吸器・縦隔',
+  cardiovascular:  '心・血管・脈管',
+  breast:          '乳腺',
+  hepatobiliary:   '消化器（肝・胆・膵・脾）',
+  gi:              '消化器（消化管）',
+  urinary:         '泌尿器',
+  pediatrics:      '小児',
+  ivr:             'IVR',
+  nuclear:         '核医学',
+  differentials:   '鑑別診断',
 };
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // 末尾スラッシュ除去
+// このセグメントはパンくずから除外（疾患ルートパス）
+const skipSegments = new Set(['diseases']);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const pathname = Astro.url.pathname;
 const slug = pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '');
 const pageTitle = Astro.locals.starlightRoute.entry.data.title;
 
-// 最も長くマッチするプレフィックスを検索
-const matchedKey = Object.keys(breadcrumbConfig)
-  .sort((a, b) => b.length - a.length)
-  .find((key) => slug === key || slug.startsWith(key + '/'));
-
-const categories = matchedKey ? breadcrumbConfig[matchedKey] : [];
+// スラッグをセグメントに分割し、最後のセグメントを除いた親セグメントを取得
+const segments = slug.split('/');
+const parentSegments = segments.slice(0, -1).filter((s) => !skipSegments.has(s));
 
 type BreadcrumbItem = { label: string; href?: string };
 
 const breadcrumbs: BreadcrumbItem[] = [
   { label: '画像診断Wiki', href: base + '/' },
-  ...categories.map((label) => ({ label })),
+  ...parentSegments.map((s) => ({ label: segmentLabels[s] ?? s })),
   { label: pageTitle },
 ];
 ---

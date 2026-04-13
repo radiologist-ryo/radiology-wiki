@@ -20,6 +20,7 @@ export default defineConfig({
 			components: {
 				PageTitle: './src/components/PageTitle.astro',
 			},
+			pagination: false,
 			sidebar: [
 				{
 					label: '疾患別',
@@ -28,11 +29,12 @@ export default defineConfig({
 						{
 							label: '婦人科',
 							items: [
+								{ label: '婦人科トップ', slug: 'diseases/gynecology' },
 								{
 									label: '卵巣腫瘍',
 									items: [
-										{ label: 'WHO分類・概要', slug: 'diseases/ovary' },
-										{ label: '漿液性嚢胞腺腫', slug: 'diseases/ovary/serous-cystadenoma' },
+										{ label: 'WHO分類・概要', slug: 'diseases/gynecology/ovary' },
+										{ label: '漿液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/serous-cystadenoma' },
 									],
 								},
 								// 今後の追加例:

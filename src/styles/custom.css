@@ -1,4 +1,6 @@
-/* アンカーリンクアイコンを非表示 */
+/* ============================================================
+   アンカーリンクアイコンを非表示
+   ============================================================ */
 @layer starlight.content {
   .sl-anchor-link {
     display: none !important;
@@ -7,4 +9,52 @@
   .sl-markdown-content .sl-heading-wrapper > :first-child {
     padding-inline-end: 0;
   }
+}
+
+/* ============================================================
+   前へ・次へナビゲーションを非表示
+   ============================================================ */
+.pagination-links {
+  display: none !important;
+}
+
+/* ============================================================
+   本文の余白・行間改善
+   ============================================================ */
+.sl-markdown-content {
+  line-height: 1.8;
+}
+
+.sl-markdown-content p {
+  margin-bottom: 1.2rem;
+}
+
+.sl-markdown-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sl-markdown-content h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ============================================================
+   テーブルのヘッダー背景色
+   ============================================================ */
+.sl-markdown-content thead th {
+  background-color: var(--sl-color-accent-low);
+  color: var(--sl-color-white);
+}
+
+/* ============================================================
+   カードグリッドのホバーエフェクト
+   ============================================================ */
+.sl-link-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sl-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
