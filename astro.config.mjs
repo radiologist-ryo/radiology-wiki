@@ -24,7 +24,7 @@ export default defineConfig({
 						{
 							label: '卵巣腫瘍',
 							items: [
-								{ label: 'WHO分類・概要', slug: 'diseases/ovary/index' },
+								{ label: 'WHO分類・概要', slug: 'diseases/ovary' },
 								{ label: '漿液性嚢胞腺腫', slug: 'diseases/ovary/serous-cystadenoma' },
 							],
 						},
