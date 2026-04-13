@@ -1,0 +1,165 @@
+---
+import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+
+const { hasSidebar } = Astro.locals.starlightRoute;
+---
+
+<div class="page sl-flex">
+  <header class="header"><slot name="header" /></header>
+  {
+    hasSidebar && (
+      <nav class="sidebar print:hidden" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
+        <MobileMenuToggle />
+        <div id="starlight__sidebar" class="sidebar-pane">
+          <div class="sidebar-content sl-flex">
+            <slot name="sidebar" />
+          </div>
+        </div>
+      </nav>
+    )
+  }
+  <div class="main-frame"><slot /></div>
+</div>
+
+<footer class="rw-site-footer">
+  <div class="rw-site-footer__links">
+    <a href="#">サイトについて</a>
+    <span aria-hidden="true">|</span>
+    <a href="#">免責事項</a>
+    <span aria-hidden="true">|</span>
+    <a href="#">参考ガイドライン</a>
+  </div>
+  <p class="rw-site-footer__title">画像診断Wiki — 放射線診断科専門医による日本語画像診断リファレンス</p>
+  <p class="rw-site-footer__disclaimer">内容は参考情報であり、診断・治療の根拠とするものではありません。</p>
+  <p class="rw-site-footer__copy">© 2025 画像診断Wiki</p>
+</footer>
+
+<style>
+  @layer starlight.core {
+    .page {
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      z-index: var(--sl-z-index-navbar);
+      position: fixed;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      width: 100%;
+      height: var(--sl-nav-height);
+      border-bottom: 1px solid var(--sl-color-hairline-shade);
+      padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+      padding-inline-end: var(--sl-nav-pad-x);
+      background-color: var(--sl-color-bg-nav);
+    }
+
+    :global([data-has-sidebar]) .header {
+      padding-inline-end: calc(
+        var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)
+      );
+    }
+
+    .sidebar-pane {
+      visibility: var(--sl-sidebar-visibility, hidden);
+      position: fixed;
+      z-index: var(--sl-z-index-menu);
+      inset-block: var(--sl-nav-height) 0;
+      inset-inline-start: 0;
+      width: 100%;
+      background-color: var(--sl-color-black);
+      overflow-y: auto;
+    }
+
+    :global([aria-expanded='true']) ~ .sidebar-pane {
+      --sl-sidebar-visibility: visible;
+    }
+
+    .sidebar-content {
+      height: 100%;
+      min-height: max-content;
+      padding: 1rem var(--sl-sidebar-pad-x) 0;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 50rem) {
+      .sidebar-content::after {
+        content: '';
+        padding-bottom: 1px;
+      }
+    }
+
+    .main-frame {
+      padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+      padding-inline-start: var(--sl-content-inline-start);
+    }
+
+    @media (min-width: 50rem) {
+      :global([data-has-sidebar]) .header {
+        padding-inline-end: var(--sl-nav-pad-x);
+      }
+      .sidebar-pane {
+        --sl-sidebar-visibility: visible;
+        width: var(--sl-sidebar-width);
+        background-color: var(--sl-color-bg-sidebar);
+        border-inline-end: 1px solid var(--sl-color-hairline-shade);
+      }
+    }
+  }
+
+  /* ============================================================
+     サイトフッター（.page の外側 → サイドバーを含む全幅）
+     ============================================================ */
+  .rw-site-footer {
+    background: #1a2744;
+    color: #a8c0e0;
+    padding: 3rem 2rem;
+    min-height: 120px;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+  }
+
+  .rw-site-footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .rw-site-footer a {
+    color: #cfe0f5;
+    text-decoration: none;
+  }
+
+  .rw-site-footer a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+
+  .rw-site-footer__links span {
+    color: #5a7299;
+  }
+
+  .rw-site-footer__title {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #cfe0f5;
+  }
+
+  .rw-site-footer__disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 0.4rem;
+  }
+
+  .rw-site-footer__copy {
+    font-size: 0.78rem;
+    opacity: 0.6;
+    margin: 0;
+  }
+</style>
