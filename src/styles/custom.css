@@ -27,7 +27,6 @@ header.header {
   background-color: var(--rw-navy) !important;
 }
 
-/* ヘッダー内のサイトタイトル・リンクを白に */
 header.header a,
 header.header .site-title {
   color: #ffffff !important;
@@ -40,13 +39,11 @@ header.header .site-title {
   background-color: var(--rw-navy-bg);
 }
 
-/* 通常テキスト */
 .sidebar a,
 nav.sidebar a {
   color: var(--rw-text-navy);
 }
 
-/* アクティブ項目 */
 .sidebar a[aria-current="page"],
 nav.sidebar a[aria-current="page"] {
   background-color: var(--rw-navy-active) !important;
@@ -87,13 +84,19 @@ nav.sidebar a[aria-current="page"] {
   margin-bottom: 1.2rem;
 }
 
+/* h2: border-bottom を廃止し、border-top のみで区切り */
 .sl-markdown-content h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 0.3rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--rw-border);
-  border-bottom: 2px solid var(--rw-navy);
+  border-bottom: none;
+}
+
+/* 最初のh2はborder-topを非表示 */
+.sl-markdown-content h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 
 .sl-markdown-content h3 {
@@ -106,23 +109,12 @@ nav.sidebar a[aria-current="page"] {
    ============================================================ */
 .sl-markdown-content table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
-/* 3カラムテーブル（WHO分類表等）の比率 50/25/25 */
-.sl-markdown-content table th:nth-child(1),
-.sl-markdown-content table td:nth-child(1) {
-  width: 50%;
-}
-
-.sl-markdown-content table th:nth-child(2),
-.sl-markdown-content table td:nth-child(2) {
-  width: 25%;
-}
-
-.sl-markdown-content table th:nth-child(3),
-.sl-markdown-content table td:nth-child(3) {
-  width: 25%;
+.sl-markdown-content table td,
+.sl-markdown-content table th {
+  padding: 10px 14px;
 }
 
 /* テーブルヘッダー */

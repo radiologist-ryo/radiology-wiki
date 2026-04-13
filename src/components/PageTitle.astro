@@ -3,7 +3,7 @@
 const PAGE_TITLE_ID = '_top';
 
 // URLセグメントからパンくずラベルへのマッピング
-// 'diseases' は疾患ルートとして非表示にし、配下のセグメントのみ表示する
+// 'diseases' は疾患ルートとして表示から除外するが、href構築には使用する
 const segmentLabels: Record<string, string> = {
   gynecology:      '婦人科',
   ovary:           '卵巣腫瘍',
@@ -23,7 +23,7 @@ const segmentLabels: Record<string, string> = {
   differentials:   '鑑別診断',
 };
 
-// このセグメントはパンくずから除外（疾患ルートパス）
+// ラベルには出さないが href には含めるセグメント
 const skipSegments = new Set(['diseases']);
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -31,15 +31,25 @@ const pathname = Astro.url.pathname;
 const slug = pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '');
 const pageTitle = Astro.locals.starlightRoute.entry.data.title;
 
-// スラッグをセグメントに分割し、最後のセグメントを除いた親セグメントを取得
-const segments = slug.split('/');
-const parentSegments = segments.slice(0, -1).filter((s) => !skipSegments.has(s));
+// 全セグメントを保持しつつ、ラベル・href・skipを計算
+const allSegments = slug.split('/');
+const parentSegments = allSegments.slice(0, -1);
 
 type BreadcrumbItem = { label: string; href?: string };
 
+// 親セグメントをパンくずアイテムに変換（skipは非表示だが href 構築には含める）
+const intermediateItems: BreadcrumbItem[] = parentSegments
+  .filter((seg) => !skipSegments.has(seg))
+  .map((seg) => {
+    // このセグメントまでのフルパスを再構築
+    const segIndex = allSegments.indexOf(seg);
+    const href = base + '/' + allSegments.slice(0, segIndex + 1).join('/') + '/';
+    return { label: segmentLabels[seg] ?? seg, href };
+  });
+
 const breadcrumbs: BreadcrumbItem[] = [
   { label: '画像診断Wiki', href: base + '/' },
-  ...parentSegments.map((s) => ({ label: segmentLabels[s] ?? s })),
+  ...intermediateItems,
   { label: pageTitle },
 ];
 ---
@@ -51,8 +61,6 @@ const breadcrumbs: BreadcrumbItem[] = [
         <li>
           {item.href ? (
             <a href={item.href}>{item.label}</a>
-          ) : index < breadcrumbs.length - 1 ? (
-            <span>{item.label}</span>
           ) : (
             <span aria-current="page">{item.label}</span>
           )}
@@ -90,7 +98,7 @@ const breadcrumbs: BreadcrumbItem[] = [
   }
 
   .breadcrumb-nav a {
-    color: var(--sl-color-accent);
+    color: #1a73e8;
     text-decoration: none;
   }
 
@@ -101,10 +109,6 @@ const breadcrumbs: BreadcrumbItem[] = [
   .breadcrumb-nav .separator {
     color: var(--sl-color-gray-4);
     font-size: 0.9em;
-  }
-
-  .breadcrumb-nav span {
-    color: var(--sl-color-gray-3);
   }
 
   .breadcrumb-nav [aria-current="page"] {

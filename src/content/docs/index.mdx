@@ -1,34 +1,78 @@
 ---
 title: 画像診断Wiki
-description: 日本語で学ぶ画像診断学の総合参考サイト
+description: WHO分類に基づく体系的な日本語画像診断リファレンス
 template: splash
 hero:
-  tagline: WHO分類に基づく体系的な画像診断学習サイト
+  tagline: WHO分類に基づく体系的な日本語放射線科リファレンス
   actions:
     - text: 疾患別にみる
       link: /radiology-wiki/diseases/
       icon: right-arrow
     - text: 鑑別診断からみる
       link: /radiology-wiki/differentials/
-      icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
-## サイトについて
-
-<CardGrid stagger>
-	<Card title="疾患別まとめ" icon="document">
-		WHO分類に基づいて各疾患の画像所見・鑑別・治療をまとめています。
-	</Card>
-	<Card title="鑑別診断" icon="list-format">
-		「肝臓の嚢胞性病変」など、所見から鑑別を考えるページです。
-	</Card>
-	<Card title="出典明記" icon="open-book">
-		RadiographicsなどのメジャーなジャーナルやWHO分類を参照し、出典を明記しています。
-	</Card>
-	<Card title="日本の疫学" icon="information">
-		日本・アジアの統計を参照し、日本人の診療に即した内容を心がけています。
-	</Card>
-</CardGrid>
+<div style="margin-top: 2.5rem;">
+  <p style="font-size: 0.75rem; font-weight: 600; color: #5a7299; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem;">臓器・部位から探す</p>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+    <a href="/radiology-wiki/diseases/brain/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">中枢神経</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">脳腫瘍・脳血管</div>
+    </a>
+    <a href="/radiology-wiki/diseases/head-neck/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">頭頸部</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">頭頸部腫瘍</div>
+    </a>
+    <a href="/radiology-wiki/diseases/spine/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">脊椎・脊髄</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">椎間板・脊髄腫瘍</div>
+    </a>
+    <a href="/radiology-wiki/diseases/musculoskeletal/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">骨・関節・軟部</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">骨腫瘍・軟部腫瘍</div>
+    </a>
+    <a href="/radiology-wiki/diseases/chest/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">呼吸器・縦隔</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">肺癌・間質性肺炎</div>
+    </a>
+    <a href="/radiology-wiki/diseases/cardiovascular/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">心・血管</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">大動脈・心疾患</div>
+    </a>
+    <a href="/radiology-wiki/diseases/breast/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">乳腺</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">乳癌・良性疾患</div>
+    </a>
+    <a href="/radiology-wiki/diseases/hepatobiliary/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">消化器（肝・胆・膵）</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">肝腫瘍・膵腫瘍</div>
+    </a>
+    <a href="/radiology-wiki/diseases/gi/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">消化管・腹膜</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">消化管腫瘍・腸閉塞</div>
+    </a>
+    <a href="/radiology-wiki/diseases/urinary/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">泌尿器</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">腎・膀胱・前立腺</div>
+    </a>
+    <a href="/radiology-wiki/diseases/gynecology/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">婦人科</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">卵巣・子宮</div>
+    </a>
+    <a href="/radiology-wiki/diseases/pediatrics/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">小児</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">小児腫瘍・先天性</div>
+    </a>
+    <a href="/radiology-wiki/diseases/ivr/" style="background:#fff; border: 0.5px solid #dde4ef; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">IVR</div>
+      <div style="font-size: 11px; color: #7a8fa8; margin-top: 3px;">IVR手技・適応</div>
+    </a>
+    <a href="/radiology-wiki/diseases/nuclear/" style="background:#e8f0fe; border: 0.5px solid #b8cff5; border-radius: 8px; padding: 14px 12px; text-align: center; text-decoration: none; display: block;">
+      <div style="font-size: 14px; font-weight: 500; color: #1a2744;">核医学</div>
+      <div style="font-size: 11px; color: #3a6bbf; margin-top: 3px;">PET/CT・シンチ</div>
+    </a>
+  </div>
+</div>

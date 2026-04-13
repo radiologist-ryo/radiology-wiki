@@ -23,9 +23,10 @@ export default defineConfig({
 			pagination: false,
 			sidebar: [
 				{
+					// 注: Starlight 0.38.x の ManualSidebarGroup には link プロパティが存在しない
+					// グループラベル自体はクリック不可のため、インデックスページを先頭アイテムに配置する
 					label: '疾患別',
 					items: [
-						{ label: '一覧', slug: 'diseases' },
 						{
 							label: '婦人科',
 							items: [
@@ -38,11 +39,11 @@ export default defineConfig({
 									],
 								},
 								// 今後の追加例:
-								// { label: '子宮腫瘍', items: [...] },
+								// { label: '子宮腫瘍', items: [{ label: '概要', slug: 'diseases/gynecology/uterus-body' }, ...] },
 							],
 						},
 						// 今後の追加例:
-						// { label: '腹部', items: [...] },
+						// { label: '腹部', items: [{ label: '腹部トップ', slug: 'diseases/hepatobiliary' }, ...] },
 						// { label: '中枢神経', items: [...] },
 						// { label: '骨軟部', items: [...] },
 						// { label: '呼吸器', items: [...] },
