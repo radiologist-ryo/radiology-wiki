@@ -11,7 +11,7 @@ description: WHO分類に基づく卵巣腫瘍の画像診断まとめ
 
 | 腫瘍名 | 悪性度 | ページ |
 |--------|--------|--------|
-| 漿液性嚢胞腺腫 | 良性 | [→](/radiology-wiki/diseases/gynecology/ovary/serous-cystadenoma/) |
+| [漿液性嚢胞腺腫](/radiology-wiki/diseases/gynecology/ovary/serous-cystadenoma/) | 良性 | ✓ |
 | 漿液性境界悪性腫瘍 | 境界悪性 | 準備中 |
 | 高異型度漿液性癌（HGSC） | 悪性 | 準備中 |
 | 低異型度漿液性癌（LGSC） | 悪性 | 準備中 |

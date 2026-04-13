@@ -1,4 +1,61 @@
 /* ============================================================
+   カラー定義
+   ============================================================ */
+:root {
+  --rw-navy:        #1a2744;
+  --rw-navy-bg:     #f0f2f7;
+  --rw-navy-active: #dde2ef;
+  --rw-text-navy:   #3a4a72;
+  --rw-accent:      #1a73e8;
+  --rw-accent-bg:   #f0f4ff;
+  --rw-border:      #e8edf5;
+}
+
+/* Starlight アクセントカラー上書き */
+:root,
+[data-theme="light"] {
+  --sl-color-accent:      var(--rw-accent);
+  --sl-color-accent-high: #1557b0;
+  --sl-color-accent-low:  var(--rw-accent-bg);
+  --sl-color-bg-sidebar:  var(--rw-navy-bg);
+}
+
+/* ============================================================
+   ヘッダー背景
+   ============================================================ */
+header.header {
+  background-color: var(--rw-navy) !important;
+}
+
+/* ヘッダー内のサイトタイトル・リンクを白に */
+header.header a,
+header.header .site-title {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   サイドバー
+   ============================================================ */
+.sidebar {
+  background-color: var(--rw-navy-bg);
+}
+
+/* 通常テキスト */
+.sidebar a,
+nav.sidebar a {
+  color: var(--rw-text-navy);
+}
+
+/* アクティブ項目 */
+.sidebar a[aria-current="page"],
+nav.sidebar a[aria-current="page"] {
+  background-color: var(--rw-navy-active) !important;
+  color: var(--rw-navy) !important;
+  border-left: 3px solid var(--rw-navy);
+  font-weight: 600;
+}
+
+/* ============================================================
    アンカーリンクアイコンを非表示
    ============================================================ */
 @layer starlight.content {
@@ -25,31 +82,75 @@
   line-height: 1.8;
 }
 
-.sl-markdown-content p {
+.sl-markdown-content p,
+.sl-markdown-content ul {
   margin-bottom: 1.2rem;
 }
 
 .sl-markdown-content h2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  border-top: 1px solid var(--rw-border);
+  border-bottom: 2px solid var(--rw-navy);
 }
 
 .sl-markdown-content h3 {
-  margin-top: 1.8rem;
+  margin-top: 2rem;
   margin-bottom: 0.8rem;
 }
 
 /* ============================================================
-   テーブルのヘッダー背景色
+   テーブル
    ============================================================ */
+.sl-markdown-content table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* 3カラムテーブル（WHO分類表等）の比率 50/25/25 */
+.sl-markdown-content table th:nth-child(1),
+.sl-markdown-content table td:nth-child(1) {
+  width: 50%;
+}
+
+.sl-markdown-content table th:nth-child(2),
+.sl-markdown-content table td:nth-child(2) {
+  width: 25%;
+}
+
+.sl-markdown-content table th:nth-child(3),
+.sl-markdown-content table td:nth-child(3) {
+  width: 25%;
+}
+
+/* テーブルヘッダー */
 .sl-markdown-content thead th {
-  background-color: var(--sl-color-accent-low);
-  color: var(--sl-color-white);
+  background-color: var(--rw-navy) !important;
+  color: #ffffff !important;
+}
+
+/* テーブル行ホバー */
+.sl-markdown-content tbody tr:hover {
+  background-color: var(--rw-accent-bg);
 }
 
 /* ============================================================
-   カードグリッドのホバーエフェクト
+   注記ボックス（:::note）
    ============================================================ */
+.sl-markdown-content .starlight-aside--note {
+  background-color: var(--rw-accent-bg);
+  border-left: 3px solid var(--rw-navy);
+}
+
+/* ============================================================
+   カードグリッド
+   ============================================================ */
+.card-grid {
+  margin-top: 1.5rem;
+}
+
 .sl-link-card {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
