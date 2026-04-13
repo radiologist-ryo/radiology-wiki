@@ -76,42 +76,46 @@ nav.sidebar a[aria-current="page"] {
    本文の余白・行間改善
    ============================================================ */
 .sl-markdown-content {
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 2.0;
 }
 
 .sl-markdown-content p {
-  margin-bottom: 1.4rem;
-  line-height: 1.9;
+  margin-bottom: 1.6rem;
+  line-height: 2.0;
 }
 
-.sl-markdown-content ul {
-  margin-bottom: 1.4rem;
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+  margin-bottom: 1.6rem;
 }
 
 .sl-markdown-content li {
-  margin-bottom: 0.5rem;
-  line-height: 1.9;
+  margin-bottom: 0.6rem;
+  line-height: 2.0;
 }
 
 /* h2: border-top で視覚的区切り */
 .sl-markdown-content h2 {
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem;
-  padding-top: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--rw-border);
   border-bottom: none;
+  font-size: 1.6rem;
 }
 
 /* 最初のh2はborder-topを非表示 */
 .sl-markdown-content h2:first-of-type {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 0;
   border-top: none;
 }
 
 .sl-markdown-content h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* ============================================================
@@ -119,7 +123,10 @@ nav.sidebar a[aria-current="page"] {
    ============================================================ */
 .sl-markdown-content table {
   width: 100%;
+  max-width: 100%;
   table-layout: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .sl-markdown-content table td,
@@ -157,4 +164,16 @@ nav.sidebar a[aria-current="page"] {
 .sl-link-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sl-link-card:last-child {
+  margin-bottom: 4rem;
+}
+
+/* ============================================================
+   フッター前の余白
+   ============================================================ */
+.main-frame footer,
+footer.rw-footer {
+  margin-top: 4rem;
 }

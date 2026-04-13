@@ -11,8 +11,8 @@ description: WHO分類に基づく卵巣腫瘍の画像診断まとめ
 
 <table>
   <colgroup>
-    <col style="width: 65%">
-    <col style="width: 35%">
+    <col style="width: 80%">
+    <col style="width: 20%">
   </colgroup>
   <thead>
     <tr><th>腫瘍名</th><th>悪性度</th></tr>
@@ -34,8 +34,8 @@ description: WHO分類に基づく卵巣腫瘍の画像診断まとめ
 
 <table>
   <colgroup>
-    <col style="width: 65%">
-    <col style="width: 35%">
+    <col style="width: 80%">
+    <col style="width: 20%">
   </colgroup>
   <thead>
     <tr><th>腫瘍名</th><th>悪性度</th></tr>
@@ -51,8 +51,8 @@ description: WHO分類に基づく卵巣腫瘍の画像診断まとめ
 
 <table>
   <colgroup>
-    <col style="width: 65%">
-    <col style="width: 35%">
+    <col style="width: 80%">
+    <col style="width: 20%">
   </colgroup>
   <thead>
     <tr><th>腫瘍名</th><th>悪性度</th></tr>

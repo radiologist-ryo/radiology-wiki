@@ -3,14 +3,14 @@
 // MDX内に <script> + { } を直接書くとMDXパーサーエラーになるため、このコンポーネントに分離
 ---
 
-<div style="margin-top: 1rem;">
+<div style="margin-top: 1rem; padding-bottom: 4rem;">
   <div style="display: flex; gap: 10px; margin-bottom: 2rem;">
     <button id="btn-diseases" class="tab-btn tab-btn--active">疾患別にみる</button>
     <button id="btn-differentials" class="tab-btn">鑑別診断からみる</button>
   </div>
 
   <div id="tab-diseases">
-    <p class="tab-section-label">臓器・部位から探す</p>
+    <p class="tab-section-label" style="margin-bottom: 1.5rem;">臓器・部位から探す</p>
     <div class="organ-grid">
       <a href="/radiology-wiki/diseases/brain/" class="organ-card">
         <div class="organ-card__title">中枢神経</div>
@@ -124,14 +124,14 @@
   .organ-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 14px;
   }
 
   .organ-card {
     background: #fff;
     border: 0.5px solid #dde4ef;
     border-radius: 8px;
-    padding: 16px 12px;
+    padding: 20px 16px;
     text-align: center;
     text-decoration: none;
     display: block;
