@@ -1,0 +1,114 @@
+---
+// PAGE_TITLE_ID は Starlight 内部定数。値は '_top' で固定。
+const PAGE_TITLE_ID = '_top';
+
+// パンくずリスト設定
+// キー: URLスラッグのプレフィックス（長いものを優先してマッチ）
+// 値: 中間カテゴリのラベル配列（ページタイトルは末尾に自動追加）
+const breadcrumbConfig: Record<string, string[]> = {
+  'diseases/ovary':    ['婦人科', '卵巣腫瘍'],
+  // 今後の追加例:
+  // 'diseases/brain':    ['中枢神経', '脳腫瘍'],
+  // 'diseases/chest':    ['呼吸器', '肺腫瘍'],
+  // 'diseases/bone':     ['骨軟部', '骨腫瘍'],
+  // 'diseases/abdomen':  ['腹部', '腹部疾患'],
+  'diseases':          ['疾患別'],
+  'differentials':     ['鑑別診断'],
+};
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // 末尾スラッシュ除去
+const pathname = Astro.url.pathname;
+const slug = pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '');
+const pageTitle = Astro.locals.starlightRoute.entry.data.title;
+
+// 最も長くマッチするプレフィックスを検索
+const matchedKey = Object.keys(breadcrumbConfig)
+  .sort((a, b) => b.length - a.length)
+  .find((key) => slug === key || slug.startsWith(key + '/'));
+
+const categories = matchedKey ? breadcrumbConfig[matchedKey] : [];
+
+type BreadcrumbItem = { label: string; href?: string };
+
+const breadcrumbs: BreadcrumbItem[] = [
+  { label: '画像診断Wiki', href: base + '/' },
+  ...categories.map((label) => ({ label })),
+  { label: pageTitle },
+];
+---
+
+{breadcrumbs.length > 1 && (
+  <nav aria-label="パンくずリスト" class="breadcrumb-nav">
+    <ol>
+      {breadcrumbs.map((item, index) => (
+        <li>
+          {item.href ? (
+            <a href={item.href}>{item.label}</a>
+          ) : index < breadcrumbs.length - 1 ? (
+            <span>{item.label}</span>
+          ) : (
+            <span aria-current="page">{item.label}</span>
+          )}
+          {index < breadcrumbs.length - 1 && (
+            <span aria-hidden="true" class="separator">›</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<h1 id={PAGE_TITLE_ID}>{pageTitle}</h1>
+
+<style>
+  .breadcrumb-nav {
+    margin-bottom: 0.75rem;
+    font-size: 0.8em;
+  }
+
+  .breadcrumb-nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .breadcrumb-nav li {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .breadcrumb-nav a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-nav .separator {
+    color: var(--sl-color-gray-4);
+    font-size: 0.9em;
+  }
+
+  .breadcrumb-nav span {
+    color: var(--sl-color-gray-3);
+  }
+
+  .breadcrumb-nav [aria-current="page"] {
+    color: var(--sl-color-text);
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+    font-size: var(--sl-text-h1);
+    line-height: var(--sl-line-height-headings);
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+</style>

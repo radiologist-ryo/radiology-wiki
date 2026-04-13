@@ -1,0 +1,10 @@
+/* アンカーリンクアイコンを非表示 */
+@layer starlight.content {
+  .sl-anchor-link {
+    display: none !important;
+  }
+
+  .sl-markdown-content .sl-heading-wrapper > :first-child {
+    padding-inline-end: 0;
+  }
+}
