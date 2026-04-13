@@ -79,15 +79,24 @@ nav.sidebar a[aria-current="page"] {
   line-height: 1.8;
 }
 
-.sl-markdown-content p,
-.sl-markdown-content ul {
-  margin-bottom: 1.2rem;
+.sl-markdown-content p {
+  margin-bottom: 1.4rem;
+  line-height: 1.9;
 }
 
-/* h2: border-bottom を廃止し、border-top のみで区切り */
+.sl-markdown-content ul {
+  margin-bottom: 1.4rem;
+}
+
+.sl-markdown-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.9;
+}
+
+/* h2: border-top で視覚的区切り */
 .sl-markdown-content h2 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--rw-border);
   border-bottom: none;
@@ -95,13 +104,14 @@ nav.sidebar a[aria-current="page"] {
 
 /* 最初のh2はborder-topを非表示 */
 .sl-markdown-content h2:first-of-type {
-  border-top: none;
+  margin-top: 1rem;
   padding-top: 0;
+  border-top: none;
 }
 
 .sl-markdown-content h3 {
   margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 /* ============================================================
@@ -117,15 +127,15 @@ nav.sidebar a[aria-current="page"] {
   padding: 10px 14px;
 }
 
-/* テーブルヘッダー */
+/* テーブルヘッダー（薄いネイビー） */
 .sl-markdown-content thead th {
-  background-color: var(--rw-navy) !important;
+  background-color: #3a5a8a !important;
   color: #ffffff !important;
 }
 
-/* テーブル行ホバー */
+/* テーブル行ホバーなし */
 .sl-markdown-content tbody tr:hover {
-  background-color: var(--rw-accent-bg);
+  background: none;
 }
 
 /* ============================================================
@@ -137,13 +147,10 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   カードグリッド
+   カード（LinkCard）
    ============================================================ */
-.card-grid {
-  margin-top: 1.5rem;
-}
-
 .sl-link-card {
+  margin-bottom: 1rem;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 

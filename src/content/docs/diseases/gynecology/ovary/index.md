@@ -9,31 +9,58 @@ description: WHO分類に基づく卵巣腫瘍の画像診断まとめ
 
 ### 上皮性腫瘍
 
-| 腫瘍名 | 悪性度 |
-|--------|--------|
-| [漿液性嚢胞腺腫](/radiology-wiki/diseases/gynecology/ovary/serous-cystadenoma/) | 良性 |
-| 漿液性境界悪性腫瘍 | 境界悪性 |
-| 高異型度漿液性癌（HGSC） | 悪性 |
-| 低異型度漿液性癌（LGSC） | 悪性 |
-| 粘液性嚢胞腺腫 | 良性 |
-| 粘液性癌 | 悪性 |
-| 類内膜腫瘍 | 良性〜悪性 |
-| 明細胞腫瘍 | 良性〜悪性 |
-| ブレンナー腫瘍 | 良性〜悪性 |
+<table>
+  <colgroup>
+    <col style="width: 65%">
+    <col style="width: 35%">
+  </colgroup>
+  <thead>
+    <tr><th>腫瘍名</th><th>悪性度</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><a href="/radiology-wiki/diseases/gynecology/ovary/serous-cystadenoma/">漿液性嚢胞腺腫</a></td><td>良性</td></tr>
+    <tr><td>漿液性境界悪性腫瘍</td><td>境界悪性</td></tr>
+    <tr><td>高異型度漿液性癌（HGSC）</td><td>悪性</td></tr>
+    <tr><td>低異型度漿液性癌（LGSC）</td><td>悪性</td></tr>
+    <tr><td>粘液性嚢胞腺腫</td><td>良性</td></tr>
+    <tr><td>粘液性癌</td><td>悪性</td></tr>
+    <tr><td>類内膜腫瘍</td><td>良性〜悪性</td></tr>
+    <tr><td>明細胞腫瘍</td><td>良性〜悪性</td></tr>
+    <tr><td>ブレンナー腫瘍</td><td>良性〜悪性</td></tr>
+  </tbody>
+</table>
 
 ### 性索間質性腫瘍
 
-| 腫瘍名 | 悪性度 |
-|--------|--------|
-| 顆粒膜細胞腫 | 低悪性 |
-| 線維腫・莢膜細胞腫 | 良性 |
-| セルトリ・ライディッヒ細胞腫 | 低悪性 |
+<table>
+  <colgroup>
+    <col style="width: 65%">
+    <col style="width: 35%">
+  </colgroup>
+  <thead>
+    <tr><th>腫瘍名</th><th>悪性度</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>顆粒膜細胞腫</td><td>低悪性</td></tr>
+    <tr><td>線維腫・莢膜細胞腫</td><td>良性</td></tr>
+    <tr><td>セルトリ・ライディッヒ細胞腫</td><td>低悪性</td></tr>
+  </tbody>
+</table>
 
 ### 胚細胞性腫瘍
 
-| 腫瘍名 | 悪性度 |
-|--------|--------|
-| 成熟嚢胞性奇形腫（皮様嚢腫） | 良性 |
-| 未熟奇形腫 | 悪性 |
-| 卵黄嚢腫瘍 | 悪性 |
-| ディスジャーミノーマ | 悪性 |
+<table>
+  <colgroup>
+    <col style="width: 65%">
+    <col style="width: 35%">
+  </colgroup>
+  <thead>
+    <tr><th>腫瘍名</th><th>悪性度</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>成熟嚢胞性奇形腫（皮様嚢腫）</td><td>良性</td></tr>
+    <tr><td>未熟奇形腫</td><td>悪性</td></tr>
+    <tr><td>卵黄嚢腫瘍</td><td>悪性</td></tr>
+    <tr><td>ディスジャーミノーマ</td><td>悪性</td></tr>
+  </tbody>
+</table>

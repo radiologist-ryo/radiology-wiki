@@ -19,6 +19,7 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				PageTitle: './src/components/PageTitle.astro',
+				Footer: './src/components/Footer.astro',
 			},
 			pagination: false,
 			sidebar: [
