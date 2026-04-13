@@ -20,13 +20,20 @@ export default defineConfig({
 				{
 					label: '疾患別',
 					items: [
-						{ label: 'トップ', slug: 'diseases' },
+						{ label: '一覧', slug: 'diseases' },
+						{
+							label: '卵巣腫瘍',
+							items: [
+								{ label: 'WHO分類・概要', slug: 'diseases/ovary/index' },
+								{ label: '漿液性嚢胞腺腫', slug: 'diseases/ovary/serous-cystadenoma' },
+							],
+						},
 					],
 				},
 				{
 					label: '鑑別診断',
 					items: [
-						{ label: 'トップ', slug: 'differentials' },
+						{ label: '一覧', slug: 'differentials' },
 					],
 				},
 			],
