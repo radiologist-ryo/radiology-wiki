@@ -41,7 +41,6 @@ type BreadcrumbItem = { label: string; href?: string };
 const intermediateItems: BreadcrumbItem[] = parentSegments
   .filter((seg) => !skipSegments.has(seg))
   .map((seg) => {
-    // このセグメントまでのフルパスを再構築
     const segIndex = allSegments.indexOf(seg);
     const href = base + '/' + allSegments.slice(0, segIndex + 1).join('/') + '/';
     return { label: segmentLabels[seg] ?? seg, href };
@@ -57,15 +56,12 @@ const breadcrumbs: BreadcrumbItem[] = [
 {breadcrumbs.length > 1 && (
   <nav aria-label="パンくずリスト" class="breadcrumb-nav">
     <ol>
-      {breadcrumbs.map((item, index) => (
+      {breadcrumbs.map((item) => (
         <li>
           {item.href ? (
             <a href={item.href}>{item.label}</a>
           ) : (
             <span aria-current="page">{item.label}</span>
-          )}
-          {index < breadcrumbs.length - 1 && (
-            <span aria-hidden="true" class="separator">&#x203A;</span>
           )}
         </li>
       ))}
@@ -88,13 +84,14 @@ const breadcrumbs: BreadcrumbItem[] = [
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.2rem;
   }
 
-  .breadcrumb-nav li {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
+  /* セパレーターはCSSの::afterで生成（JSXでの二重レンダリングを防ぐ） */
+  .breadcrumb-nav li:not(:last-child)::after {
+    content: '›';
+    margin: 0 0.35rem;
+    color: var(--sl-color-gray-4);
+    font-size: 0.9em;
   }
 
   .breadcrumb-nav a {
@@ -104,11 +101,6 @@ const breadcrumbs: BreadcrumbItem[] = [
 
   .breadcrumb-nav a:hover {
     text-decoration: underline;
-  }
-
-  .breadcrumb-nav .separator {
-    color: var(--sl-color-gray-4);
-    font-size: 0.9em;
   }
 
   .breadcrumb-nav [aria-current="page"] {

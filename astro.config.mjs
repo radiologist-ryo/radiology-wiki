@@ -23,30 +23,27 @@ export default defineConfig({
 			pagination: false,
 			sidebar: [
 				{
-					// 注: Starlight 0.38.x の ManualSidebarGroup には link プロパティが存在しない
-					// グループラベル自体はクリック不可のため、インデックスページを先頭アイテムに配置する
+					// Starlight 0.38.x の制約:
+					//   SidebarLinkItemSchema  → link あり、items なし（クリッカブルリンク）
+					//   ManualSidebarGroupSchema → items あり、link なし（折りたたみグループ）
+					// link と items を同一要素に付与することは不可。
+					// 婦人科: SidebarLinkItemSchema（クリッカブル）
+					// 卵巣腫瘍: ManualSidebarGroupSchema（collapsed グループ）
+					// として疾患別の直下に並列配置する。
 					label: '疾患別',
 					items: [
+						{ label: '婦人科', link: '/radiology-wiki/diseases/gynecology/' },
 						{
-							label: '婦人科',
+							label: '卵巣腫瘍',
+							collapsed: true,
 							items: [
-								{ label: '婦人科トップ', slug: 'diseases/gynecology' },
-								{
-									label: '卵巣腫瘍',
-									items: [
-										{ label: 'WHO分類・概要', slug: 'diseases/gynecology/ovary' },
-										{ label: '漿液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/serous-cystadenoma' },
-									],
-								},
-								// 今後の追加例:
-								// { label: '子宮腫瘍', items: [{ label: '概要', slug: 'diseases/gynecology/uterus-body' }, ...] },
+								{ label: 'WHO分類・概要', slug: 'diseases/gynecology/ovary' },
+								{ label: '漿液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/serous-cystadenoma' },
 							],
 						},
 						// 今後の追加例:
-						// { label: '腹部', items: [{ label: '腹部トップ', slug: 'diseases/hepatobiliary' }, ...] },
-						// { label: '中枢神経', items: [...] },
-						// { label: '骨軟部', items: [...] },
-						// { label: '呼吸器', items: [...] },
+						// { label: '腹部', link: '/radiology-wiki/diseases/hepatobiliary/' },
+						// { label: '中枢神経', link: '/radiology-wiki/diseases/brain/' },
 					],
 				},
 				{

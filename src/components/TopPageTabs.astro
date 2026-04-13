@@ -1,0 +1,157 @@
+---
+// トップページのタブ切り替えUI
+// MDX内に <script> + { } を直接書くとMDXパーサーエラーになるため、このコンポーネントに分離
+---
+
+<div style="margin-top: 1rem;">
+  <div style="display: flex; gap: 10px; margin-bottom: 2rem;">
+    <button id="btn-diseases" class="tab-btn tab-btn--active">疾患別にみる</button>
+    <button id="btn-differentials" class="tab-btn">鑑別診断からみる</button>
+  </div>
+
+  <div id="tab-diseases">
+    <p class="tab-section-label">臓器・部位から探す</p>
+    <div class="organ-grid">
+      <a href="/radiology-wiki/diseases/brain/" class="organ-card">
+        <div class="organ-card__title">中枢神経</div>
+        <div class="organ-card__sub">脳腫瘍・脳血管</div>
+      </a>
+      <a href="/radiology-wiki/diseases/head-neck/" class="organ-card">
+        <div class="organ-card__title">頭頸部</div>
+        <div class="organ-card__sub">頭頸部腫瘍</div>
+      </a>
+      <a href="/radiology-wiki/diseases/spine/" class="organ-card">
+        <div class="organ-card__title">脊椎・脊髄</div>
+        <div class="organ-card__sub">椎間板・脊髄腫瘍</div>
+      </a>
+      <a href="/radiology-wiki/diseases/musculoskeletal/" class="organ-card">
+        <div class="organ-card__title">骨・関節・軟部</div>
+        <div class="organ-card__sub">骨腫瘍・軟部腫瘍</div>
+      </a>
+      <a href="/radiology-wiki/diseases/chest/" class="organ-card">
+        <div class="organ-card__title">呼吸器・縦隔</div>
+        <div class="organ-card__sub">肺癌・間質性肺炎</div>
+      </a>
+      <a href="/radiology-wiki/diseases/cardiovascular/" class="organ-card">
+        <div class="organ-card__title">心・血管</div>
+        <div class="organ-card__sub">大動脈・心疾患</div>
+      </a>
+      <a href="/radiology-wiki/diseases/breast/" class="organ-card">
+        <div class="organ-card__title">乳腺</div>
+        <div class="organ-card__sub">乳癌・良性疾患</div>
+      </a>
+      <a href="/radiology-wiki/diseases/hepatobiliary/" class="organ-card">
+        <div class="organ-card__title">消化器（肝・胆・膵）</div>
+        <div class="organ-card__sub">肝腫瘍・膵腫瘍</div>
+      </a>
+      <a href="/radiology-wiki/diseases/gi/" class="organ-card">
+        <div class="organ-card__title">消化管・腹膜</div>
+        <div class="organ-card__sub">消化管腫瘍・腸閉塞</div>
+      </a>
+      <a href="/radiology-wiki/diseases/urinary/" class="organ-card">
+        <div class="organ-card__title">泌尿器</div>
+        <div class="organ-card__sub">腎・膀胱・前立腺</div>
+      </a>
+      <a href="/radiology-wiki/diseases/gynecology/" class="organ-card">
+        <div class="organ-card__title">婦人科</div>
+        <div class="organ-card__sub">卵巣・子宮</div>
+      </a>
+      <a href="/radiology-wiki/diseases/pediatrics/" class="organ-card">
+        <div class="organ-card__title">小児</div>
+        <div class="organ-card__sub">小児腫瘍・先天性</div>
+      </a>
+      <a href="/radiology-wiki/diseases/ivr/" class="organ-card">
+        <div class="organ-card__title">IVR</div>
+        <div class="organ-card__sub">IVR手技・適応</div>
+      </a>
+      <a href="/radiology-wiki/diseases/nuclear/" class="organ-card">
+        <div class="organ-card__title">核医学</div>
+        <div class="organ-card__sub">PET/CT・シンチ</div>
+      </a>
+    </div>
+  </div>
+
+  <div id="tab-differentials" style="display:none;">
+    <p class="tab-section-label">所見から鑑別を探す</p>
+    <p style="color:#7a8fa8;font-size:14px;">鑑別診断ページは準備中です。</p>
+  </div>
+</div>
+
+<script>
+  const btnDiseases = document.getElementById('btn-diseases') as HTMLButtonElement;
+  const btnDifferentials = document.getElementById('btn-differentials') as HTMLButtonElement;
+  const tabDiseases = document.getElementById('tab-diseases') as HTMLElement;
+  const tabDifferentials = document.getElementById('tab-differentials') as HTMLElement;
+
+  function showTab(tab: string) {
+    const isDiseases = tab === 'diseases';
+    tabDiseases.style.display = isDiseases ? 'block' : 'none';
+    tabDifferentials.style.display = isDiseases ? 'none' : 'block';
+    btnDiseases.classList.toggle('tab-btn--active', isDiseases);
+    btnDifferentials.classList.toggle('tab-btn--active', !isDiseases);
+  }
+
+  btnDiseases.addEventListener('click', () => showTab('diseases'));
+  btnDifferentials.addEventListener('click', () => showTab('differentials'));
+</script>
+
+<style>
+  .tab-btn {
+    background: transparent;
+    color: #1a2744;
+    border: 1.5px solid #1a2744;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .tab-btn--active {
+    background: #1a2744;
+    color: #fff;
+  }
+
+  .tab-section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #5a7299;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .organ-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .organ-card {
+    background: #fff;
+    border: 0.5px solid #dde4ef;
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .organ-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .organ-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a2744;
+  }
+
+  .organ-card__sub {
+    font-size: 11px;
+    color: #7a8fa8;
+    margin-top: 4px;
+  }
+</style>
