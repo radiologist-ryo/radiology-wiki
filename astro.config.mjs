@@ -34,7 +34,7 @@ export default defineConfig({
 					// として疾患別の直下に並列配置する。
 					label: '疾患別',
 					items: [
-						{ label: '婦人科', link: '/radiology-wiki/diseases/gynecology/' },
+						{ label: '婦人科', slug: 'diseases/gynecology' },
 						{
 							label: '卵巣腫瘍',
 							collapsed: true,
@@ -63,19 +63,45 @@ export default defineConfig({
 							],
 						},
 						{
-							label: '骨・関節',
+							label: '骨・関節・軟部',
 							collapsed: true,
 							items: [
 								{
-									label: '悪性骨腫瘍',
+									label: '骨腫瘍',
 									collapsed: true,
 									items: [
-										{ label: '総論', slug: 'diseases/bone/malignant' },
-										{ label: '骨肉腫', slug: 'diseases/bone/malignant/osteosarcoma' },
-										{ label: '軟骨肉腫', slug: 'diseases/bone/malignant/chondrosarcoma' },
-										{ label: 'Ewing肉腫', slug: 'diseases/bone/malignant/ewing' },
-										{ label: '骨巨細胞腫', slug: 'diseases/bone/malignant/gct' },
-										{ label: '悪性リンパ腫', slug: 'diseases/bone/malignant/lymphoma' },
+										{ label: '概要', slug: 'diseases/bone' },
+										{
+											label: '総論',
+											collapsed: false,
+											items: [
+												{ label: 'X線読影（辺縁解析・骨膜反応・基質）', slug: 'diseases/bone/general/xray' },
+												{ label: 'CT・MRI・PETの役割', slug: 'diseases/bone/general/imaging' },
+											],
+										},
+										{
+											label: '骨形成性腫瘍',
+											collapsed: false,
+											items: [
+												{ label: '骨肉腫', slug: 'diseases/bone/osteogenic/osteosarcoma' },
+											],
+										},
+										{
+											label: '軟骨形成性腫瘍',
+											collapsed: false,
+											items: [
+												{ label: '軟骨肉腫', slug: 'diseases/bone/chondrogenic/chondrosarcoma' },
+											],
+										},
+										{ label: '骨巨細胞腫', slug: 'diseases/bone/gct' },
+										{
+											label: '小円形細胞・その他',
+											collapsed: false,
+											items: [
+												{ label: 'Ewing肉腫', slug: 'diseases/bone/small-round-cell/ewing' },
+												{ label: '悪性リンパ腫', slug: 'diseases/bone/small-round-cell/lymphoma' },
+											],
+										},
 									],
 								},
 							],

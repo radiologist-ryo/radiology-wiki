@@ -8,7 +8,12 @@
       "Bash(git push:*)",
       "Bash(git commit *)",
       "Bash(node -e \"const pkg = require\\('./node_modules/@astrojs/starlight/package.json'\\); console.log\\(pkg.version\\);\")",
-      "Bash(npx astro *)"
+      "Bash(npx astro *)",
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/general)",
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/osteogenic)",
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/chondrogenic)",
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/gct)",
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/small-round-cell)"
     ]
   }
 }
