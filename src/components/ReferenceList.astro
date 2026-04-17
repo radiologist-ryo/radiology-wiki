@@ -1,0 +1,123 @@
+---
+interface Reference {
+  id: number;
+  authors: string;
+  title: string;
+  journal: string;
+  year: number;
+  pmid?: string;
+}
+
+const data = (Astro.locals.starlightRoute?.entry?.data as any);
+const references: Reference[] = data?.references ?? [];
+const sorted = [...references].sort((a, b) => a.id - b.id);
+---
+
+{sorted.length > 0 && (
+  <section class="reference-list">
+    <h2 class="reference-list__heading">参考文献</h2>
+    <ol class="reference-list__items">
+      {sorted.map((ref) => (
+        <li id={`ref-${ref.id}`} class="reference-list__item">
+          <span class="ref-body">
+            <span class="ref-authors">{ref.authors}.</span>
+            <span class="ref-title"> {ref.title}.</span>
+            <em class="ref-journal"> {ref.journal}</em>
+            <span class="ref-year">. {ref.year}.</span>
+            {ref.pmid && (
+              <a
+                href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ref-pubmed"
+              >
+                [PubMed]
+              </a>
+            )}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+
+<style>
+  .reference-list {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rw-border, #e8edf5);
+  }
+
+  .reference-list__heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--rw-text-navy, #3a4a72);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--rw-navy, #1a2744);
+  }
+
+  .reference-list__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: ref-counter;
+  }
+
+  .reference-list__item {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rw-border, #e8edf5);
+    font-size: 0.84rem;
+    line-height: 1.65;
+    color: var(--sl-color-text, inherit);
+    counter-increment: ref-counter;
+  }
+
+  .reference-list__item::before {
+    content: counter(ref-counter) ".";
+    flex-shrink: 0;
+    min-width: 1.6rem;
+    font-weight: 700;
+    color: var(--rw-navy, #1a2744);
+    padding-top: 0.05rem;
+  }
+
+  .reference-list__item:last-child {
+    border-bottom: none;
+  }
+
+  .ref-body {
+    flex: 1;
+  }
+
+  .ref-authors {
+    color: var(--sl-color-text, inherit);
+  }
+
+  .ref-title {
+    font-style: italic;
+  }
+
+  .ref-journal {
+    color: var(--rw-text-navy, #3a4a72);
+    font-style: normal;
+  }
+
+  .ref-year {
+    color: var(--sl-color-text, inherit);
+  }
+
+  .ref-pubmed {
+    color: var(--rw-accent, #1a73e8);
+    text-decoration: none;
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .ref-pubmed:hover {
+    text-decoration: underline;
+  }
+</style>

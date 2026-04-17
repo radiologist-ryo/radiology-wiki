@@ -5,7 +5,10 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('exports', {}\\), indent=2\\)\\)\")",
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit *)",
+      "Bash(node -e \"const pkg = require\\('./node_modules/@astrojs/starlight/package.json'\\); console.log\\(pkg.version\\);\")",
+      "Bash(npx astro *)"
     ]
   }
 }

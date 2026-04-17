@@ -62,6 +62,24 @@ export default defineConfig({
 								{ label: 'クルーケンベルグ腫瘍', slug: 'diseases/gynecology/ovary/krukenberg-tumor' },
 							],
 						},
+						{
+							label: '骨・関節',
+							collapsed: true,
+							items: [
+								{
+									label: '悪性骨腫瘍',
+									collapsed: true,
+									items: [
+										{ label: '総論', slug: 'diseases/bone/malignant' },
+										{ label: '骨肉腫', slug: 'diseases/bone/malignant/osteosarcoma' },
+										{ label: '軟骨肉腫', slug: 'diseases/bone/malignant/chondrosarcoma' },
+										{ label: 'Ewing肉腫', slug: 'diseases/bone/malignant/ewing' },
+										{ label: '骨巨細胞腫', slug: 'diseases/bone/malignant/gct' },
+										{ label: '悪性リンパ腫', slug: 'diseases/bone/malignant/lymphoma' },
+									],
+								},
+							],
+						},
 					],
 				},
 				{
