@@ -25,41 +25,36 @@ export default defineConfig({
 			pagination: false,
 			sidebar: [
 				{
-					// Starlight 0.38.x の制約:
-					//   SidebarLinkItemSchema  → link あり、items なし（クリッカブルリンク）
-					//   ManualSidebarGroupSchema → items あり、link なし（折りたたみグループ）
-					// link と items を同一要素に付与することは不可。
-					// 婦人科: SidebarLinkItemSchema（クリッカブル）
-					// 卵巣腫瘍: ManualSidebarGroupSchema（collapsed グループ）
-					// として疾患別の直下に並列配置する。
 					label: '疾患別',
 					items: [
-						{ label: '婦人科', slug: 'diseases/gynecology' },
 						{
-							label: '卵巣腫瘍',
+							label: '婦人科',
 							collapsed: true,
 							items: [
-								{ label: 'WHO分類・概要', slug: 'diseases/gynecology/ovary' },
-								// 上皮性腫瘍
-								{ label: '漿液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/serous-cystadenoma' },
-								{ label: '漿液性境界悪性腫瘍', slug: 'diseases/gynecology/ovary/serous-borderline' },
-								{ label: '高異型度漿液性癌', slug: 'diseases/gynecology/ovary/high-grade-serous-carcinoma' },
-								{ label: '低異型度漿液性癌', slug: 'diseases/gynecology/ovary/low-grade-serous-carcinoma' },
-								{ label: '粘液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/mucinous-cystadenoma' },
-								{ label: '粘液性癌', slug: 'diseases/gynecology/ovary/mucinous-carcinoma' },
-								{ label: '類内膜腫瘍', slug: 'diseases/gynecology/ovary/endometrioid-carcinoma' },
-								{ label: '明細胞癌', slug: 'diseases/gynecology/ovary/clear-cell-carcinoma' },
-								{ label: 'ブレンナー腫瘍', slug: 'diseases/gynecology/ovary/brenner-tumor' },
-								// 性索間質性腫瘍
-								{ label: '顆粒膜細胞腫', slug: 'diseases/gynecology/ovary/granulosa-cell-tumor' },
-								{ label: '線維腫・莢膜細胞腫', slug: 'diseases/gynecology/ovary/fibroma-thecoma' },
-								// 胚細胞性腫瘍
-								{ label: '成熟嚢胞性奇形腫', slug: 'diseases/gynecology/ovary/mature-teratoma' },
-								{ label: '未熟奇形腫', slug: 'diseases/gynecology/ovary/immature-teratoma' },
-								{ label: '無性細胞腫', slug: 'diseases/gynecology/ovary/dysgerminoma' },
-								{ label: '卵黄嚢腫瘍', slug: 'diseases/gynecology/ovary/yolk-sac-tumor' },
-								// 転移性腫瘍
-								{ label: 'クルーケンベルグ腫瘍', slug: 'diseases/gynecology/ovary/krukenberg-tumor' },
+								{ label: '婦人科トップ', slug: 'diseases/gynecology' },
+								{
+									label: '卵巣腫瘍',
+									collapsed: true,
+									items: [
+										{ label: 'WHO分類・概要', slug: 'diseases/gynecology/ovary' },
+										{ label: '漿液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/serous-cystadenoma' },
+										{ label: '漿液性境界悪性腫瘍', slug: 'diseases/gynecology/ovary/serous-borderline' },
+										{ label: '高異型度漿液性癌', slug: 'diseases/gynecology/ovary/high-grade-serous-carcinoma' },
+										{ label: '低異型度漿液性癌', slug: 'diseases/gynecology/ovary/low-grade-serous-carcinoma' },
+										{ label: '粘液性嚢胞腺腫', slug: 'diseases/gynecology/ovary/mucinous-cystadenoma' },
+										{ label: '粘液性癌', slug: 'diseases/gynecology/ovary/mucinous-carcinoma' },
+										{ label: '類内膜腫瘍', slug: 'diseases/gynecology/ovary/endometrioid-carcinoma' },
+										{ label: '明細胞癌', slug: 'diseases/gynecology/ovary/clear-cell-carcinoma' },
+										{ label: 'ブレンナー腫瘍', slug: 'diseases/gynecology/ovary/brenner-tumor' },
+										{ label: '顆粒膜細胞腫', slug: 'diseases/gynecology/ovary/granulosa-cell-tumor' },
+										{ label: '線維腫・莢膜細胞腫', slug: 'diseases/gynecology/ovary/fibroma-thecoma' },
+										{ label: '成熟嚢胞性奇形腫', slug: 'diseases/gynecology/ovary/mature-teratoma' },
+										{ label: '未熟奇形腫', slug: 'diseases/gynecology/ovary/immature-teratoma' },
+										{ label: '無性細胞腫', slug: 'diseases/gynecology/ovary/dysgerminoma' },
+										{ label: '卵黄嚢腫瘍', slug: 'diseases/gynecology/ovary/yolk-sac-tumor' },
+										{ label: 'クルーケンベルグ腫瘍', slug: 'diseases/gynecology/ovary/krukenberg-tumor' },
+									],
+								},
 							],
 						},
 						{

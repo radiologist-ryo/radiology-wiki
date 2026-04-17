@@ -174,8 +174,19 @@ nav.sidebar a[aria-current="page"] {
    右側目次（TOC）の幅調整
    ============================================================ */
 .right-sidebar {
-  --sl-sidebar-width: 13rem;
-  width: 13rem;
+  width: 11.5rem !important;
+  min-width: 11.5rem !important;
+}
+
+/* ============================================================
+   パンくずリストのセパレーター修正（>> → >）
+   ============================================================ */
+.sl-breadcrumbs li + li::before {
+  content: none !important;
+}
+.sl-breadcrumbs li + li > span[aria-hidden="true"],
+.sl-breadcrumbs li + li > svg {
+  display: none !important;
 }
 
 /* ============================================================
