@@ -23,6 +23,11 @@ export default defineConfig({
 				PageFrame: './src/components/PageFrame.astro',
 				Sidebar: './src/components/overrides/Sidebar.astro',
 			},
+			pagefind: {
+				ranking: {
+					pageLength: 0.1,
+				},
+			},
 			pagination: false,
 			sidebar: [
 				{
@@ -62,6 +67,7 @@ export default defineConfig({
 							label: '骨・関節・軟部',
 							collapsed: true,
 							items: [
+								{ label: '骨・関節・軟部トップ', slug: 'diseases/musculoskeletal' },
 								{
 									label: '骨腫瘍',
 									collapsed: true,

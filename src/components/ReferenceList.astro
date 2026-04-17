@@ -14,7 +14,7 @@ const sorted = [...references].sort((a, b) => a.id - b.id);
 ---
 
 {sorted.length > 0 && (
-  <section class="reference-list">
+  <section class="reference-list" data-pagefind-ignore>
     <h2 class="reference-list__heading">参考文献</h2>
     <ol class="reference-list__items">
       {sorted.map((ref) => (

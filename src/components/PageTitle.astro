@@ -17,6 +17,7 @@ const segmentLabels: Record<string, string> = {
   spine:               '脊椎・脊髄',
   'head-neck':         '頭頸部',
   musculoskeletal:     '骨・関節・軟部',
+
   chest:               '呼吸器・縦隔',
   cardiovascular:      '心・血管・脈管',
   breast:              '乳腺',
@@ -79,7 +80,7 @@ const breadcrumbs: BreadcrumbItem[] = [
   </nav>
 )}
 
-<h1 id={PAGE_TITLE_ID}>{pageTitle}</h1>
+<h1 id={PAGE_TITLE_ID} data-pagefind-meta="title">{pageTitle}</h1>
 
 <style>
   .breadcrumb-nav {

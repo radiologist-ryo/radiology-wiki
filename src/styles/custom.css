@@ -174,8 +174,8 @@ nav.sidebar a[aria-current="page"] {
    右側目次（TOC）の幅調整
    ============================================================ */
 .right-sidebar {
-  width: 11.5rem !important;
-  min-width: 11.5rem !important;
+  width: 9rem !important;
+  min-width: 9rem !important;
 }
 
 /* ============================================================
