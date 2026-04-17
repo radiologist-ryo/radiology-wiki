@@ -99,11 +99,37 @@ const { hasSidebar } = Astro.locals.starlightRoute;
       :global([data-has-sidebar]) .header {
         padding-inline-end: var(--sl-nav-pad-x);
       }
+
+      /* デスクトップ: サイドバーを通常フロー（sticky）に変更 */
+      :global([data-has-sidebar]) .page {
+        flex-direction: row;
+        padding-top: var(--sl-nav-height);
+      }
+
+      :global([data-has-sidebar]) .sidebar {
+        flex-shrink: 0;
+        width: var(--sl-sidebar-width);
+      }
+
       .sidebar-pane {
         --sl-sidebar-visibility: visible;
-        width: var(--sl-sidebar-width);
+        position: sticky;
+        top: var(--sl-nav-height);
+        inset-block: unset;
+        inset-inline-start: unset;
+        z-index: unset;
+        width: 100%;
+        height: calc(100vh - var(--sl-nav-height));
         background-color: var(--sl-color-bg-sidebar);
         border-inline-end: 1px solid var(--sl-color-hairline-shade);
+        overflow-y: auto;
+      }
+
+      :global([data-has-sidebar]) .main-frame {
+        flex: 1;
+        min-width: 0;
+        padding-top: var(--sl-mobile-toc-height);
+        padding-inline-start: 0;
       }
     }
   }
@@ -120,8 +146,6 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     font-size: 0.85rem;
     line-height: 1.8;
     box-sizing: border-box;
-    position: relative;
-    z-index: calc(var(--sl-z-index-menu) + 1);
   }
 
   .rw-site-footer__links {
