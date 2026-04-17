@@ -179,17 +179,6 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   パンくずリストのセパレーター修正（>> → >）
-   ============================================================ */
-.sl-breadcrumbs li + li::before {
-  content: none !important;
-}
-.sl-breadcrumbs li + li > span[aria-hidden="true"],
-.sl-breadcrumbs li + li > svg {
-  display: none !important;
-}
-
-/* ============================================================
    フッター前の余白
    ============================================================ */
 .main-frame footer,

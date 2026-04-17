@@ -17,7 +17,8 @@
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('exports',{}\\), indent=2\\)\\)\")",
       "Bash(python3 -c ' *)",
       "Bash(python3 *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(xargs grep *)"
     ]
   }
 }

@@ -2,42 +2,52 @@
 // PAGE_TITLE_ID は Starlight 内部定数。値は '_top' で固定。
 const PAGE_TITLE_ID = '_top';
 
-// URLセグメントからパンくずラベルへのマッピング
-// 'diseases' は疾患ルートとして表示から除外するが、href構築には使用する
+// URLセグメント → 日本語ラベルのマッピング
 const segmentLabels: Record<string, string> = {
-  gynecology:      '婦人科',
-  ovary:           '卵巣腫瘍',
-  brain:           '中枢神経',
-  spine:           '脊椎・脊髄',
-  'head-neck':     '頭頸部',
-  musculoskeletal: '骨・関節・軟部',
-  chest:           '呼吸器・縦隔',
-  cardiovascular:  '心・血管・脈管',
-  breast:          '乳腺',
-  hepatobiliary:   '消化器（肝・胆・膵・脾）',
-  gi:              '消化器（消化管）',
-  urinary:         '泌尿器',
-  pediatrics:      '小児',
-  ivr:             'IVR',
-  nuclear:         '核医学',
-  differentials:   '鑑別診断',
+  diseases:            '疾患別',
+  gynecology:          '婦人科',
+  ovary:               '卵巣腫瘍',
+  bone:                '骨腫瘍',
+  general:             '総論',
+  osteogenic:          '骨形成性腫瘍',
+  chondrogenic:        '軟骨形成性腫瘍',
+  gct:                 '骨巨細胞腫',
+  'small-round-cell':  '小円形細胞・その他',
+  brain:               '中枢神経',
+  spine:               '脊椎・脊髄',
+  'head-neck':         '頭頸部',
+  musculoskeletal:     '骨・関節・軟部',
+  chest:               '呼吸器・縦隔',
+  cardiovascular:      '心・血管・脈管',
+  breast:              '乳腺',
+  hepatobiliary:       '消化器（肝・胆・膵・脾）',
+  gi:                  '消化器（消化管）',
+  urinary:             '泌尿器',
+  pediatrics:          '小児',
+  ivr:                 'IVR',
+  nuclear:             '核医学',
+  differentials:       '鑑別診断',
 };
 
-// ラベルには出さないが href には含めるセグメント
+// パンくずに表示しないセグメント（href 構築には使う）
 const skipSegments = new Set(['diseases']);
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// ベースURL（末尾スラッシュを除去して正規化）
+const base = import.meta.env.BASE_URL.replace(/\/?$/, ''); // '/radiology-wiki'
 const pathname = Astro.url.pathname;
-const slug = pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '');
-const pageTitle = Astro.locals.starlightRoute.entry.data.title;
 
-// 全セグメントを保持しつつ、ラベル・href・skipを計算
-const allSegments = slug.split('/');
+// スラグを安全に抽出：先頭スラッシュを確実に除去してから処理
+const slug = pathname
+  .slice(base.length)          // base より後を切り出し → '/diseases/bone/general/imaging/'
+  .replace(/^\/+|\/+$/g, ''); // 先頭・末尾スラッシュを除去 → 'diseases/bone/general/imaging'
+
+const pageTitle = Astro.locals.starlightRoute.entry.data.title;
+const allSegments = slug ? slug.split('/') : [];
 const parentSegments = allSegments.slice(0, -1);
 
 type BreadcrumbItem = { label: string; href?: string };
 
-// 親セグメントをパンくずアイテムに変換（skipは非表示だが href 構築には含める）
+// 表示セグメントのアイテムを生成（skipSegments は表示をスキップするが href 構築には含める）
 const intermediateItems: BreadcrumbItem[] = parentSegments
   .filter((seg) => !skipSegments.has(seg))
   .map((seg) => {
@@ -84,9 +94,10 @@ const breadcrumbs: BreadcrumbItem[] = [
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 0;
   }
 
-  /* セパレーターはCSSの::afterで生成（JSXでの二重レンダリングを防ぐ） */
+  /* セパレーターは ::after で単一生成 */
   .breadcrumb-nav li:not(:last-child)::after {
     content: '›';
     margin: 0 0.35rem;
