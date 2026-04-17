@@ -1,0 +1,98 @@
+---
+/**
+ * Custom Sidebar override.
+ * Shows only the section tree relevant to the current URL path:
+ *   /diseases/gynecology/* → 婦人科 tree
+ *   /diseases/bone/*       → 骨・関節・軟部 tree
+ *   otherwise              → full sidebar
+ *
+ * isCurrent flags are computed by Starlight via Astro.locals.starlightRoute.sidebar,
+ * so we just filter the pre-processed data.
+ */
+import type { Props } from '@astrojs/starlight/props';
+import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
+import SidebarList from './SidebarList.astro';
+
+type SidebarLink = {
+	type: 'link';
+	label: string;
+	href: string;
+	isCurrent: boolean;
+	badge?: unknown;
+	attrs?: Record<string, unknown>;
+};
+type SidebarGroup = {
+	type: 'group';
+	label: string;
+	entries: SidebarEntry[];
+	collapsed: boolean;
+	badge?: unknown;
+};
+type SidebarEntry = SidebarLink | SidebarGroup;
+
+// Full sidebar (with isCurrent flags set by Starlight)
+const sidebar = (Astro.locals.starlightRoute as any).sidebar as SidebarEntry[];
+const pathname = Astro.url.pathname;
+const base = '/radiology-wiki';
+
+// Find the top-level '疾患別' group
+const diseasesGroup = sidebar.find(
+	(e): e is SidebarGroup => e.type === 'group' && e.label === '疾患別'
+);
+
+type FilterResult = { entries: SidebarEntry[]; withBack: boolean };
+
+function filterBySection(label: string): FilterResult | null {
+	if (!diseasesGroup) return null;
+	const match = diseasesGroup.entries.find(
+		(e): e is SidebarGroup => e.type === 'group' && e.label === label
+	);
+	if (!match) return null;
+	// Force the top-level section group to be always open
+	return { entries: [{ ...match, collapsed: false }], withBack: true };
+}
+
+let result: FilterResult | null = null;
+
+if (pathname.includes('/diseases/gynecology')) {
+	result = filterBySection('婦人科');
+} else if (pathname.includes('/diseases/bone')) {
+	result = filterBySection('骨・関節・軟部');
+}
+
+const backLink: SidebarLink = {
+	type: 'link',
+	label: '← カテゴリ一覧',
+	href: `${base}/diseases/`,
+	isCurrent: false,
+	badge: undefined,
+	attrs: { class: 'back-link' },
+};
+
+const displayEntries: SidebarEntry[] = result
+	? [backLink, ...result.entries]
+	: sidebar;
+---
+
+<SidebarList entries={displayEntries} />
+
+<div class="md:sl-hidden">
+	<MobileMenuFooter />
+</div>
+
+<style>
+	@layer starlight.core {
+		/* 「← カテゴリ一覧」リンクのスタイル */
+		:global(.back-link) {
+			color: var(--sl-color-gray-3) !important;
+			font-size: var(--sl-text-xs) !important;
+			opacity: 0.8;
+			margin-bottom: 0.75rem !important;
+			display: block;
+		}
+		:global(.back-link:hover) {
+			color: var(--sl-color-white) !important;
+			opacity: 1;
+		}
+	}
+</style>

@@ -21,6 +21,7 @@ export default defineConfig({
 				PageTitle: './src/components/PageTitle.astro',
 				Footer: './src/components/Footer.astro',
 				PageFrame: './src/components/PageFrame.astro',
+				Sidebar: './src/components/overrides/Sidebar.astro',
 			},
 			pagination: false,
 			sidebar: [

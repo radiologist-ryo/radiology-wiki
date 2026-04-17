@@ -13,7 +13,11 @@
       "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/osteogenic)",
       "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/chondrogenic)",
       "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/gct)",
-      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/small-round-cell)"
+      "Bash(mkdir -p /c/Users/takar/Documents/radiology-wiki/src/content/docs/diseases/bone/small-round-cell)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('exports',{}\\), indent=2\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(node *)"
     ]
   }
 }
