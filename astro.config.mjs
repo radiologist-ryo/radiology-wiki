@@ -77,6 +77,7 @@ export default defineConfig({
 											label: '総論',
 											collapsed: false,
 											items: [
+												{ label: 'WHO分類（第5版）', slug: 'diseases/bone/general/who-classification' },
 												{ label: 'X線読影（辺縁解析・骨膜反応・基質）', slug: 'diseases/bone/general/xray' },
 												{ label: 'CT・MRI・PETの役割', slug: 'diseases/bone/general/imaging' },
 											],
