@@ -173,15 +173,31 @@ nav.sidebar a[aria-current="page"] {
 /* ============================================================
    右側目次（TOC）の幅調整
    ============================================================ */
+:root {
+  --sl-sidebar-width: 14rem;
+  --sl-content-width: 50rem;
+}
+
 .right-sidebar {
-  width: 9rem !important;
-  min-width: 9rem !important;
+  width: 11rem !important;
+  min-width: 11rem !important;
+}
+
+.right-sidebar-panel {
+  width: 11rem !important;
 }
 
 /* ============================================================
-   フッター前の余白
+   フッター前の余白・縦線抑制
    ============================================================ */
 .main-frame footer,
 footer.rw-footer {
   margin-top: 4rem;
+}
+
+.rw-site-footer {
+  position: relative;
+  z-index: 1;
+  border-left: none !important;
+  box-shadow: none !important;
 }
