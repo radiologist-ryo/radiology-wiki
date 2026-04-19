@@ -22,7 +22,6 @@
 
 /* ============================================================
    全体レイアウト幅(左サイドバー・本文幅)
-   ※右サイドバーは別セクションで個別に調整
    ============================================================ */
 :root {
   --sl-sidebar-width: 14rem;
@@ -104,7 +103,6 @@ nav.sidebar a[aria-current="page"] {
   line-height: 2.0;
 }
 
-/* h2: border-top で視覚的区切り */
 .sl-markdown-content h2 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
@@ -114,7 +112,6 @@ nav.sidebar a[aria-current="page"] {
   font-size: 1.6rem;
 }
 
-/* 最初のh2はborder-topを非表示 */
 .sl-markdown-content h2:first-of-type {
   margin-top: 2rem;
   padding-top: 0;
@@ -143,13 +140,11 @@ nav.sidebar a[aria-current="page"] {
   padding: 10px 14px;
 }
 
-/* テーブルヘッダー(薄いネイビー) */
 .sl-markdown-content thead th {
   background-color: #3a5a8a !important;
   color: #ffffff !important;
 }
 
-/* テーブル行ホバーなし */
 .sl-markdown-content tbody tr:hover {
   background: none;
 }
@@ -180,33 +175,62 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   右側目次(TOC)の幅調整
-   Starlightは flex レイアウトで右TOCを配置しており、
-   flex-basis: auto が残っていると widthを!importantで指定しても
-   効かないため、flex短縮記法で基底幅ごと固定する
+   右側目次(TOC)の幅・内側余白・フォントサイズ調整
+   - 幅を 8rem(約128px≒4cm@等倍,5cm@125%スケーリング) に
+   - padding と list のインデントを詰めて実質使える幅を最大化
+   - フォントサイズをやや小さくして1行に入る文字数を増やす
    ============================================================ */
 .right-sidebar-container {
-  flex: 0 0 11rem !important;
-  width: 11rem !important;
-  max-width: 11rem !important;
-  min-width: 11rem !important;
+  flex: 0 0 8rem !important;
+  width: 8rem !important;
+  max-width: 8rem !important;
+  min-width: 8rem !important;
 }
 
 .right-sidebar {
-  width: 11rem !important;
-  max-width: 11rem !important;
-  min-width: 11rem !important;
+  width: 8rem !important;
+  max-width: 8rem !important;
+  min-width: 8rem !important;
 }
 
 .right-sidebar-panel {
-  width: 11rem !important;
-  max-width: 11rem !important;
-  padding-inline: 0.75rem !important;
+  width: 8rem !important;
+  max-width: 8rem !important;
+  padding-inline: 0.4rem !important;
+  padding-block: 1rem !important;
 }
 
 .right-sidebar-panel > .sl-container {
   width: 100% !important;
-  max-width: 11rem !important;
+  max-width: 8rem !important;
+}
+
+/* TOC内部の余白・インデントを詰める */
+starlight-toc nav {
+  font-size: 0.8rem !important;
+}
+
+starlight-toc ul,
+starlight-toc ol {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+}
+
+starlight-toc li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+starlight-toc a {
+  padding-inline: 0.25rem !important;
+  padding-block: 0.35rem !important;
+  line-height: 1.4 !important;
+}
+
+/* TOC見出し「目次」自体のサイズ */
+starlight-toc h2 {
+  font-size: 0.95rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 /* ============================================================
