@@ -25,7 +25,7 @@
    ============================================================ */
 :root {
   --sl-sidebar-width: 14rem;
-  --sl-content-width: 50rem;
+  --sl-content-width: 68rem;
 }
 
 /* ============================================================
@@ -175,39 +175,41 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   右側目次(TOC)の幅・位置調整
-   - 幅を 8rem に固定
-   - margin-left: auto で右端に押し出し、本文との間の余白を解消
+   右側目次(TOC)の幅・位置・折り返し制御
+   - 幅 14rem(224px)
+   - margin-left: auto で右端に押し出し
+   - リンクは折り返しを許可するが、日本語の禁則処理を厳しめにし
+     半角スペース等での安易な改行を抑止
    ============================================================ */
 .right-sidebar-container {
-  flex: 0 0 8rem !important;
-  width: 8rem !important;
-  max-width: 8rem !important;
-  min-width: 8rem !important;
+  flex: 0 0 14rem !important;
+  width: 14rem !important;
+  max-width: 14rem !important;
+  min-width: 14rem !important;
   margin-left: auto !important;
 }
 
 .right-sidebar {
-  width: 8rem !important;
-  max-width: 8rem !important;
-  min-width: 8rem !important;
+  width: 14rem !important;
+  max-width: 14rem !important;
+  min-width: 14rem !important;
 }
 
 .right-sidebar-panel {
-  width: 8rem !important;
-  max-width: 8rem !important;
-  padding-inline: 0.4rem !important;
+  width: 14rem !important;
+  max-width: 14rem !important;
+  padding-inline: 0.6rem !important;
   padding-block: 1rem !important;
 }
 
 .right-sidebar-panel > .sl-container {
   width: 100% !important;
-  max-width: 8rem !important;
+  max-width: 14rem !important;
 }
 
-/* TOC内部の余白・インデントを詰める */
+/* TOC全体のフォントサイズと余白 */
 starlight-toc nav {
-  font-size: 0.8rem !important;
+  font-size: 0.85rem !important;
 }
 
 starlight-toc ul,
@@ -221,10 +223,20 @@ starlight-toc li {
   padding: 0 !important;
 }
 
+/* TOCリンク: 折り返しは許容、ただし日本語で不自然に切らない */
+starlight-toc a,
+starlight-toc a span {
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  line-break: strict !important;
+  hyphens: none !important;
+}
+
 starlight-toc a {
-  padding-inline: 0.25rem !important;
+  padding-inline: 0.3rem !important;
   padding-block: 0.35rem !important;
-  line-height: 1.4 !important;
+  line-height: 1.5 !important;
 }
 
 starlight-toc h2 {
