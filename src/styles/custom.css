@@ -183,32 +183,30 @@ nav.sidebar a[aria-current="page"] {
    右側目次(TOC)の幅調整
    Starlightは flex レイアウトで右TOCを配置しており、
    flex-basis: auto が残っていると widthを!importantで指定しても
-   効かないため、flex短縮記法で基底幅ごと固定する必要がある
+   効かないため、flex短縮記法で基底幅ごと固定する
    ============================================================ */
-@media (min-width: 72em) {
-  .right-sidebar-container {
-    flex: 0 0 11rem !important;
-    width: 11rem !important;
-    max-width: 11rem !important;
-    min-width: 11rem !important;
-  }
+.right-sidebar-container {
+  flex: 0 0 11rem !important;
+  width: 11rem !important;
+  max-width: 11rem !important;
+  min-width: 11rem !important;
+}
 
-  .right-sidebar {
-    width: 11rem !important;
-    max-width: 11rem !important;
-    min-width: 11rem !important;
-  }
+.right-sidebar {
+  width: 11rem !important;
+  max-width: 11rem !important;
+  min-width: 11rem !important;
+}
 
-  .right-sidebar-panel {
-    width: 11rem !important;
-    max-width: 11rem !important;
-    padding-inline: 0.75rem !important;
-  }
+.right-sidebar-panel {
+  width: 11rem !important;
+  max-width: 11rem !important;
+  padding-inline: 0.75rem !important;
+}
 
-  .right-sidebar-panel > .sl-container {
-    width: 100% !important;
-    max-width: 11rem !important;
-  }
+.right-sidebar-panel > .sl-container {
+  width: 100% !important;
+  max-width: 11rem !important;
 }
 
 /* ============================================================
