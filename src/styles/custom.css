@@ -175,16 +175,16 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   右側目次(TOC)の幅・内側余白・フォントサイズ調整
-   - 幅を 8rem(約128px≒4cm@等倍,5cm@125%スケーリング) に
-   - padding と list のインデントを詰めて実質使える幅を最大化
-   - フォントサイズをやや小さくして1行に入る文字数を増やす
+   右側目次(TOC)の幅・位置調整
+   - 幅を 8rem に固定
+   - margin-left: auto で右端に押し出し、本文との間の余白を解消
    ============================================================ */
 .right-sidebar-container {
   flex: 0 0 8rem !important;
   width: 8rem !important;
   max-width: 8rem !important;
   min-width: 8rem !important;
+  margin-left: auto !important;
 }
 
 .right-sidebar {
@@ -227,7 +227,6 @@ starlight-toc a {
   line-height: 1.4 !important;
 }
 
-/* TOC見出し「目次」自体のサイズ */
 starlight-toc h2 {
   font-size: 0.95rem !important;
   margin-bottom: 0.5rem !important;
