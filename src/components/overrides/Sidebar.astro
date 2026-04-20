@@ -56,7 +56,7 @@ let result: FilterResult | null = null;
 
 if (pathname.includes('/diseases/gynecology')) {
 	result = filterBySection('婦人科');
-} else if (pathname.includes('/diseases/bone') || pathname.includes('/diseases/musculoskeletal')) {
+} else if (pathname.includes('/diseases/bone') || pathname.includes('/diseases/soft-tissue') || pathname.includes('/diseases/musculoskeletal')) {
 	result = filterBySection('骨・関節・軟部');
 }
 

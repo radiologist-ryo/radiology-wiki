@@ -108,6 +108,21 @@ Search: './src/components/overrides/Search.astro',
 										},
 									],
 								},
+								{
+									label: '軟部腫瘍',
+									collapsed: true,
+									items: [
+										{ label: '概要', slug: 'diseases/soft-tissue' },
+										{
+											label: '脂肪性腫瘍',
+											collapsed: false,
+											items: [
+												{ label: '脂肪性腫瘍トップ', slug: 'diseases/soft-tissue/adipocytic' },
+												{ label: '高分化型脂肪肉腫', slug: 'diseases/soft-tissue/adipocytic/well-differentiated-liposarcoma' },
+											],
+										},
+									],
+								},
 							],
 						},
 					],
