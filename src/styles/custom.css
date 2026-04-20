@@ -35,7 +35,7 @@ header.header {
   background-color: var(--rw-navy) !important;
 }
 
-header.header a,
+header.header a:not(site-search *):not(dialog *):not(.rw-search-list *),
 header.header .site-title {
   color: #ffffff !important;
 }
@@ -258,3 +258,4 @@ footer.rw-footer {
   border-left: none !important;
   box-shadow: none !important;
 }
+

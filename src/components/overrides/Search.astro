@@ -1,0 +1,308 @@
+---
+// 自前検索コンポーネント: タイトル部分一致検索
+// /radiology-wiki/search-index.json から [{title, url}] を取得し、
+// クエリ文字列でタイトル部分一致フィルタして結果表示
+---
+
+<site-search>
+  <button data-open-modal disabled aria-label="検索">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="flex-shrink:0;">
+      <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367.494.506.988 1.014 1.358 1.392.192.186.352.341.466.448.109.112.228.201.263.237l2.121-2.121c-.035-.035-.124-.154-.242-.265a14.8 14.8 0 0 0-.443-.467 50.989 50.989 0 0 0-1.392-1.358h-.085zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/>
+    </svg>
+    <span>検索</span>
+    <kbd><kbd>Ctrl</kbd><kbd>K</kbd></kbd>
+  </button>
+  <dialog style="padding:0;" aria-label="検索">
+    <div class="dialog-frame sl-flex">
+      <form class="sl-flex" style="gap:.5rem;flex:1;">
+        <label class="sl-flex" style="flex:1;align-items:center;">
+          <input
+            type="search"
+            id="rw-search-input"
+            placeholder="検索..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </label>
+        <button type="button" data-close-modal aria-label="閉じる">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+            <path d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"/>
+          </svg>
+        </button>
+      </form>
+      <div id="rw-search-results" aria-live="polite"></div>
+    </div>
+  </dialog>
+</site-search>
+
+<script>
+  type SearchEntry = { title: string; url: string };
+
+  class SiteSearch extends HTMLElement {
+    private index: SearchEntry[] | null = null;
+    private loadPromise: Promise<SearchEntry[]> | null = null;
+
+    connectedCallback() {
+      const openBtn = this.querySelector<HTMLButtonElement>('button[data-open-modal]')!;
+      const closeBtn = this.querySelector<HTMLButtonElement>('button[data-close-modal]')!;
+      const dialog = this.querySelector<HTMLDialogElement>('dialog')!;
+      const input = this.querySelector<HTMLInputElement>('#rw-search-input')!;
+      const resultsEl = this.querySelector<HTMLDivElement>('#rw-search-results')!;
+
+      openBtn.disabled = false;
+
+      const openDialog = () => {
+        dialog.showModal();
+        document.documentElement.setAttribute('data-search-modal-open', '');
+        this.ensureIndex();
+        requestAnimationFrame(() => input.focus());
+      };
+
+      const closeDialog = () => {
+        dialog.close();
+        document.documentElement.removeAttribute('data-search-modal-open');
+      };
+
+      openBtn.addEventListener('click', openDialog);
+      closeBtn.addEventListener('click', closeDialog);
+
+      dialog.addEventListener('close', () => {
+        document.documentElement.removeAttribute('data-search-modal-open');
+      });
+
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) closeDialog();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          if (dialog.open) closeDialog();
+          else openDialog();
+        }
+      });
+
+      let debounceTimer: number | null = null;
+      input.addEventListener('input', () => {
+        if (debounceTimer) window.clearTimeout(debounceTimer);
+        debounceTimer = window.setTimeout(() => {
+          this.runSearch(input.value, resultsEl);
+        }, 100);
+      });
+
+      // リンククリックでダイアログを閉じる
+      resultsEl.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).tagName === 'A') closeDialog();
+      });
+    }
+
+    private async ensureIndex(): Promise<SearchEntry[]> {
+      if (this.index) return this.index;
+      if (this.loadPromise) return this.loadPromise;
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      this.loadPromise = fetch(`${base}/search-index.json`)
+        .then((r) => r.json())
+        .then((data: SearchEntry[]) => {
+          this.index = data;
+          return data;
+        });
+      return this.loadPromise;
+    }
+
+    private async runSearch(query: string, resultsEl: HTMLDivElement) {
+      const q = query.trim();
+      if (!q) {
+        resultsEl.innerHTML = '';
+        return;
+      }
+      const index = await this.ensureIndex();
+      const qLower = q.toLowerCase();
+      const hits = index.filter((entry) =>
+        entry.title.toLowerCase().includes(qLower)
+      );
+
+      if (hits.length === 0) {
+        resultsEl.innerHTML = `<p class="rw-search-no-results">「${escapeHtml(q)}」に一致するページが見つかりません。</p>`;
+        return;
+      }
+
+      resultsEl.innerHTML =
+        `<p class="rw-search-count">${hits.length} 件ヒット</p>` +
+        `<ul class="rw-search-list">${hits
+          .map((h) => `<li><a href="${h.url}">${escapeHtml(h.title)}</a></li>`)
+          .join('')}</ul>`;
+    }
+  }
+
+  function escapeHtml(s: string): string {
+    return s
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  customElements.define('site-search', SiteSearch);
+</script>
+
+<style is:global>
+  /* ============================================================
+     自前検索ダイアログ
+     ============================================================ */
+  site-search {
+    display: contents;
+  }
+
+  site-search button[data-open-modal] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0;
+    background-color: transparent;
+    color: var(--sl-color-gray-1);
+    cursor: pointer;
+    height: 2.5rem;
+    font-size: var(--sl-text-xl);
+  }
+
+  @media (min-width: 50rem) {
+    site-search button[data-open-modal] {
+      border: 1px solid var(--sl-color-gray-5);
+      border-radius: 0.5rem;
+      padding-inline-start: 0.75rem;
+      padding-inline-end: 0.5rem;
+      background-color: var(--sl-color-black);
+      color: var(--sl-color-gray-2);
+      font-size: var(--sl-text-sm);
+      width: 100%;
+      max-width: 22rem;
+    }
+    site-search button[data-open-modal]:hover {
+      border-color: var(--sl-color-gray-2);
+      color: var(--sl-color-white);
+    }
+    site-search button[data-open-modal] > kbd {
+      margin-inline-start: auto;
+    }
+  }
+
+  site-search button[data-open-modal] > kbd {
+    border-radius: 0.25rem;
+    font-size: var(--sl-text-2xs);
+    gap: 0.25em;
+    padding-inline: 0.375rem;
+    background-color: var(--sl-color-gray-6);
+  }
+  site-search kbd {
+    font-family: inherit;
+  }
+
+  [data-search-modal-open] {
+    overflow: hidden;
+  }
+
+  site-search dialog {
+    margin: 0;
+    background-color: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    box-shadow: var(--sl-shadow-lg);
+  }
+  site-search dialog[open] {
+    display: flex;
+  }
+  site-search dialog::backdrop {
+    background-color: var(--sl-color-backdrop-overlay);
+    -webkit-backdrop-filter: blur(0.25rem);
+    backdrop-filter: blur(0.25rem);
+  }
+
+  @media (min-width: 50rem) {
+    site-search dialog {
+      margin: 4rem auto auto;
+      border-radius: 0.5rem;
+      width: 90%;
+      max-width: 40rem;
+      height: max-content;
+      min-height: 15rem;
+      max-height: calc(100% - 8rem);
+    }
+  }
+
+  site-search .dialog-frame {
+    position: relative;
+    overflow: auto;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  @media (min-width: 50rem) {
+    site-search .dialog-frame {
+      padding: 1.5rem;
+    }
+  }
+
+  site-search #rw-search-input {
+    width: 100%;
+    height: 2.75rem;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    color: #1a2744;
+    border: 1px solid var(--rw-border, #e8edf5);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  site-search #rw-search-input:focus {
+    outline: none;
+    border-color: var(--rw-accent, #1a73e8);
+  }
+
+  site-search button[data-close-modal] {
+    align-self: flex-start;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--sl-color-text-accent);
+  }
+
+  /* 結果リストのミニマル表示 */
+  .rw-search-count {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+  .rw-search-no-results {
+    color: var(--sl-color-gray-3);
+    font-size: 0.9rem;
+  }
+  .rw-search-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .rw-search-list li {
+    margin: 0;
+    padding: 0;
+  }
+  .rw-search-list a {
+    display: block;
+    padding: 0.5rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--rw-accent, #1a73e8) !important;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  .rw-search-list a:hover {
+    text-decoration: underline;
+    background-color: var(--rw-accent-bg, #f0f4ff) !important;
+    color: var(--rw-accent, #1a73e8) !important;
+  }
+</style>
