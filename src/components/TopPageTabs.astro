@@ -52,9 +52,9 @@
         <div class="organ-card__title">泌尿器</div>
         <div class="organ-card__sub">腎・膀胱・前立腺</div>
       </a>
-      <a href="/radiology-wiki/diseases/gynecology/" class="organ-card">
-        <div class="organ-card__title">婦人科</div>
-        <div class="organ-card__sub">卵巣・子宮</div>
+      <a href="/radiology-wiki/obgyn/" class="organ-card">
+        <div class="organ-card__title">産婦人科</div>
+        <div class="organ-card__sub">婦人科・産科</div>
       </a>
       <a href="/radiology-wiki/diseases/pediatrics/" class="organ-card">
         <div class="organ-card__title">小児</div>
@@ -78,21 +78,26 @@
 </div>
 
 <script>
-  const btnDiseases = document.getElementById('btn-diseases') as HTMLButtonElement;
-  const btnDifferentials = document.getElementById('btn-differentials') as HTMLButtonElement;
-  const tabDiseases = document.getElementById('tab-diseases') as HTMLElement;
-  const tabDifferentials = document.getElementById('tab-differentials') as HTMLElement;
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnDiseases = document.getElementById('btn-diseases');
+    const btnDifferentials = document.getElementById('btn-differentials');
+    const tabDiseases = document.getElementById('tab-diseases');
+    const tabDifferentials = document.getElementById('tab-differentials');
 
-  function showTab(tab: string) {
-    const isDiseases = tab === 'diseases';
-    tabDiseases.style.display = isDiseases ? 'block' : 'none';
-    tabDifferentials.style.display = isDiseases ? 'none' : 'block';
-    btnDiseases.classList.toggle('tab-btn--active', isDiseases);
-    btnDifferentials.classList.toggle('tab-btn--active', !isDiseases);
-  }
+    btnDiseases?.addEventListener('click', () => {
+      btnDiseases.classList.add('tab-btn--active');
+      btnDifferentials?.classList.remove('tab-btn--active');
+      if (tabDiseases) tabDiseases.style.display = '';
+      if (tabDifferentials) tabDifferentials.style.display = 'none';
+    });
 
-  btnDiseases.addEventListener('click', () => showTab('diseases'));
-  btnDifferentials.addEventListener('click', () => showTab('differentials'));
+    btnDifferentials?.addEventListener('click', () => {
+      btnDifferentials.classList.add('tab-btn--active');
+      btnDiseases?.classList.remove('tab-btn--active');
+      if (tabDifferentials) tabDifferentials.style.display = '';
+      if (tabDiseases) tabDiseases.style.display = 'none';
+    });
+  });
 </script>
 
 <style>

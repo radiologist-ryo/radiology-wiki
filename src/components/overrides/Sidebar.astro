@@ -2,9 +2,11 @@
 /**
  * Custom Sidebar override.
  * Shows only the section tree relevant to the current URL path:
- *   /diseases/gynecology/* → 婦人科 tree
- *   /diseases/bone/*       → 骨・関節・軟部 tree
- *   otherwise              → full sidebar
+ *   /obgyn/*                 → 産婦人科 tree
+ *   /diseases/bone/*         → 骨・関節・軟部 tree
+ *   /diseases/soft-tissue/*  → 骨・関節・軟部 tree
+ *   /diseases/musculoskeletal/* → 骨・関節・軟部 tree
+ *   otherwise                → full sidebar
  *
  * isCurrent flags are computed by Starlight via Astro.locals.starlightRoute.sidebar,
  * so we just filter the pre-processed data.
@@ -35,43 +37,27 @@ const sidebar = (Astro.locals.starlightRoute as any).sidebar as SidebarEntry[];
 const pathname = Astro.url.pathname;
 const base = '/radiology-wiki';
 
-// Find the top-level '疾患別' group
-const diseasesGroup = sidebar.find(
-	(e): e is SidebarGroup => e.type === 'group' && e.label === '疾患別'
-);
-
-type FilterResult = { entries: SidebarEntry[]; withBack: boolean };
-
-function filterBySection(label: string): FilterResult | null {
-	if (!diseasesGroup) return null;
-	const match = diseasesGroup.entries.find(
+function filterTopLevel(label: string): SidebarEntry[] | null {
+	const match = sidebar.find(
 		(e): e is SidebarGroup => e.type === 'group' && e.label === label
 	);
 	if (!match) return null;
-	// Force the top-level section group to be always open
-	return { entries: [{ ...match, collapsed: false }], withBack: true };
+	return [{ ...match, collapsed: false }];
 }
 
-let result: FilterResult | null = null;
+let filtered: SidebarEntry[] | null = null;
 
-if (pathname.includes('/diseases/gynecology')) {
-	result = filterBySection('婦人科');
-} else if (pathname.includes('/diseases/bone') || pathname.includes('/diseases/soft-tissue') || pathname.includes('/diseases/musculoskeletal')) {
-	result = filterBySection('骨・関節・軟部');
+if (pathname.includes('/obgyn/')) {
+	filtered = filterTopLevel('産婦人科');
+} else if (
+	pathname.includes('/diseases/bone') ||
+	pathname.includes('/diseases/soft-tissue') ||
+	pathname.includes('/diseases/musculoskeletal')
+) {
+	filtered = filterTopLevel('骨・関節・軟部');
 }
 
-const backLink: SidebarLink = {
-	type: 'link',
-	label: '← カテゴリ一覧',
-	href: `${base}/diseases/`,
-	isCurrent: false,
-	badge: undefined,
-	attrs: { class: 'back-link' },
-};
-
-const displayEntries: SidebarEntry[] = result
-	? [backLink, ...result.entries]
-	: sidebar;
+const displayEntries: SidebarEntry[] = filtered ?? sidebar;
 ---
 
 <SidebarList entries={displayEntries} />
@@ -80,19 +66,36 @@ const displayEntries: SidebarEntry[] = result
 	<MobileMenuFooter />
 </div>
 
-<style>
-	@layer starlight.core {
-		/* 「← カテゴリ一覧」リンクのスタイル */
-		:global(.back-link) {
-			color: var(--sl-color-gray-3) !important;
-			font-size: var(--sl-text-xs) !important;
-			opacity: 0.8;
-			margin-bottom: 0.75rem !important;
-			display: block;
-		}
-		:global(.back-link:hover) {
-			color: var(--sl-color-white) !important;
-			opacity: 1;
-		}
+<script is:inline>
+(function () {
+	function initSidebarHandlers() {
+		document.querySelectorAll('nav.sidebar details > summary').forEach(function (summary) {
+			summary.addEventListener('click', function (e) {
+				var link = e.target.closest('a.group-label-link');
+				if (link) {
+					// <a> クリック: details の toggle を防いでナビゲーション
+					e.preventDefault();
+					window.location.assign(link.href);
+					return;
+				}
+				var caretBtn = e.target.closest('.caret-btn');
+				if (caretBtn) {
+					// caret クリック: details.open を手動 toggle し、summary の default は防ぐ
+					e.preventDefault();
+					var details = summary.closest('details');
+					details.open = !details.open;
+					caretBtn.setAttribute('aria-expanded', String(details.open));
+					return;
+				}
+				// summary 余白クリック: default の toggle を防ぐ（caret 専用にする）
+				e.preventDefault();
+			});
+		});
 	}
-</style>
+
+	document.addEventListener('DOMContentLoaded', initSidebarHandlers);
+	// Astro View Transitions 対応
+	document.addEventListener('astro:page-load', initSidebarHandlers);
+})();
+</script>
+

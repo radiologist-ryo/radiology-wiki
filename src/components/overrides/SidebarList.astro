@@ -1,7 +1,16 @@
 ---
 /**
- * Recursive sidebar renderer — mirrors SidebarSublist.astro logic
- * using Astro.self for recursion instead of importing the internal component.
+ * Recursive sidebar renderer.
+ *
+ * Groups with a `__group_index__` marker item get a clickable label <a> that
+ * navigates to the group's index page.  The caret <button> independently
+ * controls expand/collapse so the two actions never interfere.
+ *
+ * Implementation (Approach B):
+ *   - summary onclick="event.preventDefault()" disables the browser's built-in
+ *     details-toggle on the whole summary area.
+ *   - Only the caret <button> toggles details.open (via inline JS).
+ *   - The label <a> is a pure navigation link; clicking it does NOT toggle.
  */
 
 type SidebarLink = {
@@ -33,47 +42,87 @@ function hasActive(items: SidebarEntry[]): boolean {
 		e.type === 'link' ? e.isCurrent : hasActive(e.entries)
 	);
 }
+
+type GroupInfo = { href: string; children: SidebarEntry[] };
+
+function extractGroupIndex(entries: SidebarEntry[]): GroupInfo | null {
+	const idx = entries.findIndex(
+		(e): e is SidebarLink => e.type === 'link' && e.label === '__group_index__'
+	);
+	if (idx === -1) return null;
+	return {
+		href: (entries[idx] as SidebarLink).href,
+		children: entries.filter((_, i) => i !== idx),
+	};
+}
 ---
 
 <ul class:list={{ 'top-level': !nested }}>
 	{
-		entries.map((entry) => (
-			<li>
-				{entry.type === 'link' ? (
-					<a
-						href={entry.href}
-						aria-current={entry.isCurrent ? 'page' : undefined}
-						class:list={[{ large: !nested }, (entry.attrs as any)?.class]}
-						{...(entry.attrs ?? {})}
-					>
-						<span>{entry.label}</span>
-					</a>
-				) : (
-					<details open={hasActive(entry.entries) || !entry.collapsed}>
+		entries.map((entry) => {
+			if (entry.type === 'link') {
+				return (
+					<li>
+						<a
+							href={entry.href}
+							aria-current={entry.isCurrent ? 'page' : undefined}
+							class:list={[{ large: !nested }, (entry.attrs as any)?.class]}
+							{...(entry.attrs ?? {})}
+						>
+							<span>{entry.label}</span>
+						</a>
+					</li>
+				);
+			}
+
+			const groupInfo = extractGroupIndex(entry.entries);
+			const groupIndexHref = groupInfo?.href ?? null;
+			const childEntries = groupInfo?.children ?? entry.entries;
+			const isOpen = hasActive(entry.entries) || !entry.collapsed;
+
+			return (
+				<li>
+					<details open={isOpen}>
 						<summary>
 							<span class="group-label">
-								<span class:list={[{ large: !nested }]}>{entry.label}</span>
+								{groupIndexHref ? (
+									<a
+										href={groupIndexHref}
+										class:list={['group-label-link', { large: !nested }]}
+									>
+										{entry.label}
+									</a>
+								) : (
+									<span class:list={[{ large: !nested }]}>{entry.label}</span>
+								)}
 							</span>
-							<svg
-								class="caret"
-								width="1.25rem"
-								height="1.25rem"
-								viewBox="0 0 24 24"
-								aria-hidden="true"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
+							<button
+								type="button"
+								class="caret-btn"
+								aria-label={`${entry.label}を展開・折りたたむ`}
+								aria-expanded={isOpen ? 'true' : 'false'}
 							>
-								<polyline points="9 18 15 12 9 6" />
-							</svg>
+								<svg
+									class="caret"
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="9 18 15 12 9 6" />
+								</svg>
+							</button>
 						</summary>
-						<Astro.self entries={entry.entries} nested />
+						<Astro.self entries={childEntries} nested />
 					</details>
-				)}
-			</li>
-		))
+				</li>
+			);
+		})
 	}
 </ul>
 
@@ -111,7 +160,7 @@ function hasActive(items: SidebarEntry[]): boolean {
 			justify-content: space-between;
 			padding: 0.2em var(--sl-sidebar-item-padding-inline);
 			line-height: 1.4;
-			cursor: pointer;
+			cursor: default;
 			user-select: none;
 		}
 		summary::marker,
@@ -119,9 +168,33 @@ function hasActive(items: SidebarEntry[]): boolean {
 			display: none;
 		}
 
+		/* Caret toggle button */
+		.caret-btn {
+			background: transparent;
+			border: none;
+			padding: 4px;
+			margin: 0;
+			cursor: pointer;
+			color: inherit;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			width: 24px;
+			height: 24px;
+			border-radius: 0.25rem;
+			line-height: 0;
+		}
+
+		.caret-btn:hover {
+			background: var(--sl-color-gray-6, rgba(255, 255, 255, 0.08));
+		}
+
 		.caret {
 			transition: transform 0.2s ease-in-out;
 			flex-shrink: 0;
+			width: 14px;
+			height: 14px;
 		}
 		:global([dir='rtl']) .caret {
 			transform: rotateZ(180deg);
@@ -150,6 +223,16 @@ function hasActive(items: SidebarEntry[]): boolean {
 			font-weight: 600;
 			color: var(--sl-color-text-invert);
 			background-color: var(--sl-color-text-accent);
+		}
+
+		/* Group label link: inline inside summary flex row */
+		.group-label-link {
+			display: inline;
+			padding: 0;
+		}
+
+		.group-label-link.large {
+			color: var(--sl-color-white);
 		}
 
 		a > *:not(:last-child),

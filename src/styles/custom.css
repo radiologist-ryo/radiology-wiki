@@ -158,7 +158,8 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   カード(LinkCard)
+   カード(LinkCard) — hover エフェクトと余白のみ調整
+   （Starlight の display:grid / grid-template-columns は維持）
    ============================================================ */
 .sl-link-card {
   margin-bottom: 1rem;
@@ -172,6 +173,11 @@ nav.sidebar a[aria-current="page"] {
 
 .sl-link-card:last-child {
   margin-bottom: 4rem;
+}
+
+/* CardGrid: 各カードを自然な高さに（等高行を解除） */
+.card-grid {
+  align-items: start;
 }
 
 /* ============================================================
@@ -242,6 +248,26 @@ starlight-toc a {
 starlight-toc h2 {
   font-size: 0.95rem !important;
   margin-bottom: 0.5rem !important;
+}
+
+/* ============================================================
+   本文エリアの下部余白を確保（右TOC最下項目までアクティブ化可能に）
+   ============================================================ */
+.main-frame main > .sl-markdown-content,
+.main-pane .sl-markdown-content {
+  padding-bottom: 10rem;
+}
+
+/* ============================================================
+   サイドバーは画面いっぱい使う
+   ============================================================ */
+.sidebar-pane {
+  max-height: calc(100vh - var(--sl-nav-height));
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  padding-bottom: 4rem;
 }
 
 /* ============================================================
