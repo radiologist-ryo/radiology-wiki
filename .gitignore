@@ -25,3 +25,11 @@ TASK.md
 
 # Claude Code local settings
 .claude/
+
+# Generated outputs from generate-stubs script
+scripts/generate-stubs/sidebar-output.mjs
+scripts/generate-stubs/segment-labels-output.txt
+scripts/generate-stubs/sidebar-branches-output.txt
+
+# Local task log (退避用)
+TASK_old.md

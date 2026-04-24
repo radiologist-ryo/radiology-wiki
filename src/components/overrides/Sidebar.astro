@@ -49,12 +49,32 @@ let filtered: SidebarEntry[] | null = null;
 
 if (pathname.includes('/obgyn/')) {
 	filtered = filterTopLevel('産婦人科');
-} else if (
-	pathname.includes('/diseases/bone') ||
-	pathname.includes('/diseases/soft-tissue') ||
-	pathname.includes('/diseases/musculoskeletal')
-) {
+} else if (pathname.includes('/diseases/brain/') || pathname.endsWith('/diseases/brain')) {
+	filtered = filterTopLevel('中枢神経');
+} else if (pathname.includes('/diseases/head-neck/') || pathname.endsWith('/diseases/head-neck')) {
+	filtered = filterTopLevel('頭頸部');
+} else if (pathname.includes('/diseases/spine/') || pathname.endsWith('/diseases/spine')) {
+	filtered = filterTopLevel('脊椎・脊髄');
+} else if (pathname.includes('/diseases/musculoskeletal/') || pathname.endsWith('/diseases/musculoskeletal')) {
 	filtered = filterTopLevel('骨・関節・軟部');
+} else if (pathname.includes('/diseases/chest/') || pathname.endsWith('/diseases/chest')) {
+	filtered = filterTopLevel('呼吸器・縦隔');
+} else if (pathname.includes('/diseases/cardiovascular/') || pathname.endsWith('/diseases/cardiovascular')) {
+	filtered = filterTopLevel('心・血管');
+} else if (pathname.includes('/diseases/breast/') || pathname.endsWith('/diseases/breast')) {
+	filtered = filterTopLevel('乳腺');
+} else if (pathname.includes('/diseases/hepatobiliary/') || pathname.endsWith('/diseases/hepatobiliary')) {
+	filtered = filterTopLevel('消化器（肝・胆・膵）');
+} else if (pathname.includes('/diseases/gi/') || pathname.endsWith('/diseases/gi')) {
+	filtered = filterTopLevel('消化管・腹膜');
+} else if (pathname.includes('/diseases/urinary/') || pathname.endsWith('/diseases/urinary')) {
+	filtered = filterTopLevel('泌尿器');
+} else if (pathname.includes('/diseases/pediatrics/') || pathname.endsWith('/diseases/pediatrics')) {
+	filtered = filterTopLevel('小児');
+} else if (pathname.includes('/diseases/ivr/') || pathname.endsWith('/diseases/ivr')) {
+	filtered = filterTopLevel('IVR');
+} else if (pathname.includes('/diseases/nuclear/') || pathname.endsWith('/diseases/nuclear')) {
+	filtered = filterTopLevel('核医学');
 }
 
 const displayEntries: SidebarEntry[] = filtered ?? sidebar;

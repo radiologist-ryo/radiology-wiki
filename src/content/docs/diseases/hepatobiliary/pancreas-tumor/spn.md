@@ -1,0 +1,26 @@
+---
+title: Solid pseudopapillary neoplasm（SPN）
+description: Solid pseudopapillary neoplasm（SPN）の画像診断まとめ
+---
+
+## 概要
+
+執筆予定。
+
+---
+
+## 画像所見
+
+執筆予定。
+
+---
+
+## 鑑別診断
+
+執筆予定。
+
+---
+
+## 参考文献
+
+執筆予定。

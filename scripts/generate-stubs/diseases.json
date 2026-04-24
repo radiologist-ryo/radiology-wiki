@@ -1,0 +1,1709 @@
+{
+  "organs": [
+    {
+      "dir": "brain",
+      "label": "中枢神経",
+      "description": "脳腫瘍・脳血管障害・脱髄・変性・感染・外傷・先天奇形の画像診断",
+      "items": [
+        {
+          "dir": "brain-tumor",
+          "label": "脳腫瘍",
+          "description": "神経膠腫・髄膜腫・下垂体腺腫・転移など",
+          "items": [
+            { "slug": "glioma-general", "label": "神経膠腫総論" },
+            { "slug": "diffuse-glioma-idh-mutant", "label": "びまん性星細胞腫/乏突起膠腫（IDH変異型）" },
+            { "slug": "glioblastoma", "label": "膠芽腫（IDH野生型）" },
+            { "slug": "ependymoma", "label": "上衣腫" },
+            { "slug": "choroid-plexus-tumor", "label": "脈絡叢腫瘍" },
+            { "slug": "medulloblastoma", "label": "髄芽腫" },
+            { "slug": "cns-germ-cell-tumor", "label": "胚細胞性腫瘍（胚腫・奇形腫）" },
+            { "slug": "pcnsl", "label": "中枢神経系原発悪性リンパ腫（PCNSL）" },
+            { "slug": "meningioma", "label": "髄膜腫" },
+            { "slug": "schwannoma", "label": "神経鞘腫(前庭神経鞘腫など)" },
+            { "slug": "pituitary-adenoma", "label": "下垂体腺腫" },
+            { "slug": "craniopharyngioma", "label": "頭蓋咽頭腫" },
+            { "slug": "hemangioblastoma", "label": "血管芽腫" },
+            { "slug": "brain-metastasis", "label": "転移性脳腫瘍" },
+            { "slug": "epidermoid-dermoid", "label": "類上皮腫・皮様嚢腫" },
+            { "slug": "colloid-cyst", "label": "コロイド嚢胞" }
+          ]
+        },
+        {
+          "dir": "cerebrovascular",
+          "label": "脳血管障害",
+          "description": "脳梗塞・脳出血・動脈瘤・AVMなど",
+          "items": [
+            { "slug": "cerebral-infarction-general", "label": "脳梗塞総論" },
+            { "slug": "atherothrombotic-infarction", "label": "アテローム血栓性脳梗塞" },
+            { "slug": "cardioembolic-infarction", "label": "心原性脳塞栓症" },
+            { "slug": "lacunar-infarction", "label": "ラクナ梗塞" },
+            { "slug": "watershed-infarction", "label": "分水嶺梗塞" },
+            { "slug": "cerebral-venous-thrombosis", "label": "脳静脈洞血栓症" },
+            { "slug": "hypertensive-hemorrhage", "label": "脳出血（高血圧性）" },
+            { "slug": "subarachnoid-hemorrhage", "label": "くも膜下出血" },
+            { "slug": "cerebral-aneurysm", "label": "脳動脈瘤" },
+            { "slug": "brain-avm", "label": "脳動静脈奇形（AVM）" },
+            { "slug": "dural-avf", "label": "硬膜動静脈瘻（dAVF）" },
+            { "slug": "cavernous-malformation", "label": "海綿状血管腫" },
+            { "slug": "dva", "label": "発達性静脈奇形（DVA）" },
+            { "slug": "moyamoya", "label": "もやもや病" },
+            { "slug": "rcvs", "label": "可逆性脳血管攣縮症候群（RCVS）" },
+            { "slug": "pres", "label": "PRES（可逆性後頭葉白質脳症）" }
+          ]
+        },
+        {
+          "dir": "demyelinating",
+          "label": "脱髄・炎症性疾患",
+          "description": "MS・NMOSD・ADEM・PMLなど",
+          "items": [
+            { "slug": "multiple-sclerosis", "label": "多発性硬化症（MS）" },
+            { "slug": "nmosd", "label": "視神経脊髄炎スペクトラム障害（NMOSD）" },
+            { "slug": "mogad", "label": "MOG抗体関連疾患" },
+            { "slug": "adem", "label": "急性散在性脳脊髄炎（ADEM）" },
+            { "slug": "pml", "label": "進行性多巣性白質脳症（PML）" },
+            { "slug": "neuro-behcet", "label": "神経Behçet病" },
+            { "slug": "neurosarcoidosis", "label": "神経サルコイドーシス" }
+          ]
+        },
+        {
+          "dir": "degenerative",
+          "label": "変性・認知症",
+          "description": "Alzheimer病・Parkinson病・ALSなど",
+          "items": [
+            { "slug": "alzheimer", "label": "Alzheimer病" },
+            { "slug": "dementia-with-lewy-bodies", "label": "レビー小体型認知症" },
+            { "slug": "ftld", "label": "前頭側頭葉変性症" },
+            { "slug": "vascular-dementia", "label": "血管性認知症" },
+            { "slug": "nph", "label": "正常圧水頭症" },
+            { "slug": "parkinson-disease", "label": "Parkinson病" },
+            { "slug": "msa", "label": "多系統萎縮症（MSA）" },
+            { "slug": "psp", "label": "進行性核上性麻痺（PSP）" },
+            { "slug": "huntington-disease", "label": "Huntington病" },
+            { "slug": "als", "label": "筋萎縮性側索硬化症（ALS）" }
+          ]
+        },
+        {
+          "dir": "infection",
+          "label": "感染症",
+          "description": "髄膜炎・脳炎・脳膿瘍など",
+          "items": [
+            { "slug": "bacterial-meningitis", "label": "細菌性髄膜炎" },
+            { "slug": "viral-encephalitis", "label": "ウイルス性脳炎（単純ヘルペス脳炎など）" },
+            { "slug": "tb-meningitis", "label": "結核性髄膜炎" },
+            { "slug": "fungal-infection", "label": "真菌感染" },
+            { "slug": "brain-abscess", "label": "脳膿瘍" },
+            { "slug": "neurosyphilis", "label": "神経梅毒" },
+            { "slug": "hiv-encephalopathy", "label": "HIV関連脳症" },
+            { "slug": "cjd", "label": "Creutzfeldt-Jakob病" }
+          ]
+        },
+        {
+          "dir": "trauma-other",
+          "label": "外傷・その他",
+          "description": "頭部外傷・血腫など",
+          "items": [
+            { "slug": "acute-epidural-hematoma", "label": "急性硬膜外血腫" },
+            { "slug": "acute-subdural-hematoma", "label": "急性硬膜下血腫" },
+            { "slug": "chronic-subdural-hematoma", "label": "慢性硬膜下血腫" },
+            { "slug": "traumatic-sah", "label": "外傷性くも膜下出血" },
+            { "slug": "dai", "label": "びまん性軸索損傷" },
+            { "slug": "cerebral-contusion", "label": "脳挫傷" }
+          ]
+        },
+        {
+          "dir": "congenital",
+          "label": "先天奇形",
+          "description": "Chiari奇形・神経皮膚症候群など",
+          "items": [
+            { "slug": "chiari-malformation", "label": "Chiari奇形" },
+            { "slug": "dandy-walker", "label": "Dandy-Walker奇形" },
+            { "slug": "corpus-callosum-agenesis", "label": "脳梁欠損" },
+            { "slug": "holoprosencephaly", "label": "全前脳胞症" },
+            { "slug": "cortical-malformation", "label": "皮質形成異常" },
+            { "slug": "tuberous-sclerosis", "label": "結節性硬化症" },
+            { "slug": "nf1-nf2", "label": "神経線維腫症1型・2型" },
+            { "slug": "sturge-weber", "label": "Sturge-Weber症候群" },
+            { "slug": "vhl", "label": "von Hippel-Lindau病" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "head-neck",
+      "label": "頭頸部",
+      "description": "眼窩・副鼻腔・耳・咽喉頭・唾液腺・甲状腺・頸部の画像診断",
+      "items": [
+        {
+          "dir": "orbit",
+          "label": "眼窩",
+          "description": "眼窩腫瘍・甲状腺眼症など",
+          "items": [
+            { "slug": "orbital-cellulitis", "label": "眼窩蜂窩織炎" },
+            { "slug": "thyroid-eye-disease", "label": "甲状腺眼症" },
+            { "slug": "igg4-orbital-disease", "label": "IgG4関連眼窩疾患" },
+            { "slug": "orbital-cavernous-malformation", "label": "眼窩内海綿状血管奇形" },
+            { "slug": "optic-nerve-glioma", "label": "視神経膠腫" },
+            { "slug": "optic-nerve-sheath-meningioma", "label": "視神経鞘髄膜腫" },
+            { "slug": "orbital-lymphoma", "label": "眼窩リンパ腫" },
+            { "slug": "orbital-metastasis", "label": "眼窩転移" }
+          ]
+        },
+        {
+          "dir": "sinonasal",
+          "label": "副鼻腔・鼻腔",
+          "description": "副鼻腔炎・鼻副鼻腔腫瘍",
+          "items": [
+            { "slug": "sinusitis", "label": "急性/慢性副鼻腔炎" },
+            { "slug": "fungal-sinusitis", "label": "真菌性副鼻腔炎" },
+            { "slug": "mucocele", "label": "副鼻腔粘液嚢胞" },
+            { "slug": "inverted-papilloma", "label": "反転性乳頭腫" },
+            { "slug": "esthesioneuroblastoma", "label": "嗅神経芽細胞腫" },
+            { "slug": "nasopharyngeal-carcinoma", "label": "上咽頭癌" },
+            { "slug": "sinonasal-scc", "label": "鼻副鼻腔扁平上皮癌" },
+            { "slug": "nk-t-lymphoma", "label": "鼻NK/T細胞リンパ腫" }
+          ]
+        },
+        {
+          "dir": "temporal-bone",
+          "label": "耳・側頭骨",
+          "description": "中耳炎・真珠腫・傍神経節腫",
+          "items": [
+            { "slug": "otitis-mastoiditis", "label": "中耳炎・乳突蜂巣炎" },
+            { "slug": "cholesteatoma", "label": "真珠腫" },
+            { "slug": "facial-nerve-schwannoma", "label": "顔面神経鞘腫" },
+            { "slug": "glomus-tumor", "label": "傍神経節腫（glomus tumor）" },
+            { "slug": "temporal-bone-fracture", "label": "側頭骨骨折" }
+          ]
+        },
+        {
+          "dir": "pharynx-larynx",
+          "label": "咽頭・喉頭",
+          "description": "咽頭癌・喉頭癌・膿瘍",
+          "items": [
+            { "slug": "oropharyngeal-carcinoma", "label": "中咽頭癌" },
+            { "slug": "hypopharyngeal-carcinoma", "label": "下咽頭癌" },
+            { "slug": "laryngeal-carcinoma", "label": "喉頭癌" },
+            { "slug": "peritonsillar-abscess", "label": "扁桃周囲膿瘍" },
+            { "slug": "retropharyngeal-abscess", "label": "咽後膿瘍" }
+          ]
+        },
+        {
+          "dir": "oral-mandible",
+          "label": "口腔・顎",
+          "description": "口腔癌・顎骨病変",
+          "items": [
+            { "slug": "tongue-cancer", "label": "舌癌" },
+            { "slug": "floor-of-mouth-cancer", "label": "口腔底癌" },
+            { "slug": "osteomyelitis-of-jaw", "label": "顎骨骨髄炎" },
+            { "slug": "odontogenic-cyst", "label": "歯原性嚢胞（含歯性嚢胞など）" },
+            { "slug": "ameloblastoma", "label": "エナメル上皮腫" }
+          ]
+        },
+        {
+          "dir": "salivary",
+          "label": "唾液腺",
+          "description": "唾液腺腫瘍・炎症性疾患",
+          "items": [
+            { "slug": "pleomorphic-adenoma", "label": "多形腺腫" },
+            { "slug": "warthin-tumor", "label": "Warthin腫瘍" },
+            { "slug": "mucoepidermoid-carcinoma", "label": "粘表皮癌" },
+            { "slug": "adenoid-cystic-carcinoma", "label": "腺様嚢胞癌" },
+            { "slug": "igg4-sialadenitis", "label": "IgG4関連唾液腺炎" },
+            { "slug": "sjogren-syndrome", "label": "Sjögren症候群" },
+            { "slug": "sialolithiasis", "label": "唾石症" }
+          ]
+        },
+        {
+          "dir": "thyroid-parathyroid",
+          "label": "甲状腺・副甲状腺",
+          "description": "甲状腺癌・副甲状腺腺腫",
+          "items": [
+            { "slug": "papillary-thyroid-carcinoma", "label": "乳頭癌" },
+            { "slug": "follicular-thyroid-carcinoma", "label": "濾胞癌" },
+            { "slug": "medullary-thyroid-carcinoma", "label": "髄様癌" },
+            { "slug": "anaplastic-thyroid-carcinoma", "label": "未分化癌" },
+            { "slug": "thyroid-lymphoma", "label": "甲状腺リンパ腫" },
+            { "slug": "hashimoto-graves", "label": "橋本病・Basedow病" },
+            { "slug": "parathyroid-adenoma", "label": "副甲状腺腺腫" }
+          ]
+        },
+        {
+          "dir": "neck-other",
+          "label": "頸部リンパ節・その他",
+          "description": "頸部リンパ節病変・先天性嚢胞など",
+          "items": [
+            { "slug": "cervical-lymph-node-metastasis", "label": "頸部リンパ節転移" },
+            { "slug": "cervical-lymphoma", "label": "悪性リンパ腫（頸部）" },
+            { "slug": "branchial-cleft-cyst", "label": "鰓裂嚢胞" },
+            { "slug": "thyroglossal-duct-cyst", "label": "甲状舌管嚢胞" },
+            { "slug": "lymphatic-malformation", "label": "リンパ管奇形" },
+            { "slug": "carotid-body-tumor", "label": "頸動脈小体腫瘍" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "spine",
+      "label": "脊椎・脊髄",
+      "description": "脊椎変性・脊髄腫瘍・炎症・血管障害の画像診断",
+      "items": [
+        {
+          "dir": "degenerative",
+          "label": "変性疾患",
+          "description": "椎間板ヘルニア・脊柱管狭窄症など",
+          "items": [
+            { "slug": "disc-degeneration", "label": "椎間板変性" },
+            { "slug": "disc-herniation", "label": "椎間板ヘルニア" },
+            { "slug": "spinal-canal-stenosis", "label": "脊柱管狭窄症" },
+            { "slug": "spondylosis", "label": "変形性脊椎症" },
+            { "slug": "facet-arthropathy", "label": "椎間関節症" },
+            { "slug": "modic-changes", "label": "終板変化（Modic分類）" }
+          ]
+        },
+        {
+          "dir": "trauma",
+          "label": "外傷",
+          "description": "椎体骨折・脊髄損傷",
+          "items": [
+            { "slug": "osteoporotic-vertebral-fracture", "label": "椎体圧迫骨折（骨粗鬆症性）" },
+            { "slug": "traumatic-vertebral-fracture", "label": "外傷性椎体骨折" },
+            { "slug": "disc-injury", "label": "椎間板損傷" },
+            { "slug": "spinal-cord-injury", "label": "脊髄損傷" }
+          ]
+        },
+        {
+          "dir": "tumor",
+          "label": "腫瘍",
+          "description": "脊髄内・髄外・硬膜外腫瘍、椎体腫瘍",
+          "items": [
+            { "slug": "intramedullary-tumor-general", "label": "脊髄内腫瘍総論" },
+            { "slug": "spinal-ependymoma", "label": "上衣腫（脊髄）" },
+            { "slug": "spinal-astrocytoma", "label": "星細胞腫（脊髄）" },
+            { "slug": "spinal-hemangioblastoma", "label": "血管芽腫（脊髄）" },
+            { "slug": "intradural-extramedullary-tumor", "label": "髄外硬膜内腫瘍（髄膜腫・神経鞘腫）" },
+            { "slug": "epidural-tumor", "label": "硬膜外腫瘍" },
+            { "slug": "vertebral-metastasis", "label": "椎体転移" },
+            { "slug": "spinal-myeloma", "label": "多発性骨髄腫（脊椎）" },
+            { "slug": "chordoma", "label": "脊索腫" },
+            { "slug": "spinal-gct", "label": "骨巨細胞腫（脊椎）" },
+            { "slug": "vertebral-hemangioma", "label": "血管腫（椎体）" },
+            { "slug": "spinal-osteoid-osteoma", "label": "類骨骨腫（脊椎）" }
+          ]
+        },
+        {
+          "dir": "inflammation-infection",
+          "label": "炎症・感染",
+          "description": "脊椎炎・関節炎による病変",
+          "items": [
+            { "slug": "pyogenic-spondylitis", "label": "化膿性脊椎炎" },
+            { "slug": "tb-spondylitis", "label": "結核性脊椎炎（Pott病）" },
+            { "slug": "ankylosing-spondylitis", "label": "強直性脊椎炎" },
+            { "slug": "rheumatoid-cervical", "label": "リウマチ性頸椎病変" },
+            { "slug": "dialysis-spondyloarthropathy", "label": "透析関連脊椎症" }
+          ]
+        },
+        {
+          "dir": "vascular",
+          "label": "血管障害",
+          "description": "脊髄梗塞・AVM・dAVF",
+          "items": [
+            { "slug": "spinal-cord-infarction", "label": "脊髄梗塞" },
+            { "slug": "spinal-avm", "label": "脊髄動静脈奇形" },
+            { "slug": "spinal-davf", "label": "硬膜動静脈瘻（脊髄）" },
+            { "slug": "spinal-hemorrhage", "label": "脊髄出血" }
+          ]
+        },
+        {
+          "dir": "demyelinating-other",
+          "label": "脱髄・その他",
+          "description": "脊髄MS・NMO・空洞症・奇形",
+          "items": [
+            { "slug": "spinal-ms", "label": "多発性硬化症（脊髄）" },
+            { "slug": "spinal-nmo", "label": "視神経脊髄炎（脊髄）" },
+            { "slug": "acute-transverse-myelitis", "label": "急性横断性脊髄炎" },
+            { "slug": "subacute-combined-degeneration", "label": "亜急性連合性脊髄変性症" },
+            { "slug": "syringomyelia", "label": "脊髄空洞症" },
+            { "slug": "tethered-cord", "label": "繋留脊髄" },
+            { "slug": "myelomeningocele", "label": "脊髄髄膜瘤" }
+          ]
+        }
+      ]
+    },
+{
+      "dir": "musculoskeletal",
+      "label": "骨・関節・軟部",
+      "description": "骨腫瘍・軟部腫瘍・関節疾患・代謝性骨疾患・感染炎症・外傷の画像診断",
+      "items": [
+        {
+          "dir": "bone",
+          "label": "骨腫瘍",
+          "description": "WHO分類（第5版）に準拠。骨形成性・軟骨形成性・線維性・巨細胞豊富性・脊索性・造血器・小円形細胞・その他",
+          "items": [
+            {
+              "dir": "general",
+              "label": "総論",
+              "description": "WHO分類・X線読影・モダリティの使い分け",
+              "items": [
+                { "slug": "who-classification", "label": "WHO分類（第5版）" },
+                { "slug": "xray", "label": "X線読影（辺縁解析・骨膜反応・基質）" },
+                { "slug": "imaging", "label": "CT・MRI・PETの役割" }
+              ]
+            },
+            {
+              "dir": "chondrogenic",
+              "label": "軟骨形成性腫瘍",
+              "description": "内軟骨腫・骨軟骨腫・軟骨肉腫など",
+              "items": [
+                { "slug": "enchondroma", "label": "内軟骨腫" },
+                { "slug": "osteochondroma", "label": "骨軟骨腫" },
+                { "slug": "chondroblastoma", "label": "軟骨芽細胞腫" },
+                { "slug": "chondromyxoid-fibroma", "label": "軟骨粘液線維腫" },
+                { "slug": "chondrosarcoma", "label": "軟骨肉腫" }
+              ]
+            },
+            {
+              "dir": "osteogenic",
+              "label": "骨形成性腫瘍",
+              "description": "類骨骨腫・骨芽細胞腫・骨肉腫",
+              "items": [
+                { "slug": "osteoid-osteoma", "label": "類骨骨腫" },
+                { "slug": "osteoblastoma", "label": "骨芽細胞腫" },
+                { "slug": "osteosarcoma", "label": "骨肉腫" }
+              ]
+            },
+            {
+              "dir": "fibrogenic",
+              "label": "線維形成性腫瘍",
+              "description": "線維性骨異形成・非骨化性線維腫",
+              "items": [
+                { "slug": "fibrous-dysplasia", "label": "線維性骨異形成" },
+                { "slug": "non-ossifying-fibroma", "label": "非骨化性線維腫" }
+              ]
+            },
+            {
+              "dir": "vascular",
+              "label": "血管性腫瘍",
+              "description": "骨の血管腫",
+              "items": [
+                { "slug": "bone-hemangioma", "label": "血管腫（骨）" }
+              ]
+            },
+            {
+              "dir": "osteoclastic-giant-cell-rich",
+              "label": "破骨細胞性巨細胞豊富性腫瘍",
+              "description": "骨巨細胞腫・動脈瘤様骨嚢腫",
+              "items": [
+                { "slug": "gct", "label": "骨巨細胞腫" },
+                { "slug": "abc", "label": "動脈瘤様骨嚢腫" }
+              ]
+            },
+            {
+              "dir": "notochordal",
+              "label": "脊索性腫瘍",
+              "description": "脊索腫",
+              "items": [
+                { "slug": "chordoma", "label": "脊索腫" }
+              ]
+            },
+            {
+              "dir": "other-mesenchymal",
+              "label": "その他の間葉系腫瘍",
+              "description": "単純性骨嚢腫など",
+              "items": [
+                { "slug": "simple-bone-cyst", "label": "単純性骨嚢腫" }
+              ]
+            },
+            {
+              "dir": "hematopoietic",
+              "label": "造血器腫瘍",
+              "description": "多発性骨髄腫・骨原発悪性リンパ腫",
+              "items": [
+                { "slug": "multiple-myeloma", "label": "多発性骨髄腫（骨）" },
+                { "slug": "bone-lymphoma", "label": "骨原発悪性リンパ腫" }
+              ]
+            },
+            {
+              "dir": "small-round-cell",
+              "label": "未分化小円形細胞肉腫",
+              "description": "Ewing肉腫",
+              "items": [
+                { "slug": "ewing", "label": "Ewing肉腫" }
+              ]
+            },
+            {
+              "dir": "other-bone",
+              "label": "その他の腫瘍性病変",
+              "description": "骨転移・LCH・Paget病",
+              "items": [
+                { "slug": "bone-metastasis", "label": "骨転移" },
+                { "slug": "lch", "label": "Langerhans細胞組織球症" },
+                { "slug": "paget-disease-bone", "label": "骨Paget病" }
+              ]
+            }
+          ]
+        },
+        {
+          "dir": "soft-tissue",
+          "label": "軟部腫瘍",
+          "description": "WHO分類（第5版）に準拠。脂肪性・線維芽細胞性・平滑筋性・骨格筋性・脈管性・末梢神経鞘・分化不明・腫瘍類似病変",
+          "items": [
+            {
+              "dir": "general-classification",
+              "label": "分類総論",
+              "description": "軟部腫瘍の分類とアプローチ",
+              "items": [
+                { "slug": "soft-tissue-classification", "label": "軟部腫瘍分類総論" }
+              ]
+            },
+            {
+              "dir": "adipocytic",
+              "label": "脂肪性腫瘍",
+              "description": "脂肪腫・脂肪肉腫各型",
+              "items": [
+                { "slug": "lipoma-angiolipoma", "label": "脂肪腫・血管脂肪腫" },
+                { "slug": "well-differentiated-liposarcoma", "label": "高分化型脂肪肉腫" },
+                { "slug": "dedifferentiated-liposarcoma", "label": "脱分化型脂肪肉腫" },
+                { "slug": "myxoid-liposarcoma", "label": "粘液型脂肪肉腫" },
+                { "slug": "pleomorphic-liposarcoma", "label": "多形型脂肪肉腫" }
+              ]
+            },
+            {
+              "dir": "fibroblastic",
+              "label": "線維芽細胞性・筋線維芽細胞性",
+              "description": "結節性筋膜炎・デスモイド・SFT・粘液線維肉腫・UPS",
+              "items": [
+                { "slug": "nodular-fasciitis", "label": "結節性筋膜炎" },
+                { "slug": "desmoid", "label": "デスモイド型線維腫症" },
+                { "slug": "sft", "label": "孤立性線維性腫瘍（SFT）" },
+                { "slug": "myxofibrosarcoma", "label": "粘液線維肉腫" },
+                { "slug": "ups", "label": "未分化多形肉腫" }
+              ]
+            },
+            {
+              "dir": "smooth-muscle",
+              "label": "平滑筋性",
+              "description": "平滑筋肉腫",
+              "items": [
+                { "slug": "leiomyosarcoma", "label": "平滑筋肉腫" }
+              ]
+            },
+            {
+              "dir": "skeletal-muscle",
+              "label": "骨格筋性",
+              "description": "横紋筋肉腫",
+              "items": [
+                { "slug": "rhabdomyosarcoma", "label": "横紋筋肉腫" }
+              ]
+            },
+            {
+              "dir": "vascular-soft",
+              "label": "脈管性",
+              "description": "血管腫・リンパ管腫・Kaposi肉腫",
+              "items": [
+                { "slug": "hemangioma-lymphangioma", "label": "血管腫・リンパ管腫" },
+                { "slug": "kaposi", "label": "Kaposi肉腫" }
+              ]
+            },
+            {
+              "dir": "peripheral-nerve",
+              "label": "末梢神経鞘腫瘍",
+              "description": "神経鞘腫・神経線維腫・MPNST",
+              "items": [
+                { "slug": "schwannoma-neurofibroma", "label": "神経鞘腫・神経線維腫" },
+                { "slug": "mpnst", "label": "悪性末梢神経鞘腫瘍（MPNST）" }
+              ]
+            },
+            {
+              "dir": "uncertain",
+              "label": "分化不明腫瘍",
+              "description": "滑膜肉腫・胞巣状軟部肉腫・類上皮肉腫",
+              "items": [
+                { "slug": "synovial-sarcoma", "label": "滑膜肉腫" },
+                { "slug": "alveolar-soft-part-sarcoma", "label": "胞巣状軟部肉腫" },
+                { "slug": "epithelioid-sarcoma", "label": "類上皮肉腫" }
+              ]
+            },
+            {
+              "dir": "tumor-like",
+              "label": "腫瘍類似病変",
+              "description": "ガングリオン・PVNSなど",
+              "items": [
+                { "slug": "ganglion", "label": "ガングリオン・滑液嚢腫" },
+                { "slug": "pvns", "label": "色素性絨毛結節性滑膜炎（PVNS）" }
+              ]
+            }
+          ]
+        },
+        {
+          "dir": "joints",
+          "label": "関節疾患",
+          "description": "関節炎・関節症・関節感染",
+          "items": [
+            {
+              "dir": "arthritis",
+              "label": "変性・炎症性関節疾患",
+              "description": "変形性関節症・RA・痛風・CPPDなど",
+              "items": [
+                { "slug": "osteoarthritis", "label": "変形性関節症" },
+                { "slug": "rheumatoid-arthritis", "label": "関節リウマチ" },
+                { "slug": "ankylosing-spondylitis-joint", "label": "強直性脊椎炎・体軸性脊椎関節炎" },
+                { "slug": "psoriatic-arthritis", "label": "乾癬性関節炎" },
+                { "slug": "gout", "label": "痛風性関節炎" },
+                { "slug": "cppd", "label": "ピロリン酸カルシウム沈着症（CPPD）" },
+                { "slug": "hemophilic-arthropathy", "label": "血友病性関節症" }
+              ]
+            },
+            {
+              "dir": "joint-infection",
+              "label": "感染性関節炎",
+              "description": "化膿性・結核性関節炎",
+              "items": [
+                { "slug": "septic-arthritis", "label": "化膿性関節炎" },
+                { "slug": "tuberculous-arthritis", "label": "結核性関節炎" }
+              ]
+            },
+            { "slug": "ocd", "label": "離断性骨軟骨炎" }
+          ]
+        },
+        {
+          "dir": "metabolic",
+          "label": "代謝・骨系統疾患",
+          "description": "骨粗鬆症・くる病・骨系統疾患",
+          "items": [
+            { "slug": "osteoporosis", "label": "骨粗鬆症" },
+            { "slug": "osteomalacia-rickets", "label": "骨軟化症・くる病" },
+            { "slug": "hyperparathyroidism-bone", "label": "副甲状腺機能亢進症による骨変化" },
+            { "slug": "renal-osteodystrophy", "label": "腎性骨異栄養症" },
+            { "slug": "osteopetrosis", "label": "大理石骨病" },
+            { "slug": "osteogenesis-imperfecta", "label": "骨形成不全症" },
+            { "slug": "achondroplasia", "label": "軟骨無形成症" }
+          ]
+        },
+        {
+          "dir": "infection-inflammation",
+          "label": "感染・炎症",
+          "description": "骨髄炎・壊死性筋膜炎・筋炎",
+          "items": [
+            { "slug": "acute-osteomyelitis", "label": "急性骨髄炎" },
+            { "slug": "chronic-osteomyelitis", "label": "慢性骨髄炎" },
+            { "slug": "brodie-abscess", "label": "Brodie膿瘍" },
+            { "slug": "crmo-sapho", "label": "CRMO/SAPHO症候群" },
+            { "slug": "necrotizing-fasciitis", "label": "壊死性筋膜炎" },
+            { "slug": "myositis", "label": "筋炎・筋膿瘍" }
+          ]
+        },
+        {
+          "dir": "trauma-other",
+          "label": "外傷・その他",
+          "description": "疲労骨折・骨壊死・腱/靭帯損傷",
+          "items": [
+            { "slug": "stress-fracture", "label": "疲労骨折" },
+            { "slug": "bone-contusion", "label": "骨挫傷" },
+            { "slug": "osteonecrosis", "label": "骨壊死（大腿骨頭壊死など）" },
+            { "slug": "transient-bone-marrow-edema", "label": "一過性骨髄浮腫症候群" },
+            { "slug": "muscle-tear", "label": "筋断裂・筋損傷" },
+            { "slug": "tendon-injury", "label": "腱損傷（アキレス腱断裂など）" },
+            { "slug": "knee-ligament-meniscus", "label": "靭帯損傷（膝ACL・半月板損傷）" },
+            { "slug": "rotator-cuff-tear", "label": "肩腱板断裂" },
+            { "slug": "thoracic-outlet-syndrome", "label": "胸郭出口症候群" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "chest",
+      "label": "呼吸器・縦隔",
+      "description": "肺癌・間質性肺炎・感染症・気道・肺血管・胸膜・縦隔の画像診断",
+      "items": [
+        {
+          "dir": "lung-tumor",
+          "label": "肺腫瘍",
+          "description": "肺癌各型・転移・肺リンパ腫",
+          "items": [
+            { "slug": "lung-cancer-general", "label": "肺癌総論・分類" },
+            { "slug": "adenocarcinoma", "label": "腺癌" },
+            { "slug": "squamous-cell-carcinoma", "label": "扁平上皮癌" },
+            { "slug": "small-cell-lung-cancer", "label": "小細胞肺癌" },
+            { "slug": "large-cell-carcinoma", "label": "大細胞癌" },
+            { "slug": "pulmonary-carcinoid", "label": "カルチノイド" },
+            { "slug": "pleomorphic-carcinoma", "label": "肺多形癌・肉腫様癌" },
+            { "slug": "pulmonary-hamartoma", "label": "過誤腫" },
+            { "slug": "solitary-pulmonary-nodule", "label": "孤立性肺結節の鑑別" },
+            { "slug": "lung-metastasis", "label": "肺転移" },
+            { "slug": "pulmonary-lymphoma", "label": "肺リンパ腫・MALTリンパ腫" },
+            { "slug": "lip", "label": "リンパ増殖性疾患（LIP）" }
+          ]
+        },
+        {
+          "dir": "interstitial",
+          "label": "間質性肺疾患",
+          "description": "IPF・NSIP・COP・過敏性肺炎など",
+          "items": [
+            { "slug": "interstitial-pneumonia-classification", "label": "間質性肺炎分類総論" },
+            { "slug": "ipf-uip", "label": "特発性肺線維症（IPF/UIP）" },
+            { "slug": "nsip", "label": "非特異性間質性肺炎（NSIP）" },
+            { "slug": "op-cop", "label": "器質化肺炎（OP/COP）" },
+            { "slug": "aip", "label": "急性間質性肺炎（AIP）" },
+            { "slug": "dip", "label": "剥離性間質性肺炎（DIP）" },
+            { "slug": "rb-ild", "label": "呼吸細気管支炎関連間質性肺疾患（RB-ILD）" },
+            { "slug": "hypersensitivity-pneumonitis", "label": "過敏性肺炎" },
+            { "slug": "ctd-ild", "label": "膠原病関連間質性肺炎" },
+            { "slug": "drug-induced-lung-injury", "label": "薬剤性肺障害" },
+            { "slug": "radiation-pneumonitis", "label": "放射線肺炎" }
+          ]
+        },
+        {
+          "dir": "infection",
+          "label": "感染症",
+          "description": "細菌・ウイルス・抗酸菌・真菌感染",
+          "items": [
+            { "slug": "bacterial-pneumonia", "label": "細菌性肺炎" },
+            { "slug": "mycoplasma-pneumonia", "label": "マイコプラズマ肺炎" },
+            { "slug": "viral-pneumonia", "label": "ウイルス性肺炎（COVID-19含む）" },
+            { "slug": "pulmonary-tb", "label": "肺結核" },
+            { "slug": "ntm", "label": "非結核性抗酸菌症" },
+            { "slug": "pulmonary-fungal", "label": "肺真菌症（アスペルギルス・クリプトコッカス）" },
+            { "slug": "pcp", "label": "ニューモシスチス肺炎" },
+            { "slug": "lung-abscess", "label": "肺化膿症・肺膿瘍" },
+            { "slug": "empyema", "label": "膿胸" }
+          ]
+        },
+        {
+          "dir": "airway",
+          "label": "気道疾患",
+          "description": "COPD・気管支拡張症・喘息など",
+          "items": [
+            { "slug": "copd-emphysema", "label": "COPD・肺気腫" },
+            { "slug": "chronic-bronchitis", "label": "慢性気管支炎" },
+            { "slug": "bronchiectasis", "label": "気管支拡張症" },
+            { "slug": "asthma", "label": "気管支喘息" },
+            { "slug": "dpb", "label": "びまん性汎細気管支炎" },
+            { "slug": "obliterative-bronchiolitis", "label": "閉塞性細気管支炎" },
+            { "slug": "airway-foreign-body", "label": "気道異物" }
+          ]
+        },
+        {
+          "dir": "pulmonary-vascular",
+          "label": "肺循環・血管",
+          "description": "肺塞栓・肺高血圧・AVM",
+          "items": [
+            { "slug": "pulmonary-embolism", "label": "肺血栓塞栓症" },
+            { "slug": "cteph", "label": "慢性血栓塞栓性肺高血圧症（CTEPH）" },
+            { "slug": "pulmonary-hypertension", "label": "肺高血圧症" },
+            { "slug": "pulmonary-avm", "label": "肺動静脈奇形" },
+            { "slug": "alveolar-hemorrhage", "label": "肺胞出血症候群" },
+            { "slug": "goodpasture", "label": "Goodpasture症候群" }
+          ]
+        },
+        {
+          "dir": "granulomatous-diffuse",
+          "label": "肉芽腫性・その他びまん性疾患",
+          "description": "サルコイドーシス・LAM・PAPなど",
+          "items": [
+            { "slug": "sarcoidosis", "label": "サルコイドーシス" },
+            { "slug": "gpa", "label": "多発血管炎性肉芽腫症（GPA/旧Wegener）" },
+            { "slug": "egpa", "label": "好酸球性多発血管炎性肉芽腫症（EGPA）" },
+            { "slug": "eosinophilic-pneumonia", "label": "好酸球性肺炎" },
+            { "slug": "pap", "label": "肺胞蛋白症" },
+            { "slug": "lam", "label": "肺リンパ脈管筋腫症（LAM）" },
+            { "slug": "pulmonary-lch", "label": "Langerhans細胞組織球症（肺）" },
+            { "slug": "pulmonary-amyloidosis", "label": "アミロイドーシス（肺）" }
+          ]
+        },
+        {
+          "dir": "pleura",
+          "label": "胸膜",
+          "description": "胸水・中皮腫・気胸",
+          "items": [
+            { "slug": "pleural-effusion", "label": "胸水・胸膜炎" },
+            { "slug": "mesothelioma", "label": "悪性胸膜中皮腫" },
+            { "slug": "pleural-plaque", "label": "胸膜プラーク（石綿関連）" },
+            { "slug": "pneumothorax", "label": "気胸" },
+            { "slug": "hemothorax", "label": "血胸" },
+            { "slug": "pleural-sft", "label": "胸膜孤立性線維性腫瘍" }
+          ]
+        },
+        {
+          "dir": "mediastinum",
+          "label": "縦隔",
+          "description": "縦隔腫瘍・嚢胞性病変",
+          "items": [
+            { "slug": "mediastinum-general", "label": "縦隔腫瘍総論・区画" },
+            { "slug": "thymoma", "label": "胸腺腫" },
+            { "slug": "thymic-carcinoma", "label": "胸腺癌" },
+            { "slug": "thymic-cyst", "label": "胸腺嚢胞" },
+            { "slug": "mediastinal-germ-cell", "label": "奇形腫・胚細胞腫瘍" },
+            { "slug": "mediastinal-lymphoma", "label": "縦隔リンパ腫" },
+            { "slug": "neurogenic-tumor", "label": "神経原性腫瘍（神経鞘腫・神経節腫など）" },
+            { "slug": "bronchogenic-cyst", "label": "気管支嚢胞" },
+            { "slug": "esophageal-cyst", "label": "食道嚢胞" },
+            { "slug": "pericardial-cyst", "label": "心膜嚢胞" },
+            { "slug": "mediastinitis", "label": "縦隔炎・縦隔膿瘍" },
+            { "slug": "fibrosing-mediastinitis", "label": "線維性縦隔炎" }
+          ]
+        },
+        {
+          "dir": "diaphragm-chest-wall",
+          "label": "横隔膜・胸壁",
+          "description": "横隔膜ヘルニア・胸壁腫瘍",
+          "items": [
+            { "slug": "diaphragmatic-hernia", "label": "横隔膜ヘルニア（Bochdalek・Morgagni）" },
+            { "slug": "diaphragmatic-paralysis", "label": "横隔膜麻痺" },
+            { "slug": "chest-wall-tumor", "label": "胸壁腫瘍" }
+          ]
+        },
+        {
+          "dir": "congenital",
+          "label": "先天性",
+          "description": "肺分画症・CPAMなど",
+          "items": [
+            { "slug": "pulmonary-sequestration", "label": "肺分画症" },
+            { "slug": "cpam", "label": "先天性嚢胞性腺腫様奇形（CPAM/CCAM）" },
+            { "slug": "bronchial-atresia", "label": "気管支閉鎖症" },
+            { "slug": "scimitar-syndrome", "label": "Scimitar症候群" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "cardiovascular",
+      "label": "心・血管",
+      "description": "虚血性心疾患・心筋症・弁膜症・大動脈・末梢血管の画像診断",
+      "items": [
+        {
+          "dir": "ischemic",
+          "label": "虚血性心疾患",
+          "description": "冠動脈CT・心筋梗塞評価",
+          "items": [
+            { "slug": "coronary-cta-general", "label": "冠動脈CT総論" },
+            { "slug": "coronary-stenosis-plaque", "label": "冠動脈狭窄・プラーク評価" },
+            { "slug": "acute-mi", "label": "急性心筋梗塞" },
+            { "slug": "old-mi", "label": "陳旧性心筋梗塞" },
+            { "slug": "myocardial-viability", "label": "心筋バイアビリティ評価" },
+            { "slug": "mi-complications", "label": "心筋梗塞合併症（心破裂・心室瘤・左室血栓）" }
+          ]
+        },
+        {
+          "dir": "cardiomyopathy",
+          "label": "心筋症",
+          "description": "DCM・HCM・浸潤性心筋症など",
+          "items": [
+            { "slug": "dcm", "label": "拡張型心筋症" },
+            { "slug": "hcm", "label": "肥大型心筋症" },
+            { "slug": "rcm", "label": "拘束型心筋症" },
+            { "slug": "arvc", "label": "不整脈原性右室心筋症（ARVC）" },
+            { "slug": "takotsubo", "label": "たこつぼ心筋症" },
+            { "slug": "cardiac-amyloidosis", "label": "心アミロイドーシス" },
+            { "slug": "cardiac-sarcoidosis", "label": "心サルコイドーシス" },
+            { "slug": "fabry-disease", "label": "Fabry病" },
+            { "slug": "lv-noncompaction", "label": "左室緻密化障害" }
+          ]
+        },
+        {
+          "dir": "inflammatory",
+          "label": "炎症性心疾患",
+          "description": "心筋炎・心膜炎",
+          "items": [
+            { "slug": "myocarditis", "label": "心筋炎" },
+            { "slug": "acute-pericarditis", "label": "急性心膜炎" },
+            { "slug": "constrictive-pericarditis", "label": "収縮性心膜炎" },
+            { "slug": "pericardial-effusion-tamponade", "label": "心膜液貯留・心タンポナーデ" }
+          ]
+        },
+        {
+          "dir": "valvular",
+          "label": "弁膜症",
+          "description": "大動脈弁・僧帽弁・感染性心内膜炎",
+          "items": [
+            { "slug": "as", "label": "大動脈弁狭窄症" },
+            { "slug": "ar", "label": "大動脈弁閉鎖不全症" },
+            { "slug": "ms", "label": "僧帽弁狭窄症" },
+            { "slug": "mr", "label": "僧帽弁閉鎖不全症" },
+            { "slug": "infective-endocarditis", "label": "感染性心内膜炎" },
+            { "slug": "rheumatic-valve", "label": "リウマチ性弁膜症" }
+          ]
+        },
+        {
+          "dir": "congenital",
+          "label": "先天性心疾患",
+          "description": "ASD・VSD・PDA・Fallot四徴症など",
+          "items": [
+            { "slug": "asd", "label": "心房中隔欠損（ASD）" },
+            { "slug": "vsd", "label": "心室中隔欠損（VSD）" },
+            { "slug": "pda", "label": "動脈管開存（PDA）" },
+            { "slug": "tof", "label": "Fallot四徴症" },
+            { "slug": "tga", "label": "大血管転位症" },
+            { "slug": "aortic-coarctation", "label": "大動脈縮窄症" },
+            { "slug": "ebstein", "label": "Ebstein奇形" },
+            { "slug": "single-ventricle", "label": "単心室" }
+          ]
+        },
+        {
+          "dir": "cardiac-tumor",
+          "label": "心臓腫瘍",
+          "description": "粘液腫・乳頭状線維弾性腫・転移",
+          "items": [
+            { "slug": "cardiac-myxoma", "label": "心臓粘液腫" },
+            { "slug": "papillary-fibroelastoma", "label": "乳頭状線維弾性腫" },
+            { "slug": "cardiac-metastasis", "label": "心臓転移" },
+            { "slug": "cardiac-lymphoma", "label": "心臓リンパ腫" },
+            { "slug": "cardiac-angiosarcoma", "label": "血管肉腫（心臓）" }
+          ]
+        },
+        {
+          "dir": "aorta",
+          "label": "大動脈",
+          "description": "大動脈瘤・解離・大動脈炎",
+          "items": [
+            { "slug": "aortic-aneurysm", "label": "大動脈瘤（胸部・腹部）" },
+            { "slug": "aortic-dissection", "label": "大動脈解離" },
+            { "slug": "imh", "label": "壁在血腫（IMH）" },
+            { "slug": "pau", "label": "穿通性粥状潰瘍（PAU）" },
+            { "slug": "aortitis", "label": "大動脈炎（高安動脈炎・巨細胞性動脈炎）" },
+            { "slug": "marfan-aortopathy", "label": "Marfan症候群関連大動脈病変" }
+          ]
+        },
+        {
+          "dir": "peripheral-artery",
+          "label": "末梢動脈",
+          "description": "ASO・末梢動脈瘤・血管炎",
+          "items": [
+            { "slug": "aso", "label": "閉塞性動脈硬化症（ASO）" },
+            { "slug": "acute-arterial-occlusion", "label": "急性動脈閉塞" },
+            { "slug": "peripheral-aneurysm", "label": "末梢動脈瘤" },
+            { "slug": "fmd", "label": "線維筋性異形成" },
+            { "slug": "buerger-disease", "label": "Buerger病" },
+            { "slug": "pan", "label": "結節性多発動脈炎" },
+            { "slug": "peripheral-avm", "label": "動静脈奇形（AVM）" }
+          ]
+        },
+        {
+          "dir": "venous",
+          "label": "静脈系",
+          "description": "DVT・門脈血栓・Budd-Chiari",
+          "items": [
+            { "slug": "dvt", "label": "深部静脈血栓症" },
+            { "slug": "ivc-filter", "label": "下大静脈フィルター適応・評価" },
+            { "slug": "may-thurner", "label": "May-Thurner症候群" },
+            { "slug": "budd-chiari", "label": "Budd-Chiari症候群" },
+            { "slug": "portal-vein-thrombosis", "label": "門脈血栓症" },
+            { "slug": "pelvic-congestion", "label": "骨盤うっ血症候群" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "breast",
+      "label": "乳腺",
+      "description": "乳癌・良性腫瘍・炎症性病変の画像診断",
+      "items": [
+        {
+          "dir": "malignant",
+          "label": "悪性腫瘍",
+          "description": "浸潤性乳管癌・小葉癌・DCISなど",
+          "items": [
+            { "slug": "breast-cancer-general", "label": "乳癌総論・BI-RADS" },
+            { "slug": "idc", "label": "浸潤性乳管癌" },
+            { "slug": "ilc", "label": "浸潤性小葉癌" },
+            { "slug": "dcis", "label": "非浸潤性乳管癌（DCIS）" },
+            { "slug": "lcis", "label": "非浸潤性小葉癌（LCIS）" },
+            { "slug": "mucinous-carcinoma", "label": "粘液癌" },
+            { "slug": "medullary-carcinoma", "label": "髄様癌" },
+            { "slug": "tubular-carcinoma", "label": "管状癌" },
+            { "slug": "metaplastic-carcinoma", "label": "化生癌" },
+            { "slug": "inflammatory-breast-cancer", "label": "炎症性乳癌" },
+            { "slug": "paget-disease", "label": "Paget病" },
+            { "slug": "male-breast-cancer", "label": "男性乳癌" },
+            { "slug": "breast-metastasis", "label": "乳房外病変からの転移" },
+            { "slug": "breast-lymphoma", "label": "乳腺悪性リンパ腫" }
+          ]
+        },
+        {
+          "dir": "benign",
+          "label": "良性腫瘍・腫瘤性病変",
+          "description": "線維腺腫・葉状腫瘍・乳管内乳頭腫など",
+          "items": [
+            { "slug": "fibroadenoma", "label": "線維腺腫" },
+            { "slug": "phyllodes-tumor", "label": "葉状腫瘍" },
+            { "slug": "intraductal-papilloma", "label": "乳管内乳頭腫" },
+            { "slug": "breast-hamartoma", "label": "過誤腫" },
+            { "slug": "breast-lipoma", "label": "脂肪腫" },
+            { "slug": "fibrocystic-change", "label": "乳腺症" },
+            { "slug": "breast-cyst", "label": "嚢胞" },
+            { "slug": "fat-necrosis", "label": "脂肪壊死" },
+            { "slug": "radial-scar", "label": "放射状瘢痕" }
+          ]
+        },
+        {
+          "dir": "inflammation-other",
+          "label": "炎症・その他",
+          "description": "乳腺炎・インプラント・術後変化",
+          "items": [
+            { "slug": "acute-mastitis", "label": "急性乳腺炎" },
+            { "slug": "granulomatous-mastitis", "label": "肉芽腫性乳腺炎" },
+            { "slug": "gynecomastia", "label": "女性化乳房" },
+            { "slug": "silicone-implant", "label": "シリコン漏出・インプラント評価" },
+            { "slug": "post-treatment-breast", "label": "乳癌術後評価・再発" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "hepatobiliary",
+      "label": "消化器（肝・胆・膵）",
+      "description": "肝腫瘍・胆道・膵臓の画像診断",
+      "items": [
+        {
+          "dir": "liver-tumor",
+          "label": "肝腫瘍",
+          "description": "HCC・胆管癌・良性腫瘍・嚢胞性病変",
+          "items": [
+            { "slug": "hcc", "label": "肝細胞癌（HCC）" },
+            { "slug": "intrahepatic-cholangiocarcinoma", "label": "肝内胆管癌" },
+            { "slug": "combined-hcc-cc", "label": "混合型肝癌" },
+            { "slug": "liver-metastasis", "label": "肝転移" },
+            { "slug": "hepatoblastoma", "label": "肝芽腫" },
+            { "slug": "hepatic-angiosarcoma", "label": "肝血管肉腫" },
+            { "slug": "epithelioid-hemangioendothelioma", "label": "類上皮血管内皮腫" },
+            { "slug": "hepatic-lymphoma", "label": "肝悪性リンパ腫" },
+            { "slug": "hepatic-hemangioma", "label": "肝海綿状血管腫" },
+            { "slug": "fnh", "label": "限局性結節性過形成（FNH）" },
+            { "slug": "hepatocellular-adenoma", "label": "肝細胞腺腫" },
+            { "slug": "biliary-cystadenoma", "label": "胆管嚢胞腺腫・腺癌" },
+            { "slug": "hepatic-cyst", "label": "肝嚢胞" },
+            { "slug": "liver-abscess", "label": "肝膿瘍（細菌性・アメーバ性）" },
+            { "slug": "hepatic-echinococcosis", "label": "肝エキノコックス症" },
+            { "slug": "dysplastic-regenerative-nodule", "label": "肝異型結節・再生結節" },
+            { "slug": "hepatic-steatosis", "label": "肝脂肪変性（びまん性・限局性）" }
+          ]
+        },
+        {
+          "dir": "diffuse-liver",
+          "label": "びまん性肝疾患",
+          "description": "肝硬変・脂肪肝・自己免疫性肝疾患",
+          "items": [
+            { "slug": "cirrhosis", "label": "肝硬変" },
+            { "slug": "fatty-liver-nash", "label": "脂肪肝・NASH" },
+            { "slug": "autoimmune-hepatitis", "label": "自己免疫性肝炎" },
+            { "slug": "pbc", "label": "原発性胆汁性胆管炎（PBC）" },
+            { "slug": "psc", "label": "原発性硬化性胆管炎（PSC）" },
+            { "slug": "hemochromatosis", "label": "ヘモクロマトーシス" },
+            { "slug": "wilson-disease", "label": "Wilson病" },
+            { "slug": "budd-chiari-liver", "label": "Budd-Chiari症候群" },
+            { "slug": "hepatic-congestion", "label": "肝うっ血" },
+            { "slug": "hepatic-sarcoidosis", "label": "肝サルコイドーシス" },
+            { "slug": "igg4-hepatic", "label": "IgG4関連肝疾患" }
+          ]
+        },
+        {
+          "dir": "portal-hepatic-vascular",
+          "label": "門脈・肝血管",
+          "description": "門脈圧亢進・動静脈瘻・血管奇形",
+          "items": [
+            { "slug": "portal-vein-thrombosis-liver", "label": "門脈血栓症" },
+            { "slug": "portal-hypertension", "label": "門脈圧亢進症" },
+            { "slug": "ipph", "label": "特発性門脈圧亢進症" },
+            { "slug": "hepatic-artery-aneurysm", "label": "肝動脈瘤" },
+            { "slug": "hepatic-avf", "label": "肝動静脈瘻" },
+            { "slug": "hht-liver", "label": "遺伝性出血性毛細血管拡張症（HHT）の肝病変" },
+            { "slug": "sinusoidal-obstruction-syndrome", "label": "肝類洞閉塞症候群" }
+          ]
+        },
+        {
+          "dir": "biliary",
+          "label": "胆嚢・胆管",
+          "description": "胆石症・胆管癌・先天性胆道疾患",
+          "items": [
+            { "slug": "cholelithiasis-cholecystitis", "label": "胆嚢結石・胆嚢炎（急性・慢性）" },
+            { "slug": "emphysematous-cholecystitis", "label": "気腫性胆嚢炎" },
+            { "slug": "adenomyomatosis", "label": "胆嚢腺筋腫症" },
+            { "slug": "gallbladder-polyp", "label": "胆嚢ポリープ" },
+            { "slug": "gallbladder-carcinoma", "label": "胆嚢癌" },
+            { "slug": "porcelain-gallbladder", "label": "磁器様胆嚢" },
+            { "slug": "choledocholithiasis", "label": "胆管結石" },
+            { "slug": "cholangitis", "label": "胆管炎（急性化膿性・再発性）" },
+            { "slug": "mirizzi-syndrome", "label": "Mirizzi症候群" },
+            { "slug": "extrahepatic-cholangiocarcinoma", "label": "肝外胆管癌" },
+            { "slug": "klatskin-tumor", "label": "肝門部胆管癌（Klatskin腫瘍）" },
+            { "slug": "ampullary-carcinoma", "label": "乳頭部癌" },
+            { "slug": "choledochal-cyst", "label": "先天性胆道拡張症" },
+            { "slug": "caroli-disease", "label": "Caroli病" },
+            { "slug": "biliary-atresia", "label": "胆道閉鎖症" },
+            { "slug": "hemobilia", "label": "胆道出血" }
+          ]
+        },
+        {
+          "dir": "pancreas-tumor",
+          "label": "膵腫瘍",
+          "description": "膵癌・神経内分泌腫瘍・嚢胞性腫瘍",
+          "items": [
+            { "slug": "pancreatic-ductal-adenocarcinoma", "label": "膵癌（浸潤性膵管癌）" },
+            { "slug": "pnet", "label": "膵神経内分泌腫瘍（PNET）" },
+            { "slug": "insulinoma-gastrinoma", "label": "インスリノーマ・ガストリノーマ" },
+            { "slug": "spn", "label": "Solid pseudopapillary neoplasm（SPN）" },
+            { "slug": "acinar-cell-carcinoma", "label": "膵腺房細胞癌" },
+            { "slug": "pancreatoblastoma", "label": "膵芽腫" },
+            { "slug": "pancreatic-metastasis", "label": "膵転移" },
+            { "slug": "ipmn", "label": "膵管内乳頭粘液性腫瘍（IPMN）" },
+            { "slug": "mcn", "label": "粘液性嚢胞腫瘍（MCN）" },
+            { "slug": "scn", "label": "漿液性嚢胞腫瘍（SCN）" },
+            { "slug": "pancreatic-cystic-lesion-dx", "label": "膵嚢胞性病変の鑑別" }
+          ]
+        },
+        {
+          "dir": "pancreatitis",
+          "label": "膵炎",
+          "description": "急性膵炎・慢性膵炎・自己免疫性膵炎",
+          "items": [
+            { "slug": "acute-pancreatitis", "label": "急性膵炎" },
+            { "slug": "chronic-pancreatitis", "label": "慢性膵炎" },
+            { "slug": "autoimmune-pancreatitis", "label": "自己免疫性膵炎（IgG4関連）" },
+            { "slug": "groove-pancreatitis", "label": "溝部膵炎（groove pancreatitis）" },
+            { "slug": "pseudocyst-won", "label": "膵仮性嚢胞・walled-off necrosis" }
+          ]
+        },
+        {
+          "dir": "pancreas-congenital",
+          "label": "先天・解剖異常",
+          "description": "膵分割症・輪状膵など",
+          "items": [
+            { "slug": "pancreas-divisum", "label": "膵分割症（pancreas divisum）" },
+            { "slug": "annular-pancreas", "label": "輪状膵" },
+            { "slug": "ectopic-pancreas", "label": "異所性膵" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "gi",
+      "label": "消化管・腹膜",
+      "description": "食道・胃・小腸・大腸・腹膜疾患の画像診断",
+      "items": [
+        {
+          "dir": "esophagus",
+          "label": "食道",
+          "description": "食道癌・食道運動障害・静脈瘤",
+          "items": [
+            { "slug": "esophageal-cancer", "label": "食道癌" },
+            { "slug": "esophageal-gist", "label": "食道GIST・平滑筋腫" },
+            { "slug": "hiatal-hernia", "label": "食道裂孔ヘルニア" },
+            { "slug": "achalasia", "label": "食道アカラシア" },
+            { "slug": "barrett-esophagus", "label": "Barrett食道" },
+            { "slug": "esophageal-varices", "label": "食道静脈瘤" },
+            { "slug": "esophageal-diverticulum", "label": "食道憩室" },
+            { "slug": "boerhaave", "label": "Boerhaave症候群（食道破裂）" }
+          ]
+        },
+        {
+          "dir": "stomach-duodenum",
+          "label": "胃・十二指腸",
+          "description": "胃癌・GIST・十二指腸疾患",
+          "items": [
+            { "slug": "gastric-cancer", "label": "胃癌" },
+            { "slug": "gastric-lymphoma", "label": "胃MALTリンパ腫・悪性リンパ腫" },
+            { "slug": "gastric-gist", "label": "胃GIST" },
+            { "slug": "gastric-carcinoid", "label": "胃カルチノイド" },
+            { "slug": "gastric-metastasis", "label": "胃転移" },
+            { "slug": "peptic-ulcer", "label": "消化性潰瘍" },
+            { "slug": "menetrier", "label": "肥厚性胃炎・Ménétrier病" },
+            { "slug": "gastric-anisakiasis", "label": "胃アニサキス症" },
+            { "slug": "duodenal-cancer", "label": "十二指腸癌" },
+            { "slug": "duodenal-gist", "label": "十二指腸GIST" },
+            { "slug": "duodenal-diverticulum", "label": "十二指腸憩室" },
+            { "slug": "sma-syndrome", "label": "上腸間膜動脈症候群（SMA症候群）" }
+          ]
+        },
+        {
+          "dir": "small-bowel",
+          "label": "小腸",
+          "description": "小腸腫瘍・炎症性腸疾患・虚血",
+          "items": [
+            { "slug": "small-bowel-adenocarcinoma", "label": "小腸腺癌" },
+            { "slug": "small-bowel-gist", "label": "小腸GIST" },
+            { "slug": "small-bowel-carcinoid", "label": "小腸カルチノイド" },
+            { "slug": "small-bowel-lymphoma", "label": "小腸悪性リンパ腫" },
+            { "slug": "small-bowel-metastasis", "label": "小腸転移" },
+            { "slug": "crohn-disease", "label": "Crohn病" },
+            { "slug": "intestinal-tb", "label": "腸結核" },
+            { "slug": "mesenteric-ischemia", "label": "虚血性腸炎・腸間膜虚血" },
+            { "slug": "radiation-enteritis", "label": "放射線腸炎" },
+            { "slug": "intussusception", "label": "腸重積" },
+            { "slug": "meckel-diverticulum", "label": "Meckel憩室" },
+            { "slug": "malrotation", "label": "腸回転異常" }
+          ]
+        },
+        {
+          "dir": "colon",
+          "label": "大腸",
+          "description": "大腸癌・炎症性腸疾患・憩室炎・虫垂疾患",
+          "items": [
+            { "slug": "colon-cancer", "label": "大腸癌" },
+            { "slug": "colon-polyp", "label": "大腸ポリープ・腺腫" },
+            { "slug": "fap", "label": "家族性大腸腺腫症（FAP）" },
+            { "slug": "ulcerative-colitis", "label": "潰瘍性大腸炎" },
+            { "slug": "crohn-colon", "label": "Crohn病（大腸病変）" },
+            { "slug": "ischemic-colitis", "label": "虚血性大腸炎" },
+            { "slug": "pseudomembranous-colitis", "label": "偽膜性大腸炎" },
+            { "slug": "diverticulitis", "label": "憩室症・憩室炎" },
+            { "slug": "appendicitis", "label": "虫垂炎" },
+            { "slug": "appendiceal-mucocele", "label": "虫垂粘液嚢腫・粘液性腫瘍" },
+            { "slug": "appendiceal-carcinoid", "label": "虫垂カルチノイド" },
+            { "slug": "sigmoid-volvulus", "label": "S状結腸軸捻転" },
+            { "slug": "colonic-obstruction", "label": "大腸イレウス" }
+          ]
+        },
+        {
+          "dir": "anus",
+          "label": "肛門",
+          "description": "肛門癌・肛門周囲疾患",
+          "items": [
+            { "slug": "anal-cancer", "label": "肛門癌" },
+            { "slug": "perianal-fistula-abscess", "label": "痔瘻・肛門周囲膿瘍" },
+            { "slug": "rectocele-prolapse", "label": "直腸瘤・直腸脱" }
+          ]
+        },
+        {
+          "dir": "obstruction",
+          "label": "腸閉塞・イレウス",
+          "description": "腸閉塞各型・ヘルニア",
+          "items": [
+            { "slug": "mechanical-obstruction", "label": "機械的腸閉塞" },
+            { "slug": "paralytic-ileus", "label": "麻痺性イレウス" },
+            { "slug": "strangulation", "label": "絞扼性イレウス" },
+            { "slug": "adhesive-ileus", "label": "術後癒着性イレウス" },
+            { "slug": "obturator-hernia", "label": "閉鎖孔ヘルニア" },
+            { "slug": "inguinal-femoral-hernia", "label": "鼠径ヘルニア・大腿ヘルニア" },
+            { "slug": "internal-hernia", "label": "内ヘルニア" }
+          ]
+        },
+        {
+          "dir": "peritoneum-mesentery",
+          "label": "腹膜・腸間膜",
+          "description": "腹膜播種・中皮腫・腸間膜脂肪織炎",
+          "items": [
+            { "slug": "peritoneal-carcinomatosis", "label": "腹膜播種" },
+            { "slug": "pseudomyxoma-peritonei", "label": "腹膜偽粘液腫" },
+            { "slug": "peritoneal-mesothelioma", "label": "悪性腹膜中皮腫" },
+            { "slug": "primary-peritoneal-carcinoma", "label": "原発性腹膜癌" },
+            { "slug": "mesenteric-panniculitis", "label": "腸間膜脂肪織炎" },
+            { "slug": "intraabdominal-desmoid", "label": "デスモイド（腹腔内）" },
+            { "slug": "sclerosing-encapsulating-peritonitis", "label": "硬化性被嚢性腹膜炎" },
+            { "slug": "free-gas-perforation", "label": "腹腔内遊離ガス・消化管穿孔" },
+            { "slug": "ascites", "label": "腹水" },
+            { "slug": "peritoneal-tb", "label": "腹膜結核" },
+            { "slug": "mesenteric-lymphadenopathy", "label": "腸間膜リンパ節腫大" }
+          ]
+        },
+        {
+          "dir": "abdominal-wall",
+          "label": "腹壁",
+          "description": "腹壁ヘルニア・腹直筋鞘血腫など",
+          "items": [
+            { "slug": "abdominal-wall-hernia", "label": "腹壁ヘルニア" },
+            { "slug": "rectus-sheath-hematoma", "label": "腹直筋鞘血腫" },
+            { "slug": "abdominal-wall-desmoid", "label": "腹壁デスモイド" },
+            { "slug": "urachal-remnant", "label": "臍尿管遺残" }
+          ]
+        }
+      ]
+    },
+{
+      "dir": "urinary",
+      "label": "泌尿器",
+      "description": "腎・膀胱・前立腺・精巣・副腎・後腹膜の画像診断",
+      "items": [
+        {
+          "dir": "kidney-tumor",
+          "label": "腎腫瘍",
+          "description": "腎細胞癌・腎盂尿管癌・良性腫瘍",
+          "items": [
+            { "slug": "rcc-general", "label": "腎細胞癌総論(Bosniak分類含む)" },
+            { "slug": "clear-cell-rcc", "label": "淡明細胞型腎細胞癌" },
+            { "slug": "papillary-rcc", "label": "乳頭状腎細胞癌" },
+            { "slug": "chromophobe-rcc", "label": "嫌色素性腎細胞癌" },
+            { "slug": "collecting-duct-carcinoma", "label": "集合管癌" },
+            { "slug": "upper-urinary-tract-uc", "label": "腎盂尿管癌(尿路上皮癌)" },
+            { "slug": "aml", "label": "腎血管筋脂肪腫(AML)" },
+            { "slug": "oncocytoma", "label": "腎オンコサイトーマ" },
+            { "slug": "renal-metastasis", "label": "腎転移" },
+            { "slug": "renal-lymphoma", "label": "腎悪性リンパ腫" },
+            { "slug": "wilms-tumor", "label": "Wilms腫瘍" },
+            { "slug": "multilocular-cystic-neoplasm", "label": "多房性嚢胞性腎腫瘍" },
+            { "slug": "renal-cyst", "label": "腎嚢胞(単純性・複雑性)" }
+          ]
+        },
+        {
+          "dir": "kidney-nontumor",
+          "label": "腎・尿管の非腫瘍性疾患",
+          "description": "腎盂腎炎・結石・血管病変・嚢胞性疾患",
+          "items": [
+            { "slug": "pyelonephritis", "label": "腎盂腎炎(急性・慢性)" },
+            { "slug": "emphysematous-pyelonephritis", "label": "気腫性腎盂腎炎" },
+            { "slug": "renal-abscess", "label": "腎膿瘍・腎周囲膿瘍" },
+            { "slug": "xgp", "label": "黄色肉芽腫性腎盂腎炎(XGP)" },
+            { "slug": "renal-tb", "label": "腎結核" },
+            { "slug": "urolithiasis", "label": "腎結石・尿管結石" },
+            { "slug": "hydronephrosis", "label": "水腎症・閉塞性尿路疾患" },
+            { "slug": "renal-infarction", "label": "腎梗塞" },
+            { "slug": "renal-vein-thrombosis", "label": "腎静脈血栓症" },
+            { "slug": "renal-artery-stenosis", "label": "腎動脈狭窄・線維筋性異形成" },
+            { "slug": "renal-artery-aneurysm", "label": "腎動脈瘤" },
+            { "slug": "renal-trauma", "label": "腎外傷" },
+            { "slug": "renal-vasculitis", "label": "腎血管炎(多発血管炎性肉芽腫症など)" },
+            { "slug": "diabetic-nephropathy", "label": "糖尿病性腎症" },
+            { "slug": "iga-nephropathy", "label": "IgA腎症(画像所見として)" },
+            { "slug": "adpkd", "label": "多発性嚢胞腎(ADPKD)" },
+            { "slug": "medullary-sponge-kidney", "label": "海綿腎(髄質海綿腎)" },
+            { "slug": "horseshoe-kidney", "label": "馬蹄腎・腎形態異常" },
+            { "slug": "retroperitoneal-fibrosis-kidney", "label": "後腹膜線維症" }
+          ]
+        },
+        {
+          "dir": "bladder",
+          "label": "膀胱",
+          "description": "膀胱癌・膀胱炎・膀胱損傷",
+          "items": [
+            { "slug": "bladder-uc", "label": "膀胱癌(尿路上皮癌)" },
+            { "slug": "bladder-scc", "label": "膀胱扁平上皮癌" },
+            { "slug": "bladder-adenocarcinoma", "label": "膀胱腺癌" },
+            { "slug": "urachal-carcinoma", "label": "臍尿管癌" },
+            { "slug": "bladder-diverticulum", "label": "膀胱憩室" },
+            { "slug": "neurogenic-bladder", "label": "神経因性膀胱" },
+            { "slug": "cystitis", "label": "膀胱炎(出血性・気腫性)" },
+            { "slug": "bladder-trauma", "label": "膀胱外傷" },
+            { "slug": "vesical-fistula", "label": "膀胱瘻(膀胱腸瘻・膀胱腟瘻)" }
+          ]
+        },
+        {
+          "dir": "prostate",
+          "label": "前立腺",
+          "description": "前立腺癌・前立腺肥大・炎症",
+          "items": [
+            { "slug": "prostate-cancer", "label": "前立腺癌(PI-RADS)" },
+            { "slug": "bph", "label": "前立腺肥大症" },
+            { "slug": "prostatitis", "label": "前立腺炎(急性・慢性)" },
+            { "slug": "prostatic-abscess", "label": "前立腺膿瘍" }
+          ]
+        },
+        {
+          "dir": "testis-scrotum",
+          "label": "精巣・陰嚢",
+          "description": "精巣腫瘍・精巣捻転・炎症",
+          "items": [
+            { "slug": "testicular-tumor-general", "label": "精巣腫瘍総論" },
+            { "slug": "seminoma", "label": "セミノーマ" },
+            { "slug": "non-seminoma-gct", "label": "非セミノーマ胚細胞腫瘍" },
+            { "slug": "testicular-stromal-tumor", "label": "精巣間質腫瘍" },
+            { "slug": "cryptorchidism", "label": "停留精巣" },
+            { "slug": "testicular-torsion", "label": "精巣捻転" },
+            { "slug": "epididymitis", "label": "精巣上体炎" },
+            { "slug": "hydrocele-varicocele", "label": "陰嚢水腫・精索静脈瘤" },
+            { "slug": "inguinoscrotal-hernia", "label": "鼠径ヘルニア(陰嚢内)" }
+          ]
+        },
+        {
+          "dir": "adrenal",
+          "label": "副腎",
+          "description": "副腎腺腫・褐色細胞腫・副腎皮質癌",
+          "items": [
+            { "slug": "adrenal-adenoma", "label": "副腎腺腫" },
+            { "slug": "pheochromocytoma", "label": "副腎褐色細胞腫" },
+            { "slug": "adrenocortical-carcinoma", "label": "副腎皮質癌" },
+            { "slug": "adrenal-metastasis", "label": "副腎転移" },
+            { "slug": "myelolipoma", "label": "副腎骨髄脂肪腫" },
+            { "slug": "adrenal-cyst", "label": "副腎嚢胞" },
+            { "slug": "adrenal-hemorrhage", "label": "副腎出血" },
+            { "slug": "primary-aldosteronism", "label": "原発性アルドステロン症" },
+            { "slug": "cushing-syndrome", "label": "Cushing症候群" },
+            { "slug": "cah", "label": "先天性副腎過形成" }
+          ]
+        },
+        {
+          "dir": "retroperitoneum",
+          "label": "後腹膜",
+          "description": "後腹膜肉腫・線維症・血腫",
+          "items": [
+            { "slug": "retroperitoneal-sarcoma", "label": "後腹膜肉腫(脂肪肉腫・平滑筋肉腫)" },
+            { "slug": "retroperitoneal-lymphoma", "label": "後腹膜悪性リンパ腫" },
+            { "slug": "retroperitoneal-fibrosis", "label": "後腹膜線維症" },
+            { "slug": "retroperitoneal-hematoma", "label": "後腹膜血腫" },
+            { "slug": "castleman-disease", "label": "Castleman病" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "pediatrics",
+      "label": "小児",
+      "description": "新生児疾患・小児腫瘍・先天性疾患の画像診断",
+      "items": [
+        {
+          "dir": "neonatal-infant",
+          "label": "新生児・乳児",
+          "description": "新生児呼吸障害・消化管奇形など",
+          "items": [
+            { "slug": "rds", "label": "新生児呼吸窮迫症候群(RDS)" },
+            { "slug": "ttn", "label": "新生児一過性多呼吸(TTN)" },
+            { "slug": "mas", "label": "胎便吸引症候群(MAS)" },
+            { "slug": "bpd", "label": "気管支肺異形成症(BPD)" },
+            { "slug": "neonatal-pneumonia", "label": "新生児肺炎" },
+            { "slug": "nec", "label": "壊死性腸炎(NEC)" },
+            { "slug": "meconium-peritonitis", "label": "胎便性腹膜炎" },
+            { "slug": "cdh", "label": "先天性横隔膜ヘルニア" },
+            { "slug": "hypertrophic-pyloric-stenosis", "label": "肥厚性幽門狭窄症" },
+            { "slug": "malrotation-midgut-volvulus", "label": "腸回転異常・中腸軸捻転" },
+            { "slug": "anorectal-malformation", "label": "鎖肛・直腸肛門奇形" },
+            { "slug": "hirschsprung", "label": "Hirschsprung病" },
+            { "slug": "biliary-atresia-peds", "label": "胆道閉鎖症" },
+            { "slug": "choledochal-cyst-peds", "label": "先天性胆道拡張症(小児)" }
+          ]
+        },
+        {
+          "dir": "pediatric-neuro",
+          "label": "小児脳神経",
+          "description": "小児脳腫瘍・HIE・先天奇形",
+          "items": [
+            { "slug": "dnet", "label": "胚芽異形成性神経上皮腫瘍(DNET)" },
+            { "slug": "pilocytic-astrocytoma", "label": "毛様細胞性星細胞腫" },
+            { "slug": "medulloblastoma-peds", "label": "髄芽腫(小児)" },
+            { "slug": "ependymoma-peds", "label": "上衣腫(小児)" },
+            { "slug": "atrt", "label": "非典型的奇形腫様/ラブドイド腫瘍(AT/RT)" },
+            { "slug": "germ-cell-tumor-peds", "label": "胚細胞腫瘍(松果体・鞍上部)" },
+            { "slug": "hypothalamic-hamartoma", "label": "視床下部過誤腫" },
+            { "slug": "intracranial-lipoma", "label": "頭蓋内脂肪腫" },
+            { "slug": "hie", "label": "低酸素性虚血性脳症(HIE)" },
+            { "slug": "neonatal-ivh", "label": "新生児脳室内出血" },
+            { "slug": "pvl", "label": "脳室周囲白質軟化症(PVL)" },
+            { "slug": "torch", "label": "TORCH感染" },
+            { "slug": "neural-tube-defect", "label": "神経管閉鎖不全(髄膜瘤・脊髄髄膜瘤)" },
+            { "slug": "hydrocephalus-peds", "label": "水頭症(小児)" },
+            { "slug": "craniosynostosis", "label": "頭蓋縫合早期癒合症" }
+          ]
+        },
+        {
+          "dir": "pediatric-tumor",
+          "label": "小児固形腫瘍",
+          "description": "神経芽腫・Wilms腫瘍・肝芽腫など",
+          "items": [
+            { "slug": "neuroblastoma", "label": "神経芽腫" },
+            { "slug": "ganglioneuroma-ganglioneuroblastoma", "label": "節細胞神経腫・節細胞神経芽腫" },
+            { "slug": "wilms-tumor-peds", "label": "Wilms腫瘍" },
+            { "slug": "clear-cell-sarcoma-kidney", "label": "腎明細胞肉腫" },
+            { "slug": "rhabdoid-tumor-kidney", "label": "腎ラブドイド腫瘍" },
+            { "slug": "mesoblastic-nephroma", "label": "中胚葉性腎腫" },
+            { "slug": "hepatoblastoma-peds", "label": "肝芽腫" },
+            { "slug": "pediatric-hcc", "label": "小児肝細胞癌" },
+            { "slug": "rhabdomyosarcoma-peds", "label": "横紋筋肉腫(小児)" },
+            { "slug": "ewing-peds", "label": "Ewing肉腫(小児)" },
+            { "slug": "osteosarcoma-peds", "label": "骨肉腫(小児)" },
+            { "slug": "yolk-sac-tumor-peds", "label": "卵黄嚢腫瘍" },
+            { "slug": "sacrococcygeal-teratoma", "label": "奇形腫(仙尾部など)" },
+            { "slug": "retinoblastoma", "label": "網膜芽細胞腫" }
+          ]
+        },
+        {
+          "dir": "pediatric-chest",
+          "label": "小児呼吸器・縦隔",
+          "description": "先天性肺疾患・胸腺病変",
+          "items": [
+            { "slug": "cpam-peds", "label": "先天性嚢胞性腺腫様奇形(CPAM)" },
+            { "slug": "pulmonary-sequestration-peds", "label": "肺分画症" },
+            { "slug": "bronchial-atresia-peds", "label": "気管支閉鎖症" },
+            { "slug": "congenital-lobar-emphysema", "label": "先天性肺気腫" },
+            { "slug": "thymic-enlargement", "label": "胸腺腫大(正常変異含む)" },
+            { "slug": "pediatric-thymic-lymphoma", "label": "小児胸腺リンパ腫" }
+          ]
+        },
+        {
+          "dir": "pediatric-abdomen",
+          "label": "小児腹部",
+          "description": "腸重積・虫垂炎・小児肝血管病変",
+          "items": [
+            { "slug": "intussusception-peds", "label": "腸重積" },
+            { "slug": "appendicitis-peds", "label": "急性虫垂炎(小児)" },
+            { "slug": "mesenteric-lymphadenitis", "label": "腸間膜リンパ節炎" },
+            { "slug": "meckel-diverticulum-peds", "label": "Meckel憩室" },
+            { "slug": "pediatric-hepatic-hemangioma", "label": "小児肝血管腫・血管内皮腫" },
+            { "slug": "pediatric-abdominal-trauma", "label": "腹部外傷(小児)" }
+          ]
+        },
+        {
+          "dir": "pediatric-musculoskeletal",
+          "label": "小児骨・関節",
+          "description": "Perthes病・股関節形成不全など",
+          "items": [
+            { "slug": "perthes", "label": "Perthes病" },
+            { "slug": "scfe", "label": "大腿骨頭すべり症" },
+            { "slug": "ddh", "label": "発育性股関節形成不全" },
+            { "slug": "jia", "label": "若年性特発性関節炎" },
+            { "slug": "pediatric-osteomyelitis", "label": "小児骨髄炎・化膿性関節炎" },
+            { "slug": "lch-peds", "label": "Langerhans細胞組織球症(小児)" }
+          ]
+        },
+        {
+          "dir": "syndrome",
+          "label": "症候群・遺伝性疾患",
+          "description": "母斑症・症候群の小児画像所見",
+          "items": [
+            { "slug": "tuberous-sclerosis-peds", "label": "結節性硬化症(小児)" },
+            { "slug": "nf1-peds", "label": "神経線維腫症1型(小児)" },
+            { "slug": "vhl-peds", "label": "von Hippel-Lindau病(小児)" },
+            { "slug": "beckwith-wiedemann", "label": "Beckwith-Wiedemann症候群" },
+            { "slug": "down-syndrome", "label": "Down症候群の画像所見" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "ivr",
+      "label": "IVR",
+      "description": "血管・非血管IVRの手技と適応",
+      "items": [
+        {
+          "dir": "vascular-general",
+          "label": "血管系IVR総論",
+          "description": "血管造影・塞栓物質総論",
+          "items": [
+            { "slug": "angiography-general", "label": "血管造影総論・アプローチ" },
+            { "slug": "embolization-general", "label": "血管塞栓術総論" },
+            { "slug": "embolic-materials", "label": "塞栓物質の種類と選択" }
+          ]
+        },
+        {
+          "dir": "tumor-ivr",
+          "label": "腫瘍に対するIVR",
+          "description": "TACE・RFA・MWA・Y-90など",
+          "items": [
+            { "slug": "tace", "label": "肝動脈化学塞栓療法(TACE)" },
+            { "slug": "tae-liver", "label": "肝動脈塞栓療法(TAE)" },
+            { "slug": "deb-tace", "label": "薬剤溶出性ビーズTACE(DEB-TACE)" },
+            { "slug": "haic", "label": "経カテーテル動注療法(HAIC)" },
+            { "slug": "tare-y90", "label": "放射線塞栓療法(TARE/Y-90)" },
+            { "slug": "rfa-liver", "label": "肝腫瘍ラジオ波焼灼療法(RFA)" },
+            { "slug": "mwa", "label": "マイクロ波焼灼療法(MWA)" },
+            { "slug": "cryoablation", "label": "凍結療法(cryoablation)" },
+            { "slug": "renal-cryo-rfa", "label": "腎腫瘍凍結療法・RFA" },
+            { "slug": "lung-rfa", "label": "肺腫瘍RFA" },
+            { "slug": "bone-rfa-cement", "label": "骨腫瘍RFA・セメント注入" }
+          ]
+        },
+        {
+          "dir": "bleeding",
+          "label": "出血に対するIVR",
+          "description": "外傷・消化管・気道・産科出血の塞栓術",
+          "items": [
+            { "slug": "trauma-embolization", "label": "外傷性出血に対する緊急塞栓術" },
+            { "slug": "gi-bleeding-embolization", "label": "消化管出血に対する塞栓術" },
+            { "slug": "bae", "label": "気管支動脈塞栓術(喀血)" },
+            { "slug": "obstetric-embolization", "label": "産科出血に対する塞栓術" },
+            { "slug": "postop-pseudoaneurysm-embolization", "label": "術後出血・仮性動脈瘤塞栓術" },
+            { "slug": "epistaxis-embolization", "label": "鼻出血塞栓術" }
+          ]
+        },
+        {
+          "dir": "aneurysm-avm",
+          "label": "動脈瘤・血管奇形",
+          "description": "脳・内臓・末梢AVMの塞栓・硬化療法",
+          "items": [
+            { "slug": "visceral-aneurysm-embolization", "label": "内臓動脈瘤塞栓術" },
+            { "slug": "cerebral-aneurysm-coiling", "label": "脳動脈瘤コイル塞栓術" },
+            { "slug": "brain-avm-embolization", "label": "脳AVM塞栓術" },
+            { "slug": "davf-embolization", "label": "硬膜動静脈瘻塞栓術" },
+            { "slug": "peripheral-avm-sclerotherapy", "label": "末梢AVM塞栓術・硬化療法" },
+            { "slug": "venous-malformation-sclerotherapy", "label": "静脈奇形硬化療法" },
+            { "slug": "lymphatic-malformation-sclerotherapy", "label": "リンパ管奇形硬化療法" }
+          ]
+        },
+        {
+          "dir": "stenosis",
+          "label": "狭窄・閉塞に対するIVR",
+          "description": "PTA・ステント・ステントグラフト",
+          "items": [
+            { "slug": "peripheral-pta-stent", "label": "末梢動脈インターベンション(PTA・ステント)" },
+            { "slug": "renal-artery-stent", "label": "腎動脈ステント" },
+            { "slug": "cas", "label": "頸動脈ステント(CAS)" },
+            { "slug": "tevar-evar", "label": "大動脈ステントグラフト(TEVAR/EVAR)" },
+            { "slug": "venous-stent", "label": "静脈ステント(May-Thurner症候群など)" },
+            { "slug": "av-fistula-pta", "label": "透析シャントPTA" }
+          ]
+        },
+        {
+          "dir": "non-vascular",
+          "label": "非血管系IVR",
+          "description": "ドレナージ・生検・カテーテル留置",
+          "items": [
+            { "slug": "percutaneous-drainage", "label": "経皮的ドレナージ(膿瘍)" },
+            { "slug": "ptcd-ptgbd", "label": "胆道ドレナージ(PTCD・PTGBD)" },
+            { "slug": "biliary-stent", "label": "経皮経肝胆道ステント" },
+            { "slug": "pcn", "label": "腎瘻造設術(PCN)" },
+            { "slug": "ureteral-stent", "label": "尿管ステント" },
+            { "slug": "percutaneous-biopsy", "label": "経皮的生検(CTガイド・超音波ガイド)" },
+            { "slug": "cv-port", "label": "中心静脈ポート造設" },
+            { "slug": "cv-catheter", "label": "CVカテーテル挿入" },
+            { "slug": "peg-ptg", "label": "胃瘻造設(PEG・PTEG)" }
+          ]
+        },
+        {
+          "dir": "venous-ivr",
+          "label": "静脈系IVR",
+          "description": "IVCフィルター・TIPS・BRTOなど",
+          "items": [
+            { "slug": "ivc-filter", "label": "下大静脈フィルター留置・回収" },
+            { "slug": "dvt-thrombolysis", "label": "深部静脈血栓症に対する血栓溶解・吸引" },
+            { "slug": "tips", "label": "経頸静脈的肝内門脈大循環短絡術(TIPS)" },
+            { "slug": "pse", "label": "部分的脾動脈塞栓術(PSE)" },
+            { "slug": "brto", "label": "BRTO(バルーン閉塞下逆行性経静脈的塞栓術)" },
+            { "slug": "varicose-vein", "label": "下肢静脈瘤治療" }
+          ]
+        },
+        {
+          "dir": "other-ivr",
+          "label": "その他",
+          "description": "UAE・PAE・椎体形成術など",
+          "items": [
+            { "slug": "uae", "label": "子宮筋腫に対する子宮動脈塞栓術(UAE)" },
+            { "slug": "varicocele-embolization", "label": "精索静脈瘤塞栓術" },
+            { "slug": "pae", "label": "前立腺動脈塞栓術(PAE)" },
+            { "slug": "vertebroplasty", "label": "椎体形成術(vertebroplasty・kyphoplasty)" },
+            { "slug": "nerve-block", "label": "神経ブロック・神経根ブロック" }
+          ]
+        }
+      ]
+    },
+    {
+      "dir": "nuclear",
+      "label": "核医学",
+      "description": "PET/CT・SPECT・内用療法の基礎と臨床応用",
+      "items": [
+        {
+          "dir": "general",
+          "label": "総論",
+          "description": "核医学検査・PET/SPECT基礎",
+          "items": [
+            { "slug": "nuclear-medicine-general", "label": "核医学検査総論" },
+            { "slug": "radiopharmaceuticals", "label": "放射性医薬品の種類と特性" },
+            { "slug": "pet-ct-mri-basics", "label": "PET/CT・PET/MRIの基礎" },
+            { "slug": "spect-ct-basics", "label": "SPECT/CTの基礎" }
+          ]
+        },
+        {
+          "dir": "fdg-pet",
+          "label": "FDG-PET",
+          "description": "各種悪性腫瘍・炎症性疾患のFDG-PET",
+          "items": [
+            { "slug": "fdg-pet-general", "label": "FDG-PET総論・生理的集積" },
+            { "slug": "fdg-pet-lung", "label": "肺癌のFDG-PET" },
+            { "slug": "fdg-pet-head-neck", "label": "頭頸部癌のFDG-PET" },
+            { "slug": "fdg-pet-lymphoma", "label": "悪性リンパ腫(Deauville criteria)" },
+            { "slug": "fdg-pet-esophagus-stomach", "label": "食道癌・胃癌のFDG-PET" },
+            { "slug": "fdg-pet-colon", "label": "大腸癌のFDG-PET" },
+            { "slug": "fdg-pet-gynecologic", "label": "婦人科癌のFDG-PET" },
+            { "slug": "fdg-pet-melanoma", "label": "悪性黒色腫のFDG-PET" },
+            { "slug": "fdg-pet-cup", "label": "原発不明癌の検索" },
+            { "slug": "fdg-pet-fuo", "label": "不明熱・感染症のFDG-PET" },
+            { "slug": "fdg-pet-vasculitis", "label": "大型血管炎のFDG-PET" },
+            { "slug": "fdg-pet-cardiac-sarcoid", "label": "心サルコイドーシスのFDG-PET" }
+          ]
+        },
+        {
+          "dir": "non-fdg-oncology",
+          "label": "腫瘍核医学(非FDG)",
+          "description": "PSMA・DOTATATE・MIBG・アミノ酸PETなど",
+          "items": [
+            { "slug": "dotatate-pet", "label": "ソマトスタチン受容体シンチ・PET(神経内分泌腫瘍)" },
+            { "slug": "psma-pet", "label": "PSMA-PET(前立腺癌)" },
+            { "slug": "amino-acid-pet", "label": "アミノ酸PET(脳腫瘍)" },
+            { "slug": "choline-pet", "label": "コリンPET" },
+            { "slug": "mibg-scintigraphy", "label": "MIBGシンチ(褐色細胞腫・神経芽腫)" },
+            { "slug": "gallium-scintigraphy", "label": "ガリウムシンチ" }
+          ]
+        },
+        {
+          "dir": "bone-scintigraphy",
+          "label": "骨シンチ",
+          "description": "骨転移・代謝性骨疾患・感染",
+          "items": [
+            { "slug": "bone-scintigraphy-general", "label": "骨シンチ総論" },
+            { "slug": "bone-scintigraphy-metastasis", "label": "骨転移の評価" },
+            { "slug": "bone-scintigraphy-fracture", "label": "骨折・疲労骨折" },
+            { "slug": "bone-scintigraphy-metabolic", "label": "代謝性骨疾患" },
+            { "slug": "bone-scintigraphy-infection", "label": "骨髄炎・感染症" },
+            { "slug": "bone-spect-ct", "label": "SPECT/CT骨シンチ" }
+          ]
+        },
+        {
+          "dir": "brain-nuclear",
+          "label": "脳核医学",
+          "description": "脳血流・認知症・ドパミントランスポーター",
+          "items": [
+            { "slug": "brain-spect", "label": "脳血流シンチ(SPECT)" },
+            { "slug": "acetazolamide-challenge", "label": "アセタゾラミド負荷試験" },
+            { "slug": "dementia-spect", "label": "認知症の脳血流パターン" },
+            { "slug": "amyloid-pet", "label": "アミロイドPET" },
+            { "slug": "tau-pet", "label": "タウPET" },
+            { "slug": "datscan", "label": "ドパミントランスポーターシンチ(DaTscan)" },
+            { "slug": "mibg-parkinson", "label": "MIBG心筋シンチ(Parkinson病)" },
+            { "slug": "brain-tumor-pet", "label": "脳腫瘍のメチオニンPET・FDG-PET" }
+          ]
+        },
+        {
+          "dir": "cardiac-nuclear",
+          "label": "心臓核医学",
+          "description": "心筋血流・バイアビリティ・アミロイド",
+          "items": [
+            { "slug": "myocardial-perfusion", "label": "心筋血流シンチ(負荷・安静)" },
+            { "slug": "myocardial-viability-nuclear", "label": "心筋バイアビリティ評価" },
+            { "slug": "mibg-cardiac", "label": "MIBG心筋シンチ(心不全・Parkinson病)" },
+            { "slug": "pyrophosphate-amyloid", "label": "ピロリン酸シンチ(心アミロイドーシス)" },
+            { "slug": "cardiac-fdg-pet", "label": "FDG-PET(心サルコイドーシス・心筋バイアビリティ)" }
+          ]
+        },
+        {
+          "dir": "respiratory-nuclear",
+          "label": "呼吸器核医学",
+          "description": "換気血流シンチ",
+          "items": [
+            { "slug": "vq-scintigraphy", "label": "肺換気血流シンチ" },
+            { "slug": "pe-vq", "label": "肺血栓塞栓症の評価" },
+            { "slug": "preop-lung-function", "label": "術前肺機能予測" }
+          ]
+        },
+        {
+          "dir": "renal-nuclear",
+          "label": "腎・泌尿器核医学",
+          "description": "レノグラム・DMSA・移植評価",
+          "items": [
+            { "slug": "renogram", "label": "レノグラム(腎動態シンチ)" },
+            { "slug": "dmsa", "label": "DMSA腎シンチ" },
+            { "slug": "diuretic-renography", "label": "利尿レノグラフィ(閉塞評価)" },
+            { "slug": "renal-transplant-nuclear", "label": "腎移植後評価" }
+          ]
+        },
+        {
+          "dir": "thyroid-parathyroid-nuclear",
+          "label": "甲状腺・副甲状腺",
+          "description": "甲状腺・副甲状腺シンチ・放射性ヨード治療",
+          "items": [
+            { "slug": "thyroid-scintigraphy", "label": "甲状腺シンチ" },
+            { "slug": "radioactive-iodine-therapy", "label": "放射性ヨード内用療法(バセドウ病・甲状腺癌)" },
+            { "slug": "parathyroid-mibi", "label": "副甲状腺シンチ(MIBI)" }
+          ]
+        },
+        {
+          "dir": "other-nuclear",
+          "label": "その他",
+          "description": "唾液腺・消化管・センチネル・内用療法",
+          "items": [
+            { "slug": "salivary-scintigraphy", "label": "唾液腺シンチ(Sjögren症候群)" },
+            { "slug": "meckel-scintigraphy", "label": "Meckel憩室シンチ" },
+            { "slug": "gi-bleeding-scintigraphy", "label": "消化管出血シンチ" },
+            { "slug": "sentinel-lymph-node", "label": "センチネルリンパ節シンチ" },
+            { "slug": "i131-dtc", "label": "放射性ヨード内用療法(分化型甲状腺癌)" },
+            { "slug": "lu177-therapy", "label": "ルテチウム(Lu-177)内用療法(PSMA・DOTATATE)" },
+            { "slug": "ra223-therapy", "label": "ラジウム223内用療法(去勢抵抗性前立腺癌骨転移)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

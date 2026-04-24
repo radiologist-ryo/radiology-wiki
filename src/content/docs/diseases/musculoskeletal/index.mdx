@@ -1,12 +1,15 @@
 ---
 title: 骨・関節・軟部
-description: 骨腫瘍・軟部腫瘍・関節疾患の画像診断
+description: 骨腫瘍・軟部腫瘍・関節疾患・代謝性骨疾患・感染炎症・外傷の画像診断
 ---
 
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 <CardGrid>
-  <LinkCard title="骨腫瘍" href="/radiology-wiki/diseases/bone/" description="WHO分類・骨肉腫・軟骨肉腫・Ewing肉腫など" />
-  <LinkCard title="軟部腫瘍" href="/radiology-wiki/diseases/soft-tissue/" description="脂肪肉腫・粘液線維肉腫・平滑筋肉腫・滑膜肉腫など" />
-  <LinkCard title="関節疾患" href="#" description="（準備中）" />
+  <LinkCard title="骨腫瘍" href="/radiology-wiki/diseases/musculoskeletal/bone/" description="WHO分類（第5版）に準拠。骨形成性・軟骨形成性・線維性・巨細胞豊富性・脊索性・造血器・小円形細胞・その他" />
+  <LinkCard title="軟部腫瘍" href="/radiology-wiki/diseases/musculoskeletal/soft-tissue/" description="WHO分類（第5版）に準拠。脂肪性・線維芽細胞性・平滑筋性・骨格筋性・脈管性・末梢神経鞘・分化不明・腫瘍類似病変" />
+  <LinkCard title="関節疾患" href="/radiology-wiki/diseases/musculoskeletal/joints/" description="関節炎・関節症・関節感染" />
+  <LinkCard title="代謝・骨系統疾患" href="/radiology-wiki/diseases/musculoskeletal/metabolic/" description="骨粗鬆症・くる病・骨系統疾患" />
+  <LinkCard title="感染・炎症" href="/radiology-wiki/diseases/musculoskeletal/infection-inflammation/" description="骨髄炎・壊死性筋膜炎・筋炎" />
+  <LinkCard title="外傷・その他" href="/radiology-wiki/diseases/musculoskeletal/trauma-other/" description="疲労骨折・骨壊死・腱/靭帯損傷" />
 </CardGrid>
