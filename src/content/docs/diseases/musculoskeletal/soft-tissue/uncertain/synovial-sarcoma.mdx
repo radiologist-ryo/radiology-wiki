@@ -1,26 +1,135 @@
 ---
 title: 滑膜肉腫
-description: 滑膜肉腫の画像診断まとめ
+description: 滑膜肉腫（synovial sarcoma）の画像診断。SS18::SSX融合遺伝子、若年成人、多嚢胞変性・石灰化・triple sign、膝周囲好発。
+references:
+  - id: 1
+    authors: "WHO Classification of Tumours Editorial Board"
+    title: "Soft Tissue and Bone Tumours. WHO Classification of Tumours, 5th ed."
+    journal: "IARC Publications, Lyon"
+    year: 2020
+  - id: 2
+    authors: "Stevens MC, et al"
+    title: "Treatment of nonmetastatic rhabdomyosarcoma in childhood and adolescence: third study of the International Society of Paediatric Oncology"
+    journal: "J Clin Oncol"
+    year: 2005
+    pmid: "15728225"
+  - id: 3
+    authors: "Kawai A, et al"
+    title: "Trabectedin monotherapy after standard chemotherapy versus best supportive care in patients with advanced, translocation-related sarcoma"
+    journal: "Lancet Oncol"
+    year: 2015
+    pmid: "25795406"
 ---
+
+import Cite from '../../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../../components/ReferenceList.astro';
 
 ## 概要
 
-執筆予定。
+滑膜肉腫（synovial sarcoma; SS）は、**SS18::SSX1/2/4融合遺伝子**を特徴とする悪性軟部肉腫で、WHO分類では**分化不明腫瘍**に分類される。名称は歴史的なもので、発生母地は滑膜とは無関係である。<Cite id={1} />
+
+- **好発年齢**：若年成人〜中年（15〜40歳代）、AYA世代に多い
+- **性別**：男性にやや多い
+- **好発部位**：**四肢深部軟部組織**（特に膝周囲・大腿）、次いで体幹・頭頸部・胸膜・腹腔
+
+組織学的には以下に分類される。
+
+- **二相型（biphasic type）**：紡錘形細胞成分＋上皮様細胞成分
+- **単相線維型（monophasic fibrous type）**：紡錘形細胞のみ
+- **低分化型（poorly differentiated type）**：予後不良
+
+---
+
+## 臨床像
+
+緩徐に増大する**無痛性腫瘤**として発見されることが多い。関節近傍に発生することが多いため、関節疾患と誤認されることがある。石灰化を伴う例では関節炎・異所性骨化などと誤診されることがあり、注意を要する。
 
 ---
 
 ## 画像所見
 
-執筆予定。
+### 単純X線・CT
+
+**石灰化**（約30%）が特徴的な所見である。石灰化は粗大・点状で、腫瘍辺縁・内部いずれにもみられる。近接する骨に骨膜反応・骨びらんを伴うことがある。
+
+### MRI（診断の中心）
+
+MRIでの典型的所見は**triple sign**と呼ばれる。
+
+| シーケンス | 所見 |
+|-----------|------|
+| T1強調像 | 不均一な信号：筋と等〜低信号、出血部位は高信号 |
+| T2強調像 | **triple sign**：高信号（嚢胞変性・壊死）＋中等度信号（充実成分）＋低信号（線維化・石灰化）が混在 |
+| 脂肪抑制T2 | 不均一な信号パターン |
+| 造影後T1 | 充実成分は強く不均一に造影、嚢胞変性部は非造影 |
+| DWI/ADC | 充実成分で拡散制限 |
+
+### その他の所見
+
+- **多嚢胞変性**が高頻度（30〜50%）
+- **fluid-fluid level**（嚢胞内出血）
+- **境界比較的明瞭**（初期は良性に見える）
+- **神経血管束との位置関係**は手術計画に重要
+
+### 小型病変の診断の難しさ
+
+5 cm未満の小型滑膜肉腫は**嚢胞性良性腫瘍（ganglion、血管腫）と誤認**されやすく、関節近傍の"嚢胞性病変"をみた場合は以下を考慮する。
+
+- 造影効果の有無を必ず確認
+- 内部の不均一な信号パターン
+- 増大傾向があれば生検を検討
 
 ---
 
 ## 鑑別診断
 
-執筆予定。
+### 関節近傍の囊胞性腫瘤
+
+| 疾患 | 鑑別のポイント |
+|------|---------------|
+| **ガングリオン** | 単房性、造影効果乏しい、関節と交通 |
+| **色素性絨毛結節性滑膜炎（PVNS）** | ヘモジデリンによるT2低信号、blooming |
+| **滑膜軟骨腫症** | 多数の石灰化小結節、滑膜由来 |
+| **血管腫** | 静脈石、fatty component |
+
+### 軟部肉腫
+
+| 疾患 | 鑑別のポイント |
+|------|---------------|
+| **未分化多形肉腫** | 高齢者、より不均一、石灰化稀 |
+| **粘液線維肉腫** | 高齢者、皮下・筋膜下、tail sign |
+| **横紋筋肉腫** | 小児、胎児型 |
+| **類上皮肉腫** | 若年、末梢（手・前腕）、リンパ行性転移 |
 
 ---
 
-## 参考文献
+## 治療
 
-執筆予定。
+治療の基本は**広範切除＋化学放射線療法**の集学的治療である。
+
+1. **広範切除**（R0マージン）
+2. **化学療法**：ifosfamide高用量 ± ドキソルビシン（**IFO-based regimen**）<Cite id={2} />
+3. **放射線治療**：術前・術後照射
+4. 再発・転移例には、**トラベクテジン**（転座関連肉腫に有効）、パゾパニブ<Cite id={3} />
+
+### 予後因子
+
+- 腫瘍サイズ（5 cm未満は予後良好）
+- 組織学的分化度（低分化型は予後不良）
+- 年齢（小児・若年成人は予後良好）
+- 完全切除の達成
+- 融合遺伝子型（SS18::SSX1 vs SSX2）
+
+---
+
+## 画像診断のポイント
+
+1. **AYA世代の四肢深部（特に膝周囲）軟部腫瘤** → 滑膜肉腫を必ず鑑別に挙げる
+2. **Triple sign**（T2強調像での3種類の信号混在）は滑膜肉腫の特徴
+3. **石灰化**（30%）＋ **多嚢胞変性**は診断への手がかり
+4. **小型病変を"嚢胞"と軽視しない**。造影効果・不均一性を必ず確認
+5. 肺転移は血行性に生じやすく、治療後の胸部CTフォローアップが重要
+
+---
+
+<ReferenceList />
