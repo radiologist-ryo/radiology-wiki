@@ -1599,6 +1599,14 @@ export default defineConfig({
 										{
 											"label": "多形型脂肪肉腫",
 											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/pleomorphic-liposarcoma"
+										},
+										{
+											"label": "異型紡錘形細胞/多形脂肪腫様腫瘍（ASPLT）",
+											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/atypical-spindle-cell-lipomatous-tumour"
+										},
+										{
+											"label": "粘液多形型脂肪肉腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/myxoid-pleomorphic-liposarcoma"
 										}
 									]
 								},
@@ -1629,6 +1637,14 @@ export default defineConfig({
 										{
 											"label": "未分化多形肉腫",
 											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/ups"
+										},
+										{
+											"label": "軟部血管線維腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/angiofibroma-soft-tissue"
+										},
+										{
+											"label": "表在性CD34陽性線維芽細胞性腫瘍",
+											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/superficial-cd34-fibroblastic-tumour"
 										}
 									]
 								},
@@ -1715,6 +1731,18 @@ export default defineConfig({
 										{
 											"label": "類上皮肉腫",
 											"slug": "diseases/musculoskeletal/soft-tissue/uncertain/epithelioid-sarcoma"
+										},
+										{
+											"label": "NTRK再構成紡錘形細胞腫瘍",
+											"slug": "diseases/musculoskeletal/soft-tissue/uncertain/ntrk-rearranged-spindle-cell-neoplasm"
+										},
+										{
+											"label": "CIC再構成肉腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/uncertain/cic-rearranged-sarcoma"
+										},
+										{
+											"label": "BCOR遺伝子異常肉腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/uncertain/bcor-sarcoma"
 										}
 									]
 								},
