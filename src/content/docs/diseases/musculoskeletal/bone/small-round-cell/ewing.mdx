@@ -1,19 +1,31 @@
 ---
 title: Ewing肉腫
-description: Ewing肉腫（Ewing sarcoma）の画像診断まとめ。X線・CT・MRI所見と鑑別診断。
+description: Ewing肉腫（Ewing sarcoma）の画像診断まとめ。WHO第5版で骨軟部未分化小円形細胞肉腫として再定義。
 references:
   - id: 1
+    authors: "WHO Classification of Tumours Editorial Board"
+    title: "Soft Tissue and Bone Tumours, WHO Classification of Tumours, 5th ed"
+    journal: "IARC Publications, Lyon"
+    year: 2020
+    pmid: ""
+  - id: 2
     authors: "Ragsdale BD, et al"
     title: "Radiologic and pathologic analysis of solitary bone lesions. Part II: periosteal reactions"
     journal: "Radiol Clin North Am"
     year: 1981
     pmid: "7323291"
-  - id: 2
+  - id: 3
     authors: "Madewell JE, et al"
     title: "Radiologic and pathologic analysis of solitary bone lesions. Part I: internal margins"
     journal: "Radiol Clin North Am"
     year: 1981
     pmid: "7323290"
+  - id: 4
+    authors: "Womer RB, et al"
+    title: "Randomized controlled trial of interval-compressed chemotherapy for the treatment of localized Ewing sarcoma"
+    journal: "J Clin Oncol"
+    year: 2012
+    pmid: "23091096"
 ---
 
 import Cite from '../../../../../../components/Cite.astro';
@@ -21,59 +33,68 @@ import ReferenceList from '../../../../../../components/ReferenceList.astro';
 
 ## 概要
 
-Ewing肉腫（Ewing sarcoma）は神経外胚葉由来の悪性腫瘍であり、EWSR1遺伝子の転座（主にEWSR1-FLI1融合遺伝子：t(11;22)）を特徴とする。原発性悪性骨腫瘍の約16%を占め、骨肉腫に次ぐ頻度である。
+Ewing肉腫（Ewing sarcoma）は、特異的なキメラ遺伝子を有する小円形細胞肉腫である。
 
-- **好発年齢**：5〜25歳（若年者。20歳未満が約80%）
-- **好発部位**：長管骨骨幹部（大腿骨・脛骨・腓骨）および骨盤・肋骨。脊椎発生も約10%に見られる
-- **臨床症状**：局所の疼痛・腫脹・発熱・炎症反応上昇（骨髄炎との鑑別が問題となる）
+- **好発年齢**：5〜25歳（20歳未満が約80%）
+- **好発部位**：小児の長管骨**骨幹部**または骨幹部〜骨幹端部、扁平骨（骨盤・肋骨・脊椎）
+- **軟部発生**：約12%
+- **臨床症状**：局所の疼痛・腫脹・発熱・炎症反応上昇（骨髄炎との鑑別が問題）
 
----
+## WHO第5版における位置づけ
+
+『WHO骨軟部腫瘍分類（第5版）』では、従来の軟部腫瘍分類・骨腫瘍分類と並ぶ独立したカテゴリーとして**「骨軟部未分化小円形細胞肉腫（undifferentiated small round cell sarcomas of bone and soft tissue）」**が新設された<Cite refs={[1]} />。これは近年の分子病理学的研究により、Ewing肉腫とは異なる円形細胞肉腫の存在が明らかになったためで、以下の4種類が含まれる：
+
+1. **Ewing肉腫**（古典的Ewing肉腫）
+2. **EWSR1-non-ETS融合遺伝子を有する円形細胞肉腫**（NFATC2、PATZ1など）
+3. **CIC遺伝子再構成肉腫**
+4. **BCOR遺伝子変異肉腫**
+
+これらの腫瘍群は骨と軟部のいずれにも発生しうるため、従来の「骨腫瘍」「軟部腫瘍」という区分では分類しきれなくなっていた。
+
+## 分子背景
+
+Ewing肉腫は **FET family遺伝子**（FUS, EWSR1, TAF-15）と **ETS family遺伝子**（FLI1, ERG, ETV-1, ETV-4, FEV）のキメラ遺伝子を特徴とする<Cite refs={[1]} />：
+
+- **EWSR1::FLI1**：85%以上を占める最も頻度の高いキメラ遺伝子。t(11;22)(q24;q12)
+- **EWSR1::ERG**：次いで多い
+- 免疫染色：CD99、NKX2.2、PAX7に陽性
 
 ## 画像所見
 
-### 単純X線写真
+### 単純X線写真・CT
 
-Ewing肉腫の典型的X線所見は「広範な骨破壊・骨形成なし・巨大軟部腫瘤・骨膜反応」の組み合わせである。
+境界不明瞭で髄内に浸潤性あるいは虫食い状（moth-eaten / permeative）に進展する溶骨性病変<Cite refs={[3]} />。骨幹部〜骨幹端に好発し、しばしば軟部組織に浸潤して**骨破壊に不釣り合いな大きな軟部腫瘤**を形成する。
 
-| 所見 | 特徴 |
-|------|------|
-| 辺縁 | 不明瞭（Moth-eaten〜Permeative型；Lodwick II〜III）<Cite id={2} /> |
-| 基質石灰化 | 原則なし（骨形成成分を含まない） |
-| 骨破壊 | 骨幹部の広範な浸潤性骨破壊。骨皮質の広範な侵食 |
-| 骨膜反応 | **Onion skin（積層状）骨膜反応**が特徴的<Cite id={1} />。Codman三角も出現しうる |
-| 軟部腫瘤 | 骨破壊の程度に比して著しく大きい軟部腫瘤（Ewing肉腫の特徴） |
+特徴的な骨膜反応<Cite refs={[2]} />：
 
-Onion skin骨膜反応は急速増殖性腫瘍の骨膜への侵入と反応性骨形成が交互に繰り返されることで形成される。Ewing肉腫で最も特徴的だが、骨肉腫・骨髄炎・ランゲルハンス組織球症でも出現しうる。
+- **onion skin**（多層性骨膜反応）：層状の骨膜反応で、急速な進展を反映
+- **sunburst appearance**（放射状骨膜反応）：垂直方向の骨膜反応
+- **hair-on-end appearance**：垂直方向の細い棘状骨膜反応
 
-### CT
-
-CTでは骨皮質内の虫食い状変化（endosteal erosion）と、骨外に広がる軟部腫瘤を明瞭に評価できる。石灰化はほとんど認められない。壊死による不均一な低吸収域を軟部腫瘤内に認めることがある。
+これらの骨膜反応は急性骨髄炎などの良性病変でもみられることがあるため、注意が必要。
 
 ### MRI
 
-Ewing肉腫のMRI評価は術前計画において最も重要であり、腫瘍の骨髄内進展範囲・軟部浸潤・神経血管束への関与を精密に評価する。
+- **T1強調像**：低信号（骨髄置換）
+- **T2強調像**：中等度〜高信号、不均一
+- **造影後**：不均一な造影効果
+- **拡散強調像**：細胞密度の高さを反映して**著明な拡散制限**
 
-| シーケンス | 所見 |
-|-----------|------|
-| T1強調像 | 骨髄を置換する低信号。広範な骨幹部に及ぶことが多い |
-| T2強調像/STIR | 腫瘍は不均一な中〜高信号。軟部腫瘤内の壊死・出血により信号不均一 |
-| 造影T1 | 不均一な増強。壊死部は非増強 |
-| DWI | 活性腫瘍部で拡散制限。治療効果判定に有用 |
-
-**全身MRI（whole-body MRI）またはPET-CT**は診断時の骨転移・骨外転移の評価に推奨される。
-
----
+骨内・骨外進展範囲の評価にMRIが必須。罹患骨全長を含めた撮像が望ましい。
 
 ## 鑑別診断
 
-| 疾患 | 鑑別のポイント |
-|------|---------------|
-| **骨髄炎（急性化膿性）** | 最重要鑑別。発熱・白血球増多。MRIで骨端板をまたぐ浸潤・周囲軟部炎症・液体貯留。臨床・血液検査・生検が確定に必要 |
-| **骨肉腫** | 骨端部〜骨幹端部。骨様基質（osteoid matrix）を認める。Sunburst pattern。年齢（10〜20歳代） |
-| **ランゲルハンス細胞組織球症（LCH）** | 病変が単発・境界明瞭なことも多い。脊椎椎体圧壊（vertebra plana）。若年者 |
-| **リンパ腫** | 中高年。骨幹部。骨破壊が軽微な割に軟部腫瘤が大きい（Ewing肉腫に類似） |
-| **転移性神経芽細胞腫** | 5歳未満の幼児。多発骨転移。尿中カテコラミン高値 |
+- **CIC再構成肉腫**：若年成人の四肢・体幹**深層軟部組織**に好発、骨発生は稀。Ewing肉腫より予後不良。免疫染色でWT1・ETV4陽性、NKX2.2/PAX7陰性で鑑別
+- **BCOR遺伝子変異肉腫**：男児の骨（骨盤・下肢・傍脊柱）に好発。免疫染色でBCOR・SATB2・CCNB3陽性
+- **EWSR1::NFATC2肉腫**：長管骨の骨幹端〜骨幹部に好発。単純X線写真で**Buttressing型肥厚**が特徴的との報告あり
+- **骨髄炎**：境界不明瞭な溶骨性変化と骨膜反応で類似。発熱・炎症反応はEwing肉腫でもみられる
+- **悪性リンパ腫**：浸潤性溶骨性変化で類似するが、骨膜反応に乏しく、骨破壊に不釣り合いな軟部腫瘤を形成する点で類似する。発症年齢が高い（40〜60歳台）
+- **転移性骨腫瘍**：高齢者では原発検索が必要
 
----
+## 治療・予後
+
+標準治療は**VDC/IE療法**（ビンクリスチン、ドキソルビシン、シクロホスファミド/イホスファミド、エトポシド）を主体とする多剤併用化学療法と局所制御（手術または放射線治療）の集学的治療<Cite refs={[4]} />。Interval-compressed regimen（2週間隔投与）が標準。
+
+5年生存率は限局性で約70%、転移例で約30%。
 
 <ReferenceList />
