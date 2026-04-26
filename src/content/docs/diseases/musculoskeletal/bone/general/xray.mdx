@@ -1,26 +1,157 @@
 ---
-title: X線読影（辺縁解析・骨膜反応・基質）
-description: X線読影（辺縁解析・骨膜反応・基質）の画像診断まとめ
+title: 骨腫瘍のX線読影（辺縁解析・骨膜反応・基質）
+description: 骨腫瘍診断の基本となる単純X線写真の読影法。Lodwick-AFIP方式の辺縁解析、骨膜反応のパターン、腫瘍内基質の評価。
+references:
+  - id: 1
+    authors: "Madewell JE, et al"
+    title: "Radiologic and pathologic analysis of solitary bone lesions. Part I: internal margins"
+    journal: "Radiol Clin North Am"
+    year: 1981
+    pmid: "7323290"
+  - id: 2
+    authors: "Ragsdale BD, et al"
+    title: "Radiologic and pathologic analysis of solitary bone lesions. Part II: periosteal reactions"
+    journal: "Radiol Clin North Am"
+    year: 1981
+    pmid: "7323291"
+  - id: 3
+    authors: "Sweet DE, et al"
+    title: "Radiologic and pathologic analysis of solitary bone lesions. Part III: matrix patterns"
+    journal: "Radiol Clin North Am"
+    year: 1981
+    pmid: "7323292"
+  - id: 4
+    authors: "Caracciolo JT, et al"
+    title: "A modified Lodwick-Madewell grading system for the evaluation of lytic bone lesions"
+    journal: "AJR"
+    year: 2016
+    pmid: "27070373"
 ---
+
+import Cite from '../../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../../components/ReferenceList.astro';
 
 ## 概要
 
-執筆予定。
+骨腫瘍の診断は、現代においても**単純X線写真が基本**である。CT・MRIを追加することで詳細な評価が可能となるが、まず単純X線写真で病変の性格を判断することが診療の出発点となる。
 
----
+単純X線写真での読影の柱は3つ：
 
-## 画像所見
+1. **辺縁の解析**（最も重要）
+2. **骨膜反応の評価**
+3. **腫瘍内基質の評価**
 
-執筆予定。
+## 1. 辺縁の解析
 
----
+病変の辺縁の性状は病変の活動性と直接関係する。腫瘍と周囲正常骨組織の境界部分を**移行帯（zone of transition）**と呼ぶ：
 
-## 鑑別診断
+- **狭い移行帯**: 緩徐に増大する病変、硬化縁を形成、良性が多い
+- **広い移行帯**: 急速に進行する悪性病変、炎症性病変
 
-執筆予定。
+### AFIP/Lodwick方式の分類
 
----
+| Type | 名称 | 特徴 | 主な疾患例 |
+|------|------|------|------|
+| **IA** | 地図状＋全周性硬化縁 | 活動性低い良性 | NOF、骨嚢腫、線維性骨異形成症 |
+| **IB** | 地図状、硬化縁の一部欠如 | 増殖傾向の強い良性〜低侵襲悪性 | 骨巨細胞腫、軟骨芽細胞腫 |
+| **IC** | 境界明瞭、硬化縁なし | 増殖傾向の強い病変 | 骨巨細胞腫、低侵襲性悪性腫瘍 |
+| **II** | 蚕食状（moth-eaten） | 小円形破壊巣の集簇、悪性示唆 | 骨肉腫、悪性リンパ腫 |
+| **III** | 浸潤性（permeative） | 骨皮質を保ちながら広がる | Ewing肉腫、悪性リンパ腫 |
 
-## 参考文献
+近年、Lodwick方式を改良した **Lodwick-Madewell分類** も用いられている<Cite refs={[4]} />。
 
-執筆予定。
+### 重要なポイント
+
+- type II/III は**悪性を強く示唆**するが、急性骨髄炎などの炎症性病変でも生じうる
+- 骨巨細胞腫の Campanacci分類（grade I-III）は AFIP の IA/IB/IC におおむね対応<Cite refs={[1]} />
+- 単純X線写真で認識できる範囲より、実際の腫瘍進展は広いことが多い
+
+## 2. 骨膜反応の評価
+
+骨膜反応は腫瘍が骨に及ぼす影響を表しており、**活動性・増殖スピード・侵襲性**を反映する<Cite refs={[2]} />。
+
+### 骨膜の解剖
+
+骨膜は2層性の膜性組織：
+- **inner cambium layer**（内側、骨芽細胞・破骨細胞を含む細胞性層）
+- **outer fibrous layer**（外側、線維性結合組織層）
+
+骨膜反応が単純X線写真で観察されるまでには、最初の刺激から **10日〜3週間**かかる。若年者ではより短期間で出現する。
+
+### 骨膜反応のパターン
+
+#### Solid型（緩徐病変）
+- 平滑な緻密骨からなる肥厚
+- 類骨骨腫、骨折治癒過程
+
+#### Buttressing型（緩徐病変）
+- 骨皮質の膨張と肥厚が同時に生じる
+- 異型軟骨性腫瘍、low-grade 軟骨肉腫
+
+#### 単層性骨膜反応
+- 比較的活動性の低い病変
+- 単一の薄い骨膜反応層
+
+#### Onion skin（多層性、急速病変）
+- タマネギの皮状の多層性骨膜反応
+- 病変の活動性増悪、急速進展を示す
+- Ewing肉腫、骨肉腫
+
+#### Sunburst（放射状、急速病変）
+- 垂直方向の放射状骨膜反応
+- 増殖スピードの早い侵襲性病変
+- 骨肉腫、Ewing肉腫
+- 注：急性骨髄炎などの良性病変でも生じうる
+
+#### Hair-on-end（垂直方向）
+- 細い棘状の垂直骨膜反応
+- Ewing肉腫、サラセミア（鉄欠乏に伴う頭蓋骨）
+
+#### Codman三角（途絶した骨膜反応）
+- 腫瘍がもち上げた骨膜が病変辺縁で途絶
+- **悪性を強く示唆**
+- 骨肉腫で典型的
+
+## 3. 腫瘍内基質の評価
+
+腫瘍細胞が産生する細胞外物質のうち、**軟骨基質と骨基質**は特徴的な石灰化を示し、診断に役立つ<Cite refs={[3]} />。
+
+### 骨基質の石灰化（骨化, ossification）
+
+- 塊状（mass-like）
+- 雲状（cloud-like）
+- 象牙状（ivory-like）
+- すりガラス状（ground-glass）
+
+→ **骨肉腫**で典型的（雲状）。**骨折の仮骨形成、骨化性筋炎**でも類似所見
+
+### 軟骨基質の石灰化（cartilaginous calcification）
+
+- 点状（punctate）
+- リング状（ring-like）
+- 弧状（arc-like）
+- コンマ状
+
+→ **内軟骨腫、軟骨肉腫、骨軟骨腫**
+
+### 異栄養性石灰化（dystrophic calcification）
+
+- 変性・壊死に伴う非特異的石灰化
+- 骨梗塞では辺縁の蛇行する曲線状（serpentine）
+
+### 腫瘍内基質の意義
+
+- 鑑別診断には重要
+- ただし**良悪性の判断にはそれほど有用ではない**
+  - 例：骨基質を産生する病変でも良性（骨芽細胞腫）と悪性（骨肉腫）の両方あり
+  - 軟骨基質も内軟骨腫（良性）と軟骨肉腫（悪性）の両方で見られる
+
+## まとめ：読影の流れ
+
+1. **辺縁解析**で病変の活動性を判断（type IA → III）
+2. **骨膜反応**のパターンから侵襲性を評価
+3. **腫瘍内基質**で組織型を推定
+4. 患者の**年齢・性別・好発部位**を加味して鑑別を絞る
+5. 必要に応じて CT・MRI で詳細評価
+
+<ReferenceList />

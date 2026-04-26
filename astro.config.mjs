@@ -1361,6 +1361,10 @@ export default defineConfig({
 										{
 											"label": "CT・MRI・PETの役割",
 											"slug": "diseases/musculoskeletal/bone/general/imaging"
+										},
+										{
+											"label": "良性骨腫瘍総論（Don't touch lesion）",
+											"slug": "diseases/musculoskeletal/bone/general/benign-bone-overview"
 										}
 									]
 								},
@@ -1621,6 +1625,14 @@ export default defineConfig({
 										{
 											"label": "軟部腫瘍分類総論",
 											"slug": "diseases/musculoskeletal/soft-tissue/general-classification/soft-tissue-classification"
+										},
+										{
+											"label": "悪性軟部腫瘍の画像診断総論",
+											"slug": "diseases/musculoskeletal/soft-tissue/general-classification/malignant-soft-tissue-imaging"
+										},
+										{
+											"label": "良性軟部腫瘍総論",
+											"slug": "diseases/musculoskeletal/soft-tissue/general-classification/benign-soft-tissue-overview"
 										}
 									]
 								},
