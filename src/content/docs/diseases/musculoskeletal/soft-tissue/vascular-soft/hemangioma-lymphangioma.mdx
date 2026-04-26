@@ -1,26 +1,98 @@
 ---
 title: 血管腫・リンパ管腫
-description: 血管腫・リンパ管腫の画像診断まとめ
+description: 血管腫（haemangioma）とリンパ管腫（lymphangioma）の画像診断まとめ。ISSVA分類、血管奇形との区別。
+references:
+  - id: 1
+    authors: "WHO Classification of Tumours Editorial Board"
+    title: "Soft Tissue and Bone Tumours, WHO Classification of Tumours, 5th ed"
+    journal: "IARC Publications, Lyon"
+    year: 2020
+    pmid: ""
+  - id: 2
+    authors: "Wassef M, et al"
+    title: "Vascular Anomalies Classification: Recommendations From the International Society for the Study of Vascular Anomalies"
+    journal: "Pediatrics"
+    year: 2015
+    pmid: "26055853"
 ---
+
+import Cite from '../../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../../components/ReferenceList.astro';
 
 ## 概要
 
-執筆予定。
+血管腫およびリンパ管腫は、血管・リンパ管成分から構成される良性病変である。
+**ISSVA分類（International Society for the Study of Vascular Anomalies）**では、血管病変は **vascular tumours（腫瘍）** と **vascular malformations（血管奇形）** に大別される<Cite refs={[2]} />。
 
----
+## ISSVA分類の要点
 
-## 画像所見
+| 区分 | 主な病変 | 特徴 |
+|------|---------|------|
+| Vascular tumours | 乳児血管腫、tufted angioma、kaposiform hemangioendothelioma | 細胞増殖あり |
+| Vascular malformations | 毛細血管奇形、静脈奇形、リンパ管奇形、動静脈奇形（AVM） | 細胞増殖なし |
 
-執筆予定。
+従来「血管腫」「リンパ管腫」と呼ばれた多くは、現在では **vascular malformation（血管奇形）** に分類される。
 
----
+## 乳児血管腫（infantile haemangioma）
+
+### 概要
+
+最も頻度の高い小児血管性腫瘍。生後数週〜数ヶ月で出現し、**増殖期 → 退縮期**を経て自然消退する。
+
+- **好発年齢**：乳児（生後数週〜数ヶ月で出現）
+- **好発部位**：頭頸部、体幹
+- **GLUT-1陽性**が特異的マーカー
+
+### 画像所見
+
+- **MRI**: T1低信号、T2高信号、強い均一造影効果
+- 増殖期は内部に flow void を認める高血流性
+- 退縮期は脂肪化、信号変化
+
+## 静脈奇形（venous malformation）
+
+従来「海綿状血管腫」と呼ばれた病変の多くがこれに該当。
+
+### 画像所見
+
+- **T1強調像**：低〜中等度信号
+- **T2強調像**：著明な高信号（葡萄房状の小嚢胞集簇）
+- 造影後：緩徐な造影効果、遅延相で充満
+- 内部に**静脈石（phlebolith）**を認めることがある（CTで高吸収、X線でも検出可能）
+
+## リンパ管奇形（lymphatic malformation）
+
+従来「リンパ管腫」「嚢胞状リンパ管腫」と呼ばれた病変。マクロ嚢胞型・マイクロ嚢胞型・混合型に分類される。
+
+### 画像所見
+
+- **T1強調像**：低信号（液体成分）、出血を伴うと高信号
+- **T2強調像**：著明な高信号
+- 造影後：嚢胞壁・隔壁のみ造影
+- 液面形成（出血を伴う場合）
+
+## 動静脈奇形（AVM）
+
+動脈と静脈が異常吻合（ナイダス）を形成する病変。
+
+### 画像所見
+
+- 多数の **flow void**
+- 造影早期相での強い造影効果
+- 拡張した流入動脈・流出静脈
+- 周囲組織への二次変化
 
 ## 鑑別診断
 
-執筆予定。
+- **血管肉腫**: 高齢者、頭部・四肢、急速増大、悪性所見
+- **kaposiform hemangioendothelioma**: 中間悪性、Kasabach-Merritt症候群を合併
 
----
+## 治療
 
-## 参考文献
+無症状例は経過観察。症状例（疼痛、機能障害、整容上の問題）に対しては：
+- **硬化療法**（静脈奇形、リンパ管奇形）
+- **塞栓術**（AVM）
+- **外科的切除**
+- **薬物療法**（プロプラノロール: 乳児血管腫）
 
-執筆予定。
+<ReferenceList />

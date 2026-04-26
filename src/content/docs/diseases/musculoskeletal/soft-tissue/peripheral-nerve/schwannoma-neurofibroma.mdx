@@ -1,26 +1,101 @@
 ---
 title: 神経鞘腫・神経線維腫
-description: 神経鞘腫・神経線維腫の画像診断まとめ
+description: 神経鞘腫（schwannoma）・神経線維腫（neurofibroma）の画像診断まとめ。target sign、NF1合併、悪性転化リスク。
+references:
+  - id: 1
+    authors: "WHO Classification of Tumours Editorial Board"
+    title: "Soft Tissue and Bone Tumours, WHO Classification of Tumours, 5th ed"
+    journal: "IARC Publications, Lyon"
+    year: 2020
+    pmid: ""
+  - id: 2
+    authors: "Suh JS, et al"
+    title: "Peripheral (extracranial) nerve tumors: correlation of MR imaging and histologic findings"
+    journal: "Radiology"
+    year: 1992
+    pmid: "1561333"
+  - id: 3
+    authors: "Pilavaki M, et al"
+    title: "Imaging of peripheral nerve sheath tumors with pathologic correlation: pictorial review"
+    journal: "Eur J Radiol"
+    year: 2004
+    pmid: "15544900"
 ---
+
+import Cite from '../../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../../components/ReferenceList.astro';
 
 ## 概要
 
-執筆予定。
+神経鞘腫・神経線維腫はWHO分類の末梢神経鞘腫瘍（peripheral nerve sheath tumours）の良性に分類される腫瘍で、日常臨床でも遭遇する機会の多い疾患である。
 
----
+- **好発年齢**：若年成人〜中高年
+- **好発部位**：全身のあらゆる部位、脊椎近傍、皮下や筋間に好発
+- **臨床症状**：腫瘤、神経領域の疼痛・しびれ・Tinel徴候
 
-## 画像所見
+## 神経鞘腫（schwannoma）
 
-執筆予定。
+### 概要
 
----
+Schwann細胞への分化を示す良性末梢神経腫瘍で、良性軟部腫瘍の約5%を占める。組織学的に細胞成分に富む **Antoni A領域** と粘液状基質に富む **Antoni B領域** が混在する。
 
-## 鑑別診断
+- 神経に連続し、線維性被膜を有する円形・楕円形の単発性腫瘤が多い
+- 多発例もある
+- **嚢胞変性・出血**などの二次的変化を伴いやすい
+- 脊髄腫瘍（硬膜内髄外腫瘍）の代表的疾患のひとつ
 
-執筆予定。
+### 画像所見<Cite refs={[2]} /><Cite refs={[3]} />
 
----
+- **T1強調像**：低〜中等度信号
+- **T2強調像**：辺縁主体に粘液状基質を反映した高信号、内部に同心円状の低信号を呈する **target sign** を認めることがある
+- **fascicular sign**: 内部に細い索状の信号（神経束を反映）
+- **split fat sign**: 腫瘤辺縁と周囲の筋肉を分ける脂肪信号（筋間発生）
+- 造影後：強い不均一な造影効果
 
-## 参考文献
+## 神経線維腫（neurofibroma）
 
-執筆予定。
+### 概要
+
+Schwann細胞、神経周膜細胞、線維芽細胞など複数の細胞由来の腫瘍で、若年成人に多い。
+
+### 病型
+
+- **孤立性（solitary）**：神経線維腫症を伴わないことが多い、限局型
+- **多発性**：**神経線維腫症1型（neurofibromatosis type 1; NF1）**を伴うことが多い
+  - **限局型（localized）**: 孤立性と同様の所見
+  - **蔓状型（plexiform）**: 比較的大きな神経から分枝に沿って広がる**数珠状に多発する結節**、target sign を認める
+  - **びまん性（diffuse）**: 皮膚の肥厚や筋肉の構造を残して増殖、血管の増生
+
+### 画像所見
+
+- target sign を認める点は神経鞘腫と類似
+- **神経鞘腫と比較し、被膜形成は認めず、嚢胞変性や出血なども少ない**
+- 蔓状神経線維腫：脊柱に沿った多発結節、神経走行に一致
+
+## 神経鞘腫と神経線維腫の鑑別
+
+| 項目 | 神経鞘腫 | 神経線維腫 |
+|------|----------|------------|
+| 神経との関係 | 偏心性に発生 | 中心性に発生（神経が腫瘍内を貫く） |
+| 被膜 | あり | なし |
+| 嚢胞変性 | しばしばあり | 稀 |
+| 多発性 | NF2合併例 | NF1合併例 |
+| 悪性転化 | 稀 | NF1で5〜10%（蔓状型） |
+
+## NF1合併例の経過観察と悪性転化
+
+NF1患者では、既存の神経線維腫（特に**蔓状神経線維腫**）からの悪性末梢神経鞘腫瘍（MPNST）への悪性転化リスクがある。以下の所見があれば MPNST を疑う：
+
+- 急速な増大
+- 疼痛の出現
+- 5cm以上のサイズ
+- target sign の消失
+- 不均一な造影効果、壊死領域
+- 強い拡散制限
+- FDG-PET/CT での高 SUV
+
+## 治療
+
+無症状例は経過観察。症状例や悪性転化が疑われる例では外科的切除。神経温存に注意（神経束間切除）。
+
+<ReferenceList />
