@@ -1617,6 +1617,14 @@ export default defineConfig({
 											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/lipoma-angiolipoma"
 										},
 										{
+											"label": "紡錘形細胞脂肪腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/spindle-cell-lipoma"
+										},
+										{
+											"label": "良性対称性脂肪腫症",
+											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/benign-symmetric-lipomatosis"
+										},
+										{
 											"label": "高分化型脂肪肉腫",
 											"slug": "diseases/musculoskeletal/soft-tissue/adipocytic/well-differentiated-liposarcoma"
 										},
@@ -1657,6 +1665,10 @@ export default defineConfig({
 										{
 											"label": "デスモイド型線維腫症",
 											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/desmoid"
+										},
+										{
+											"label": "手掌・足底線維腫症",
+											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/palmar-plantar-fibromatosis"
 										},
 										{
 											"label": "孤立性線維性腫瘍（SFT）",
@@ -1739,6 +1751,10 @@ export default defineConfig({
 											"slug": "diseases/musculoskeletal/soft-tissue/peripheral-nerve/schwannoma-neurofibroma"
 										},
 										{
+											"label": "神経内脂肪腫症",
+											"slug": "diseases/musculoskeletal/soft-tissue/peripheral-nerve/lipomatosis-of-nerve"
+										},
+										{
 											"label": "悪性末梢神経鞘腫瘍（MPNST）",
 											"slug": "diseases/musculoskeletal/soft-tissue/peripheral-nerve/mpnst"
 										}
@@ -1793,6 +1809,14 @@ export default defineConfig({
 										{
 											"label": "色素性絨毛結節性滑膜炎（PVNS）",
 											"slug": "diseases/musculoskeletal/soft-tissue/tumor-like/pvns"
+										},
+										{
+											"label": "表皮嚢腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/tumor-like/epidermal-cyst"
+										},
+										{
+											"label": "筋肉内粘液腫",
+											"slug": "diseases/musculoskeletal/soft-tissue/tumor-like/myxoma"
 										}
 									]
 								}
