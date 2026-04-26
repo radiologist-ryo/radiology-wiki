@@ -46,6 +46,7 @@ export default defineConfig({
 				PageFrame: './src/components/PageFrame.astro',
 				Sidebar: './src/components/overrides/Sidebar.astro',
 				Search: './src/components/overrides/Search.astro',
+				TableOfContents: './src/components/overrides/TableOfContents.astro',
 			},
 			pagefind: {
 				ranking: {
