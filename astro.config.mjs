@@ -1407,6 +1407,10 @@ export default defineConfig({
 										{
 											"label": "軟骨肉腫",
 											"slug": "diseases/musculoskeletal/bone/chondrogenic/chondrosarcoma"
+										},
+										{
+											"label": "淡明細胞性軟骨肉腫",
+											"slug": "diseases/musculoskeletal/bone/chondrogenic/clear-cell-chondrosarcoma"
 										}
 									]
 								},
@@ -1429,6 +1433,14 @@ export default defineConfig({
 										{
 											"label": "骨肉腫",
 											"slug": "diseases/musculoskeletal/bone/osteogenic/osteosarcoma"
+										},
+										{
+											"label": "傍骨性骨肉腫",
+											"slug": "diseases/musculoskeletal/bone/osteogenic/parosteal-osteosarcoma"
+										},
+										{
+											"label": "骨膜性骨肉腫",
+											"slug": "diseases/musculoskeletal/bone/osteogenic/periosteal-osteosarcoma"
 										}
 									]
 								},
@@ -1505,6 +1517,14 @@ export default defineConfig({
 										{
 											"label": "脊索腫",
 											"slug": "diseases/musculoskeletal/bone/notochordal/chordoma"
+										},
+										{
+											"label": "低分化脊索腫",
+											"slug": "diseases/musculoskeletal/bone/notochordal/poorly-differentiated-chordoma"
+										},
+										{
+											"label": "脱分化脊索腫",
+											"slug": "diseases/musculoskeletal/bone/notochordal/dedifferentiated-chordoma"
 										}
 									]
 								},
