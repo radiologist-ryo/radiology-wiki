@@ -1389,6 +1389,22 @@ export default defineConfig({
 											"slug": "diseases/musculoskeletal/bone/chondrogenic/chondromyxoid-fibroma"
 										},
 										{
+											"label": "爪下外骨腫",
+											"slug": "diseases/musculoskeletal/bone/chondrogenic/subungual-exostosis"
+										},
+										{
+											"label": "傍骨性骨軟骨異形増生（BPOP）",
+											"slug": "diseases/musculoskeletal/bone/chondrogenic/bpop"
+										},
+										{
+											"label": "骨膜性軟骨腫",
+											"slug": "diseases/musculoskeletal/bone/chondrogenic/periosteal-chondroma"
+										},
+										{
+											"label": "滑膜軟骨腫症",
+											"slug": "diseases/musculoskeletal/bone/chondrogenic/synovial-chondromatosis"
+										},
+										{
 											"label": "軟骨肉腫",
 											"slug": "diseases/musculoskeletal/bone/chondrogenic/chondrosarcoma"
 										}
@@ -1429,6 +1445,10 @@ export default defineConfig({
 											"slug": "diseases/musculoskeletal/bone/fibrogenic/fibrous-dysplasia"
 										},
 										{
+											"label": "骨線維性異形成",
+											"slug": "diseases/musculoskeletal/bone/fibrogenic/osteofibrous-dysplasia"
+										},
+										{
 											"label": "非骨化性線維腫",
 											"slug": "diseases/musculoskeletal/bone/fibrogenic/non-ossifying-fibroma"
 										}
@@ -1445,6 +1465,10 @@ export default defineConfig({
 										{
 											"label": "血管腫（骨）",
 											"slug": "diseases/musculoskeletal/bone/vascular/bone-hemangioma"
+										},
+										{
+											"label": "類上皮血管腫（骨）",
+											"slug": "diseases/musculoskeletal/bone/vascular/bone-epithelioid-hemangioma"
 										}
 									]
 								},
@@ -1475,6 +1499,10 @@ export default defineConfig({
 											"slug": "diseases/musculoskeletal/bone/notochordal"
 										},
 										{
+											"label": "良性脊索細胞腫",
+											"slug": "diseases/musculoskeletal/bone/notochordal/bnct"
+										},
+										{
 											"label": "脊索腫",
 											"slug": "diseases/musculoskeletal/bone/notochordal/chordoma"
 										}
@@ -1491,6 +1519,10 @@ export default defineConfig({
 										{
 											"label": "単純性骨嚢腫",
 											"slug": "diseases/musculoskeletal/bone/other-mesenchymal/simple-bone-cyst"
+										},
+										{
+											"label": "骨内脂肪腫",
+											"slug": "diseases/musculoskeletal/bone/other-mesenchymal/bone-lipoma"
 										}
 									]
 								},
