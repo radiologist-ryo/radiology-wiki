@@ -1365,6 +1365,14 @@ export default defineConfig({
 										{
 											"label": "良性骨腫瘍総論（Don't touch lesion）",
 											"slug": "diseases/musculoskeletal/bone/general/benign-bone-overview"
+										},
+										{
+											"label": "悪性骨軟部腫瘍の外科手術",
+											"slug": "diseases/musculoskeletal/bone/general/malignant-tumor-surgery"
+										},
+										{
+											"label": "悪性骨軟部腫瘍の化学療法",
+											"slug": "diseases/musculoskeletal/bone/general/malignant-tumor-chemotherapy"
 										}
 									]
 								},
