@@ -1,0 +1,236 @@
+---
+title: 脳動静脈奇形（bAVM）
+description: 脳動静脈奇形の画像診断、Spetzler-Martin分類、CT・MRIによる血管構築評価、4D-MRA、treatment後の経過観察
+references:
+  - id: 1
+    authors: "Emani SS, et al"
+    title: "Are brain arteriovenous malformations congenital or developmental? Evidence from paediatric age data"
+    journal: "Brain"
+    year: 2025
+    pmid: "40392970"
+  - id: 2
+    authors: "Spetzler RF, et al"
+    title: "A proposed grading system for arteriovenous malformations"
+    journal: "J Neurosurg"
+    year: 1986
+    pmid: "3760956"
+  - id: 3
+    authors: "Valavanis A, et al"
+    title: "Endovascular treatment of cerebral arteriovenous malformations with emphasis on the curative role of embolisation"
+    journal: "Interv Neuroradiol"
+    year: 2005
+    pmid: "20584458"
+  - id: 4
+    authors: "Singh R, et al"
+    title: "Time resolved computed tomography angiography in the evaluation of brain arteriovenous malformation: a feasibility study"
+    journal: "Neuroradiol J"
+    year: 2018
+    pmid: "28691576"
+  - id: 5
+    authors: "Schmitt N, et al"
+    title: "Iterative Metal Artifact Reduction (iMAR) of the non-adhesive liquid embolic agent onyx in computed tomography: an experimental study"
+    journal: "Clin Neuroradiol"
+    year: 2022
+    pmid: "34643742"
+  - id: 6
+    authors: "Dautry R, et al"
+    title: "Interest of HYPR flow dynamic MRA for characterization of cerebral arteriovenous malformations: comparison with TRICKS MRA and catheter DSA"
+    journal: "Eur Radiol"
+    year: 2015
+    pmid: "25916388"
+  - id: 7
+    authors: "Soize S, et al"
+    title: "Value of 4D MR angiography at 3T compared with DSA for the follow-up of treated brain arteriovenous malformation"
+    journal: "AJNR"
+    year: 2014
+    pmid: "24904052"
+  - id: 8
+    authors: "Togao O, et al"
+    title: "Arterial spin labeling-based MR angiography for cerebrovascular diseases: principles and clinical applications"
+    journal: "J Magn Reson Imaging"
+    year: 2024
+    pmid: "37937684"
+  - id: 9
+    authors: "Suzuki Y, et al"
+    title: "Acceleration of ASL-based time-resolved MR angiography by acquisition of control and labeled images in the same shot (ACTRESS)"
+    journal: "Magn Reson Med"
+    year: 2018
+    pmid: "28321915"
+  - id: 10
+    authors: "Togao O, et al"
+    title: "Vessel-selective 4D-MR angiography using super-selective pseudo-continuous arterial spin labeling may be a useful tool for assessing brain AVM hemodynamics"
+    journal: "Eur Radiol"
+    year: 2020
+    pmid: "32696254"
+  - id: 11
+    authors: "Fujima N, et al"
+    title: "Utility of noncontrast-enhanced time-resolved four-dimensional MR angiography with a vessel-selective technique for intracranial arteriovenous malformations"
+    journal: "J Magn Reson Imaging"
+    year: 2016
+    pmid: "26970348"
+  - id: 12
+    authors: "Rangel-Castilla L, et al"
+    title: "Normal perfusion pressure breakthrough theory: a reappraisal after 35 years"
+    journal: "Neurosurg Rev"
+    year: 2015
+    pmid: "25483235"
+---
+
+import Cite from '../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../components/ReferenceList.astro';
+
+## 概要
+
+脳動静脈奇形（brain arteriovenous malformation; **bAVM**）は、**脳軟膜動静脈間** にシャントを形成する血管奇形である。多くは **nidus** と呼ばれるシャント血管の塊（vascular tangle）を形成するが、シンプルな短絡のみの形態もありうる。硬膜動静脈瘻（dAVF）と異なり、流入動脈は皮質動脈や脳実質内動脈であり、シャント部位は脳実質内・皮質である。
+
+### 病態
+- **盗血現象** による正常脳の虚血症状、痙攣発作
+- **高圧・高流量血流** による流入動脈・流出静脈への負荷 → nidus 内動脈瘤、流入動脈の動脈瘤、流出静脈の varix 形成
+- これらの破裂による出血（くも膜下出血や脳内出血）で発症することも多い
+
+治療目的は出血・再出血の予防と神経症状の改善。治療効果を永続させるには **AVM の完全閉塞または全摘出** が必要。
+
+## bAVMは先天性か後天性か
+
+以前は "奇形" の名称通り先天性と考えられていたが、近年は以下の根拠から **発生学的・後天的要因の関与** が支持されている<Cite id={1} />。
+
+- Galen 大静脈瘤と異なり、bAVM は胎内での出生前診断がほぼなされない
+- ほとんどが成人型の皮質動静脈・深部血管が短絡を形成
+- 若年者で bAVM がない状態から **de novo** に発生した症例報告が増加
+
+現在では、血管増生・異形成を来しやすい遺伝的要因（hereditary hemorrhagic telangiectasia [HHT] や Wyburn-Mason 症候群など）に、虚血・炎症・物理的刺激といった二次的要因が加わって生じる **異常な増殖的異形成** と考えられている。
+
+## 分類
+
+### Spetzler-Martin 分類
+
+最も広く利用される外科的治療リスク評価のためのスコアリングシステム<Cite id={2} />。3項目（nidus サイズ、eloquence、流出静脈）の合計でグレード 1〜5 を決定する。
+
+| 評価項目 | スコア |
+| --- | --- |
+| **nidus サイズ** | |
+| 小（&lt; 3 cm） | 1 |
+| 中（3〜6 cm） | 2 |
+| 大（&gt; 6 cm） | 3 |
+| **eloquence** | |
+| non-eloquent | 0 |
+| eloquent | 1 |
+| **流出静脈** | |
+| superficial only | 0 |
+| deep | 1 |
+
+**eloquent**: 感覚野、運動野、言語野、視覚野、視床下部、視床、脳幹、小脳核
+**non-eloquent**: 前頭葉、側頭葉、小脳半球
+
+### グレード別治療方針（一般的な目安）
+
+| グレード | 推奨治療 |
+| --- | --- |
+| 1, 2 | 外科的摘出術または定位放射線治療 |
+| 3 | 摘出術 + 塞栓術 |
+| 4, 5 | 保存的治療（出血例や動脈瘤合併例で塞栓術） |
+
+その他の様々な要素を考慮して個々に治療方針が検討される。
+
+### 存在部位による分類（sulcal / gyral / mixed）
+
+nidus の存在部位による分類<Cite id={3} />。
+
+- **sulcal type**: nidus が脳溝に存在
+- **gyral type**: nidus が脳回（脳実質内）に存在 → 周囲に正常脳実質が介在する部分が多く、摘出術や経カテーテル的塞栓術の難易度が高い
+- **mixed type**: 両者が混在
+
+### 流入動脈の分類
+
+- **terminal type feeder**: 皮質動脈が nidus 部分で終枝し nidus のみに供血
+- **transit type feeder**: 正常脳実質を栄養する pial artery の途中から nidus に供血
+- その他: perforating artery, choroidal artery, meningeal artery が関与する場合もある
+
+## 画像診断
+
+bAVM 治療を検討する上で必要な情報は **流入動脈、流出静脈、nidus の存在部位とサイズ、合併動脈瘤・静脈瘤の有無**。これらを画像で評価する。
+
+### 単純CT
+
+スクリーニングで以下に留意:
+
+- nidus・連続する流入動脈・流出静脈・合併動脈瘤・静脈瘤は、正常脳実質より **淡い高吸収** に描出される
+- nidus には **石灰化** を伴うことがある
+- これらの所見を見落とさないことが重要
+
+### 造影 CTA（3D-CTA / 4D-CTA）
+
+- 血管の三次元情報・ダイナミックな血流情報の取得に有用
+- 近年の高解像度・高速多列検出器 CT では、全頭蓋を撮影対象とした **4D-CTA** が撮影可能でダイナミック情報も取得できる<Cite id={4} />
+- レポートでは: nidus の存在部位とサイズ、流出静脈（特に深部静脈系への流出）、流入動脈の種類、動脈瘤・静脈瘤の有無を明記
+
+### 術後CT評価
+
+外科的摘出術・塞栓術・定位放射線治療後:
+
+- 急性期は出血・虚血性合併症の有無に留意
+- nidus 残存・再発の確認には造影 CTA、血行動態把握には 4D-CTA が有用
+- 流入動脈・流出静脈の血栓化の有無にも留意
+- 塞栓物質は CT で非常に高吸収を示すため、撮像時に **MAR（metal artifact reduction）併用** で影響を低減する工夫が必要<Cite id={5} />
+
+### MRI / TOF-MRA
+
+- high flow の流入動脈、nidus、流出静脈は **T2 強調像で flow void** として描出
+- TOF-MRA では高信号
+- 周囲脳実質の出血・浮腫の評価も重要
+
+### 造影 4D-MRA
+
+- ダイナミック情報を付加した造影 4D-MRA は血管構築評価に有用
+- HYPR flow dynamic MRA や TRICKS MRA など、空間分解能を維持しつつ時間分解能を高めるシーケンスが普及<Cite id={6} />
+- 治療後 bAVM のフォローアップで DSA とほぼ同等の病変検出能<Cite id={7} />
+
+### 非造影 4D-MRA（ASLベース）
+
+- arterial spin labeling（ASL）を応用し、近位動脈プロトンを labeling して脳内到達タイミングでデータ収集、labeling なし画像との差分で血管データを抽出<Cite id={8} />
+- **ACTRESS**（Acquisition of Control and Labeled images in the Same Shot）等の高速化技術で画質向上・撮像時間短縮<Cite id={9} />
+- **vessel-selective 4D-MRA**: labeling 箇所を選択して特定血管系のみ描出可能で、bAVM の血行動態評価に特に有用<Cite id={10} /><Cite id={11} />
+
+### ASL灌流画像
+
+- ASL は本来灌流画像で、nidus は **rCBF 上昇域** として描出される
+- 微小な AVM の検出に有用
+- bAVM スクリーニングの補助ツールとして活用可能
+
+### MRI での出血急性期の落とし穴
+
+bAVM からの出血急性期では:
+
+- 血腫による物理的圧迫で病変が圧迫される
+- 血腫の T1 短縮、磁化率効果により病変が **不明瞭化・過小評価** されることがある
+- 血腫吸収後の再検査も考慮する
+
+## 治療後経過観察
+
+### Normal Perfusion Pressure Breakthrough（NPPB）
+
+摘出術後・塞栓術後では、急激に血行動態が変化する。
+
+- 治療前: 病変による盗血現象で正常脳循環が **慢性的低灌流** となり、代償性に脳血管床が拡張
+- 治療後: 盗血現象の消失で血流が増加し、浮腫や出血を来す病態 = **NPPB**<Cite id={12} />
+- 発生予測は困難だが、**nidus 径が大きく盗血現象が顕著な症例は高リスク**
+- 治療後は浮腫・出血の有無、perfusion CT/MRI や脳血流 SPECT で過灌流の有無を確認
+
+### 定位放射線治療後
+
+- nidus の閉塞が経時的・緩徐に進行
+- 経過観察ポイント: nidus の血栓化・器質化、流入動脈や流出静脈の縮小
+- 放射線治療の合併症: 浮腫、嚢胞形成 → 注意して評価
+
+## 鑑別診断
+
+| 病態 | 鑑別ポイント |
+| --- | --- |
+| 硬膜動静脈瘻（dAVF） | 流入は硬膜動脈、シャントは硬膜・骨内・架橋静脈合流部 |
+| Galen 大静脈瘤 | 小児、深部静脈系（vein of Galen）の拡大 |
+| developmental venous anomaly (DVA) | "caput medusae" 様の集合静脈、単独では治療対象外 |
+| cavernous malformation | T2* で著明な低信号、popcorn 様、流入動脈なし |
+| 海綿状血管腫合併静脈奇形（mixed type） | DVA の近傍に出血性病変 |
+| 高灌流腫瘍（GBM など） | 占拠性病変、造影効果のパターン、周囲浮腫 |
+
+<ReferenceList />
