@@ -41,7 +41,7 @@ header.header .site-title {
 }
 
 /* ============================================================
-   サイドバー
+   サイドバー(左)の色味
    ============================================================ */
 .sidebar {
   background-color: var(--rw-navy-bg);
@@ -58,6 +58,22 @@ nav.sidebar a[aria-current="page"] {
   color: var(--rw-navy) !important;
   border-left: 3px solid var(--rw-navy);
   font-weight: 600;
+}
+
+/* ============================================================
+   左サイドバー: メイン本文と一緒にスクロールする
+   - position: static にして sticky を解除
+   - 内部スクロールも切って、項目数分の高さを取る
+   ============================================================ */
+.sidebar-pane {
+  position: static !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.sidebar-content {
+  padding-bottom: 4rem;
 }
 
 /* ============================================================
@@ -158,8 +174,7 @@ nav.sidebar a[aria-current="page"] {
 }
 
 /* ============================================================
-   カード(LinkCard) — hover エフェクトと余白のみ調整
-   （Starlight の display:grid / grid-template-columns は維持）
+   カード(LinkCard)
    ============================================================ */
 .sl-link-card {
   margin-bottom: 1rem;
@@ -175,45 +190,70 @@ nav.sidebar a[aria-current="page"] {
   margin-bottom: 4rem;
 }
 
-/* CardGrid: 各カードを自然な高さに（等高行を解除） */
 .card-grid {
   align-items: start;
 }
 
 /* ============================================================
-   右側目次(TOC)の幅・位置・折り返し制御
-   - 幅 14rem(224px)
-   - margin-left: auto で右端に押し出し
-   - リンクは折り返しを許可するが、日本語の禁則処理を厳しめにし
-     半角スペース等での安易な改行を抑止
+   右側目次(TOC) — レイアウト
+   - 親 flex の stretch を解除して TOC を flex-start に揃える
+   - .right-sidebar-container 自体を sticky にして画面追従
+   - 内側の Starlight デフォルト position: fixed を打ち消す
+   - フッターと被らず、画面下端で自然に止まる
    ============================================================ */
-.right-sidebar-container {
+.lg\:sl-flex {
+  align-items: flex-start !important;
+}
+
+aside.right-sidebar-container {
   flex: 0 0 14rem !important;
   width: 14rem !important;
   max-width: 14rem !important;
   min-width: 14rem !important;
   margin-left: auto !important;
+
+  position: sticky !important;
+  top: 64px !important;
+  align-self: flex-start !important;
+  height: auto !important;
+  max-height: calc(100vh - 64px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
+/* 内側の .right-sidebar は Starlight 標準で position: fixed が当たる場合があるので解除 */
 .right-sidebar {
-  width: 14rem !important;
+  position: static !important;
+  top: auto !important;
+  width: auto !important;
   max-width: 14rem !important;
-  min-width: 14rem !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
 }
 
 .right-sidebar-panel {
+  position: static !important;
   width: 14rem !important;
   max-width: 14rem !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
   padding-inline: 0.6rem !important;
-  padding-block: 1rem !important;
+  padding-block: 0.5rem !important;
 }
 
 .right-sidebar-panel > .sl-container {
   width: 100% !important;
   max-width: 14rem !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
-/* TOC全体のフォントサイズと余白 */
+/* ============================================================
+   右側目次(TOC) — 中身のタイポグラフィ
+   ============================================================ */
 starlight-toc nav {
   font-size: 0.85rem !important;
 }
@@ -229,13 +269,20 @@ starlight-toc li {
   padding: 0 !important;
 }
 
-/* TOCリンク: 折り返しは許容、ただし日本語で不自然に切らない */
+starlight-toc h2 {
+  font-size: 0.95rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+}
+
+/* TOC リンク: 長い英単語も折り返して横スクロールを出さない */
 starlight-toc a,
 starlight-toc a span {
   white-space: normal !important;
-  word-break: keep-all !important;
-  overflow-wrap: normal !important;
-  line-break: strict !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  line-break: auto !important;
   hyphens: none !important;
 }
 
@@ -245,13 +292,8 @@ starlight-toc a {
   line-height: 1.5 !important;
 }
 
-starlight-toc h2 {
-  font-size: 0.95rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
 /* ============================================================
-   本文エリアの下部余白を確保（右TOC最下項目までアクティブ化可能に）
+   本文エリア下部余白(右TOC最下項目までアクティブ化可能に)
    ============================================================ */
 .main-frame main > .sl-markdown-content,
 .main-pane .sl-markdown-content {
@@ -259,19 +301,7 @@ starlight-toc h2 {
 }
 
 /* ============================================================
-   サイドバーは画面いっぱい使う
-   ============================================================ */
-.sidebar-pane {
-  max-height: calc(100vh - var(--sl-nav-height));
-  overflow-y: auto;
-}
-
-.sidebar-content {
-  padding-bottom: 4rem;
-}
-
-/* ============================================================
-   フッター前の余白・縦線抑制
+   フッター
    ============================================================ */
 .main-frame footer,
 footer.rw-footer {
@@ -284,4 +314,3 @@ footer.rw-footer {
   border-left: none !important;
   box-shadow: none !important;
 }
-
