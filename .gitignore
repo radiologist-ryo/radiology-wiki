@@ -37,3 +37,5 @@ TASK_old.md
 # Renumber citations script outputs
 scripts/renumber-citations/dry-run-output.txt
 scripts/renumber-citations/last-run.log
+# Dev server logs
+dev-server.log
