@@ -596,6 +596,10 @@ export default defineConfig({
 								{
 									"label": "PRES（可逆性後頭葉白質脳症）",
 									"slug": "diseases/brain/cerebrovascular/pres"
+								},
+								{
+									"label": "自己免疫性疾患・血管炎による脳血管障害",
+									"slug": "diseases/brain/cerebrovascular/vasculitis-autoimmune"
 								}
 							]
 						},
