@@ -600,6 +600,10 @@ export default defineConfig({
 								{
 									"label": "自己免疫性疾患・血管炎による脳血管障害",
 									"slug": "diseases/brain/cerebrovascular/vasculitis-autoimmune"
+								},
+								{
+									"label": "感染症による脳血管障害",
+									"slug": "diseases/brain/cerebrovascular/infectious-cerebrovascular"
 								}
 							]
 						},
