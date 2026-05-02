@@ -604,6 +604,10 @@ export default defineConfig({
 								{
 									"label": "感染症による脳血管障害",
 									"slug": "diseases/brain/cerebrovascular/infectious-cerebrovascular"
+								},
+								{
+									"label": "遺伝性脳小血管病",
+									"slug": "diseases/brain/cerebrovascular/hereditary-csvd"
 								}
 							]
 						},
@@ -2296,6 +2300,10 @@ export default defineConfig({
 								{
 									"label": "Goodpasture症候群",
 									"slug": "diseases/chest/pulmonary-vascular/goodpasture"
+								},
+								{
+									"label": "非心原性肺水腫",
+									"slug": "diseases/chest/pulmonary-vascular/noncardiogenic-pulmonary-edema"
 								}
 							]
 						},
@@ -2310,6 +2318,10 @@ export default defineConfig({
 								{
 									"label": "サルコイドーシス",
 									"slug": "diseases/chest/granulomatous-diffuse/sarcoidosis"
+								},
+								{
+									"label": "サルコイドーシス（リンパ節病変）",
+									"slug": "diseases/chest/granulomatous-diffuse/sarcoidosis-lymph-node"
 								},
 								{
 									"label": "多発血管炎性肉芽腫症（GPA/旧Wegener）",
