@@ -5050,6 +5050,66 @@ export default defineConfig({
 					]
 				},
 				{
+						"label": "全身性疾患",
+						"collapsed": true,
+						"items": [
+							{
+								"label": "__group_index__",
+								"slug": "diseases/systemic"
+							},
+							{
+								"label": "IgG4関連疾患",
+								"collapsed": true,
+								"items": [
+									{
+										"label": "__group_index__",
+										"slug": "diseases/systemic/igg4-related"
+									},
+									{
+										"label": "IgG4関連疾患とは何か？",
+										"slug": "diseases/systemic/igg4-related/overview"
+									},
+									{
+										"label": "類似疾患の臨床的特徴像",
+										"slug": "diseases/systemic/igg4-related/mimickers"
+									},
+									{
+										"label": "病理学的視点",
+										"slug": "diseases/systemic/igg4-related/pathology"
+									}
+								]
+							},
+							{
+								"label": "サルコイドーシス",
+								"slug": "diseases/systemic/sarcoidosis"
+							},
+							{
+								"label": "自己免疫性疾患",
+								"slug": "diseases/systemic/autoimmune"
+							},
+							{
+								"label": "血管炎",
+								"slug": "diseases/systemic/vasculitis"
+							},
+							{
+								"label": "リンパ増殖性疾患",
+								"slug": "diseases/systemic/lymphoproliferative"
+							},
+							{
+								"label": "組織球症",
+								"slug": "diseases/systemic/histiocytosis"
+							},
+							{
+								"label": "アミロイドーシス",
+								"slug": "diseases/systemic/amyloidosis"
+							},
+							{
+								"label": "遺伝性・代謝性疾患",
+								"slug": "diseases/systemic/hereditary-metabolic"
+							}
+						]
+					},
+				{
 					label: '鑑別診断',
 					items: [
 						{ label: '一覧', slug: 'differentials' },
