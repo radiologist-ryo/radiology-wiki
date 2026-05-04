@@ -314,3 +314,35 @@ footer.rw-footer {
   border-left: none !important;
   box-shadow: none !important;
 }
+
+/* ===== organ-card / organ-grid (shared with TopPageTabs.astro) ===== */
+/* MDX (e.g. systemic/index.mdx) からも使えるようにグローバルに定義 */
+.organ-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.organ-card {
+  background: #fff;
+  border: 0.5px solid #dde4ef;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.organ-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.organ-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a2744;
+}
+.organ-card__sub {
+  font-size: 11px;
+  color: #7a8fa8;
+  margin-top: 4px;
+}
