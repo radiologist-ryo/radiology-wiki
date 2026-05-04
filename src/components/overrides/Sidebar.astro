@@ -75,6 +75,8 @@ if (pathname.includes('/obgyn/')) {
 	filtered = filterTopLevel('IVR');
 } else if (pathname.includes('/diseases/nuclear/') || pathname.endsWith('/diseases/nuclear')) {
 	filtered = filterTopLevel('核医学');
+} else if (pathname.includes('/diseases/systemic/') || pathname.endsWith('/diseases/systemic')) {
+	filtered = filterTopLevel('全身性疾患');
 }
 
 const displayEntries: SidebarEntry[] = filtered ?? sidebar;
