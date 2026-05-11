@@ -2153,6 +2153,10 @@ export default defineConfig({
 								{
 									"label": "リンパ増殖性疾患（LIP）",
 									"slug": "diseases/chest/lung-tumor/lip"
+								},
+								{
+									"label": "肺癌術後画像のピットフォール",
+									"slug": "diseases/chest/lung-tumor/post-operative-pitfalls"
 								}
 							]
 						},
@@ -2365,6 +2369,26 @@ export default defineConfig({
 								{
 									"label": "非心原性肺水腫",
 									"slug": "diseases/chest/pulmonary-vascular/noncardiogenic-pulmonary-edema"
+								},
+								{
+									"label": "大動脈弓左側の血管陰影（PLSVC・PALIV・PAPVR）",
+									"slug": "diseases/chest/pulmonary-vascular/plsvc-and-mimickers"
+								},
+								{
+									"label": "肺静脈走行異常症（AUSPV）",
+									"slug": "diseases/chest/pulmonary-vascular/auspv"
+								},
+								{
+									"label": "下大静脈−奇静脈連結",
+									"slug": "diseases/chest/pulmonary-vascular/azygos-continuation-of-ivc"
+								},
+								{
+									"label": "右側大動脈弓",
+									"slug": "diseases/chest/pulmonary-vascular/right-aortic-arch"
+								},
+								{
+									"label": "Kommerell憩室",
+									"slug": "diseases/chest/pulmonary-vascular/kommerell-diverticulum"
 								}
 							]
 						},
