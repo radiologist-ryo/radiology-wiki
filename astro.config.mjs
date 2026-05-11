@@ -2461,6 +2461,10 @@ export default defineConfig({
 								{
 									"label": "胸腔内遊離体",
 									"slug": "diseases/chest/pleura/thoracolithiasis"
+								},
+								{
+									"label": "胸壁筋肉による偽病変（胸膜プラーク類似）",
+									"slug": "diseases/chest/pleura/chest-wall-muscle-pseudolesion"
 								}
 							]
 						},
@@ -2545,6 +2549,30 @@ export default defineConfig({
 								{
 									"label": "胸壁腫瘍",
 									"slug": "diseases/chest/diaphragm-chest-wall/chest-wall-tumor"
+								},
+								{
+									"label": "肋骨の正常変異",
+									"slug": "diseases/chest/diaphragm-chest-wall/rib-variants"
+								},
+								{
+									"label": "肋骨周囲の偽病変",
+									"slug": "diseases/chest/diaphragm-chest-wall/rib-pseudolesions"
+								},
+								{
+									"label": "胸椎の偽病変・正常変異",
+									"slug": "diseases/chest/diaphragm-chest-wall/thoracic-vertebra-pseudolesions"
+								},
+								{
+									"label": "胸骨の正常変異・偽病変",
+									"slug": "diseases/chest/diaphragm-chest-wall/sternal-variants"
+								},
+								{
+									"label": "鎖骨の正常変異・偽病変",
+									"slug": "diseases/chest/diaphragm-chest-wall/clavicular-findings"
+								},
+								{
+									"label": "肩甲骨の所見",
+									"slug": "diseases/chest/diaphragm-chest-wall/scapular-findings"
 								}
 							]
 						},
