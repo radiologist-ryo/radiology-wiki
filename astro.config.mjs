@@ -2295,6 +2295,18 @@ export default defineConfig({
 							]
 						},
 						{
+							"label": "気道の正常解剖と変異",
+							"collapsed": true,
+							"items": [
+								{ "label": "__group_index__", "slug": "diseases/chest/airway-anatomy" },
+								{ "label": "区域・亜区域気管支の正常解剖", "slug": "diseases/chest/airway-anatomy/bronchial-segmental-anatomy" },
+								{ "label": "気管の加齢性変化", "slug": "diseases/chest/airway-anatomy/tracheal-age-related-changes" },
+								{ "label": "気管気管支 (tracheal bronchus)", "slug": "diseases/chest/airway-anatomy/tracheal-bronchus" },
+								{ "label": "傍気管嚢胞 (paratracheal air cyst)", "slug": "diseases/chest/airway-anatomy/paratracheal-air-cyst" },
+								{ "label": "左側相同・内臓錯位", "slug": "diseases/chest/airway-anatomy/left-isomerism-heterotaxy" }
+							]
+						},
+						{
 							"label": "肺循環・血管",
 							"collapsed": true,
 							"items": [
