@@ -2295,7 +2295,7 @@ export default defineConfig({
 							]
 						},
 						{
-							"label": "気道の正常解剖と変異",
+							"label": "気管支:解剖・変異・ピットフォール",
 							"collapsed": true,
 							"items": [
 								{ "label": "__group_index__", "slug": "diseases/chest/airway-anatomy" },
@@ -2303,7 +2303,19 @@ export default defineConfig({
 								{ "label": "気管の加齢性変化", "slug": "diseases/chest/airway-anatomy/tracheal-age-related-changes" },
 								{ "label": "気管気管支 (tracheal bronchus)", "slug": "diseases/chest/airway-anatomy/tracheal-bronchus" },
 								{ "label": "傍気管嚢胞 (paratracheal air cyst)", "slug": "diseases/chest/airway-anatomy/paratracheal-air-cyst" },
-								{ "label": "左側相同・内臓錯位", "slug": "diseases/chest/airway-anatomy/left-isomerism-heterotaxy" }
+								{ "label": "左側相同・内臓錯位", "slug": "diseases/chest/airway-anatomy/left-isomerism-heterotaxy" },
+								{ "label": "中枢気道発育型肺癌", "slug": "diseases/chest/airway-anatomy/endobronchial-growth-lung-cancer" },
+								{ "label": "副心臓枝 (accessory cardiac bronchus)", "slug": "diseases/chest/airway-anatomy/accessory-cardiac-bronchus" },
+								{ "label": "気管支結核", "slug": "diseases/chest/airway-anatomy/endobronchial-tuberculosis" }
+							]
+						},
+						{
+							"label": "肺野:偽病変とピットフォール",
+							"collapsed": true,
+							"items": [
+								{ "label": "__group_index__", "slug": "diseases/chest/lung-pearls" },
+								{ "label": "CTで見落としやすい肺癌の好発部位", "slug": "diseases/chest/lung-pearls/missed-lung-cancer-locations" },
+								{ "label": "胸椎骨棘による肺野の限局性線維化", "slug": "diseases/chest/lung-pearls/thoracic-spine-osteophyte-fibrosis" }
 							]
 						},
 						{
