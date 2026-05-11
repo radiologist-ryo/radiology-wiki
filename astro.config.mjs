@@ -59,6 +59,7 @@ export default defineConfig({
 					label: '産婦人科',
 					items: [
 						{ label: '__group_index__', slug: 'obgyn' },
+						{ label: '子宮MRI 撮像プロトコール', slug: 'obgyn/uterine-mri-protocol' },
 						{
 							label: '婦人科',
 							collapsed: true,
@@ -2450,6 +2451,10 @@ export default defineConfig({
 								{
 									"label": "線維性縦隔炎",
 									"slug": "diseases/chest/mediastinum/fibrosing-mediastinitis"
+								},
+								{
+									"label": "縦隔気腫",
+									"slug": "diseases/chest/mediastinum/pneumomediastinum"
 								}
 							]
 						},
@@ -3938,6 +3943,10 @@ export default defineConfig({
 								{
 									"label": "前立腺癌(PI-RADS)",
 									"slug": "diseases/urinary/prostate/prostate-cancer"
+								},
+								{
+									"label": "前立腺MRI 撮像プロトコール",
+									"slug": "diseases/urinary/prostate/prostate-mri-protocol"
 								},
 								{
 									"label": "前立腺肥大症",
