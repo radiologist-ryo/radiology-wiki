@@ -1,0 +1,299 @@
+---
+title: 肝MRIプロトコール
+description: 肝MRIルーチンプロトコール。Gd-EOB-DTPA造影MRIと細胞外液性ガドリニウム造影MRIの使い分け、TSMA対策、定量MRI(PDFF・MRE)
+references:
+  - id: 1
+    authors: "日本医学放射線学会(編)"
+    title: "画像診断ガイドライン2021年版(第3版)"
+    journal: "金原出版"
+    year: 2020
+    pmid: ""
+  - id: 2
+    authors: "Chernyak V, et al"
+    title: "Liver Imaging Reporting and Data System (LI-RADS) Version 2018: Imaging of Hepatocellular Carcinoma in At-Risk Patients"
+    journal: "Radiology"
+    year: 2018
+    pmid: "30251931"
+  - id: 3
+    authors: "肝癌診療ガイドライン(編)"
+    title: "肝癌診療ガイドライン 2021年版"
+    journal: "金原出版"
+    year: 2021
+    pmid: ""
+  - id: 4
+    authors: "日本磁気共鳴専門技術者認定機構"
+    title: "上腹部推奨撮像条件"
+    journal: "JMRTS"
+    year: 2024
+    pmid: ""
+  - id: 5
+    authors: "日本磁気共鳴医学会"
+    title: "肝MRエラストグラフィ撮像・管理指針"
+    journal: "JSMRM"
+    year: 2022
+    pmid: ""
+  - id: 6
+    authors: "QIBA MR Biomarker Committee"
+    title: "QIBA Profile: Magnetic resonance elastography of the liver"
+    journal: "RSNA QIBA"
+    year: 2022
+    pmid: ""
+  - id: 7
+    authors: "日本磁気共鳴専門技術者認定機構(JMRTS)"
+    title: "各部位推奨撮影法"
+    journal: "JMRTS"
+    year: 2024
+    pmid: ""
+  - id: 8
+    authors: "McClellan TR, et al"
+    title: "Intravenous gadoxetate disodium administration reduces breath-holding capacity in the hepatic arterial phase: a multi-center randomized placebo-controlled trial"
+    journal: "Radiology"
+    year: 2017
+    pmid: "27509544"
+  - id: 9
+    authors: "Motosugi U, et al"
+    title: "An investigation of transient severe motion related to gadoxetic acid-enhanced MR imaging"
+    journal: "Radiology"
+    year: 2016
+    pmid: "26473642"
+  - id: 10
+    authors: "Kromrey ML, et al"
+    title: "Gadoxetate disodium-related event during image acquisition: a prospective multi-institutional study for better MR practice"
+    journal: "Eur Radiol"
+    year: 2020
+    pmid: "31338655"
+  - id: 11
+    authors: "Ichikawa S, et al"
+    title: "An intra-individual comparison between free-breathing dynamic MR imaging of the liver using stack-of-stars acquisition and the breath-holding method using cartesian sampling or view-sharing"
+    journal: "Magn Reson Med Sci"
+    year: 2023
+    pmid: "35296587"
+  - id: 12
+    authors: "Gutzeit A, et al"
+    title: "Reduction in respiratory motion artefacts on gadoxetate-enhanced MRI after training technicians to apply a simple and more patient-adapted breathing command"
+    journal: "Eur Radiol"
+    year: 2016
+    pmid: "26573682"
+  - id: 13
+    authors: "Yoon JH, et al"
+    title: "Triple arterial phase MR imaging with gadoxetic acid using a combination of contrast enhanced time robust angiography, keyhole, and viewsharing techniques and two-dimensional parallel imaging in comparison with conventional single arterial phase"
+    journal: "Korean J Radiol"
+    year: 2016
+    pmid: "27390543"
+  - id: 14
+    authors: "Vilgrain V, et al"
+    title: "A meta-analysis of diffusion-weighted and gadoxetic acid-enhanced MR imaging for the detection of liver metastases"
+    journal: "Eur Radiol"
+    year: 2016
+    pmid: "26883327"
+  - id: 15
+    authors: "Tamada T, et al"
+    title: "Hypointense hepatocellular nodules on hepatobiliary phase of Gd-EOB-DTPA-enhanced MRI: Can increasing the flip angle improve conspicuity of lesions?"
+    journal: "J Magn Reson Imaging"
+    year: 2013
+    pmid: "23148032"
+  - id: 16
+    authors: "Hernando D, et al"
+    title: "Multisite, multivendor validation of the accuracy and reproducibility of proton-density fat-fraction quantification at 1.5T and 3T using a fat-water phantom"
+    journal: "Magn Reson Med"
+    year: 2017
+    pmid: "27080068"
+  - id: 17
+    authors: "Weingärtner S, et al"
+    title: "Development, validation, qualification, and dissemination of quantitative MR methods: overview and recommendations by the ISMRM quantitative MR study group"
+    journal: "Magn Reson Med"
+    year: 2022
+    pmid: "34825741"
+  - id: 18
+    authors: "Caussy C, et al"
+    title: "Non-invasive, quantitative assessment of liver fat by MRI-PDFF as an endpoint in NASH trials"
+    journal: "Hepatology"
+    year: 2018
+    pmid: "29356032"
+  - id: 19
+    authors: "QIBA MR Biomarker Committee"
+    title: "QIBA Profile: MRI-based proton density fat fraction (PDFF) of the liver"
+    journal: "RSNA QIBA"
+    year: 2024
+    pmid: ""
+  - id: 20
+    authors: "Motosugi U, et al"
+    title: "High SNR acquisitions improve the repeatability of liver fat quantification using confounder-corrected chemical shift-encoded MR imaging"
+    journal: "Magn Reson Med Sci"
+    year: 2017
+    pmid: "28190853"
+  - id: 21
+    authors: "Morisaka H, et al"
+    title: "Magnetic resonance elastography is as accurate as liver biopsy for liver fibrosis staging"
+    journal: "J Magn Reson Imaging"
+    year: 2018
+    pmid: "29030995"
+---
+
+import Cite from '../../../../components/Cite.astro';
+import ReferenceList from '../../../../components/ReferenceList.astro';
+
+## 概要
+
+MRIは肝腫瘍診断における重要なモダリティで、特徴的な画像所見をとらえることで血管腫や限局性結節性過形成などの良性腫瘍、肝細胞癌などの悪性腫瘍を生検なしに臨床診断可能である。豊富なコントラストが診断に役立つ一方、撮像シーケンスが多くなりがちで、ルーチンプロトコールの整理が重要となる。
+
+本稿では『画像診断ガイドライン2021年版』<Cite id={1} />に沿って肝MRIルーチンプロトコールを整理する。
+
+---
+
+## 肝MRIの標準的撮像法
+
+『画像診断ガイドライン』では推奨シーケンスが、単純MRI、細胞外液性ガドリニウム造影MRI、Gd-EOB-DTPA造影MRI(以下、EOB造影MRI)、SPIO造影MRIに分けて示されている<Cite id={1} />。
+
+### 単純MRI
+
+- **必須**:T1強調像、T2強調像
+- **推奨**:拡散強調像、steady-state coherent image(trueFISPなど)
+- steady-state coherent image:撮像時間短く画質低下少、脈管内を高信号に描出可能で、腫瘍の脈管・胆管浸潤診断や造影剤使用不可例の解剖把握に有用
+
+### 細胞外液性ガドリニウム造影MRI
+
+造影剤投与後にダイナミック・スタディを行う。
+
+- 注入は速度一定法/注入時間一定法どちらでも可
+- **動脈相タイミング**:ボーラストラッキング法で腹部または下行大動脈への造影剤到達後10〜15秒後にk-space中心が来るよう撮像が推奨
+- 撮像タイミング固定法:注入開始後30秒程度にk-space中心
+- 門脈相(注入開始後70秒前後)、平衡相(2〜5分後)を続いて撮像
+
+### Gd-EOB-DTPA造影MRI(EOB造影MRI)
+
+細胞外液性と同様にダイナミック・スタディを行うが、以下の点で異なる:
+
+- **平衡相に相当する画像が「移行相」と呼ばれる**:Gd-EOB-DTPA造影剤はOATP 1B3/1B1受容体を介して肝細胞に取り込まれ、2〜5分後は中間的コントラスト
+- **肝細胞相が撮像される**:投与後約20分(良好な肝実質造影では15分後でも可)
+- 移行相と肝細胞相の間に10〜15分の待ち時間が生じ、この間にT2強調像・拡散強調像を撮像
+- MRCP追加時は造影前撮像が推奨(胆道排泄造影剤による胆管描出低下を防ぐため)
+
+### SPIO造影MRI
+
+Kupffer細胞に取り込まれる肝特異性造影剤で、T2*強調像(long TE GRE法)もしくはT2強調像で評価。
+
+- 高速GRE法が使用できるGd造影剤と比較し高分解能撮像が難しい
+- 肝細胞情報は得られない
+- **eGFR 30mL/min/1.73m²未満の腎機能低下例で施行考慮**(画像診断ガイドライン BQ38)<Cite id={1} />
+
+---
+
+## その他の肝MRI関連ガイドライン
+
+シーケンスパラメータの詳細検討では、他の肝MRI関連ガイドラインも参考になる。
+
+- **LI-RADS®**:肝細胞癌の診断アルゴリズム<Cite id={2} />
+- **肝癌診療ガイドライン2021年版**:検査適応・診断アルゴリズム<Cite id={3} />
+- **JMRTS 上腹部推奨撮像条件**:撮像プロトコールの具体的パラメータ<Cite id={4} />
+- **日本磁気共鳴医学会 肝MRエラストグラフィ撮像・管理指針**:MRE撮像・管理<Cite id={5} />
+- **QIBA MRE Profile**:MRE定量基準<Cite id={6} />
+- **JMRTS 各部位推奨撮影法**:ベンダー別撮像パラメータ・技術の使い分け<Cite id={7} />
+
+---
+
+## Gd-EOB-DTPA造影剤を使うとき、使わないとき
+
+『画像診断ガイドライン』BQ39で具体的シナリオごとの使い分けが示されている<Cite id={1} />。
+
+### 細胞外液性ガドリニウム造影剤が推奨される
+
+- 肝機能障害著明・高度肝硬変
+- 肝血管腫の診断が主目的(EOBではpseudo-washout appearanceでpoolingが不明瞭となり高flow血管腫と肝細胞癌の鑑別困難)
+- 動脈相濃染の確認が主目的
+- 肝細胞癌診断で特異度を重視
+- 以前のEOB-MRIで動脈相TSMAが生じた
+- 肝以外の腹部臓器・脈管を併せて精査
+
+### Gd-EOB-DTPA造影剤が推奨される
+
+- 非多血性肝細胞癌の診断
+- 肝細胞癌の術前検査
+- 肝細胞癌治療後の異時性多発・再発検出
+- 造影CT/細胞外液性造影MRIで血流異常による偽病変の確定困難例
+- 肝転移症例の術前検査
+- 肝細胞癌または肝細胞腺腫 vs 限局性結節性過形成の鑑別
+- 肝腫瘍と同時に胆道系機能的情報が必要
+
+わが国では外科的切除やRFAなど小病変のうちに治療したいニーズから、Gd-EOB-DTPAの小病変検出能の高さが評価されている。
+
+---
+
+## TSMA(transient severe motion artifact)
+
+EOB造影MRIでは動脈相で画質低下を生じやすい。Gd-EOB-DTPA投与時の呼吸停止可能時間短縮や腹部運動モニタ研究から、動脈相での呼吸停止失敗頻度上昇が機序として考えられているが詳細は未解明<Cite id={8} /><Cite id={9} />。検査中の一過性現象で治療不要。
+
+### TSMA抑制法
+
+- **撮像時間短縮**が最も有効<Cite id={10} />
+- 多時相撮像<Cite id={11} />
+- 自由呼吸下撮像(造影タイミング取得頻度は改善するが総合画質低下に注意)<Cite id={11} />
+- 呼吸指導<Cite id={12} />
+- AI画像再構成併用の高速多時相撮像<Cite id={13} />
+
+---
+
+## T2強調像のポイント
+
+脂肪抑制を用いた呼吸同期FSE法もしくはsingle-shot FSE法が推奨。
+
+- TEに注意:肝細胞癌などの腫瘍性病変はT2値が短く、**long TEになりやすいsingle-shot FSE法では腫瘍の高信号をとらえられないことがある**
+- **heavily T2強調像(TE 150ms以上)**:嚢胞・血管腫のみ高信号、これら病変の積極的診断時に有用
+
+---
+
+## 拡散強調像のポイント
+
+『画像診断ガイドライン』標準的撮像法では必須ではなく推奨の位置づけ<Cite id={1} />。装置による画質差や、対象が一般病院であることが背景。
+
+- BQ44では転移性肝腫瘍検索で拡散強調像追加が **1cm未満病変の診断能向上** に寄与するため撮像推奨<Cite id={14} />
+- parallel imaging制約などがない限り、ルーチンプロトコール組入れが望ましい
+- **左葉の信号低下による偽陰性に注意**:心拍動で肝実質が変形し位相分散による信号低下が起こる。weighted averagingや心拍同期など左葉信号低下抑制技術の活用を検討
+
+---
+
+## 肝細胞相のポイント
+
+病変特異性は肝細胞性腫瘍を除けば乏しいが、**病変検出感度が高い** ことが特徴。転移性肝腫瘍術前検索や肝細胞癌(2cm以下、非多血性)診断で有用性が示されている(BQ36・BQ44)<Cite id={1} />。
+
+- 撮像タイミングは投与後20分推奨、良好造影例では15分後でも可
+- 高速GRE法使用で良好画質が安定的に得られる
+- 肝実質造影効果不良例では細胞外液性造影剤が推奨されるが、事前予測困難な場合もある
+- **高いフリップ角(例:10°→15°)** でコントラスト改善が報告されており<Cite id={15} />、ルーチンの次の一手として有用
+
+---
+
+## 定量MRI
+
+『画像診断ガイドライン』には記載がないが、近年注目される肝の定量MRI。
+
+### Proton Density Fat Fraction(PDFF)
+
+組織内の水・脂肪信号のうち脂肪信号割合を画像化し、脂肪肝を定量評価。
+
+- 検査間・施設間・ベンダー間・静磁場強度間の再現性が高く、ISMRM定量MRIスタディグループでも成功例として報告<Cite id={16} /><Cite id={17} />
+- 臨床研究の参照基準として用いられる(NASH試験のエンドポイントなど)<Cite id={18} />
+- **2023年QIBAコンセンサスプロファイル**:過去検査との比較でfat fractionが5%以上変化すれば有意<Cite id={19} />
+- 高精度には高SNRが重要、撮像時はボクセルサイズを大きく保つ設定が必要<Cite id={20} />
+
+### MR elastography(MRE)
+
+肝組織硬度を非侵襲的に画像化し、肝線維化を評価。
+
+- 2022年わが国でも非アルコール性脂肪肝炎(疑い含む)対象に保険収載
+- **肝生検に迫る診断能を示す**<Cite id={21} />が、検査間再現性は必ずしも高くない
+- QIBA profileでは **19%以上の値変化で有意**<Cite id={6} />、精度管理が重要
+- 測定:波画像が明るく平行でクロスハッチがなく、肝表から1cm程度を除いた領域にROI設定
+- 詳細な撮像・測定のコツは日本磁気共鳴医学会・JMRTSの講習会・動画で公開
+
+---
+
+## おわりに
+
+肝MRIルーチンプロトコールはGd-EOB-DTPA造影剤や細胞外液性ガドリニウム造影剤を用いたダイナミック・スタディが基本。造影剤選択はシナリオ別の使い分けが鍵で、TSMAなどの技術的課題にはプロトコール最適化で対応する。定量MRI(PDFF・MRE)の臨床応用拡大も今後の重要トピックである。
+
+---
+
+## 参考文献
+
+<ReferenceList />

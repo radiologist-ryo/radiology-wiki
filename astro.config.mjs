@@ -2500,6 +2500,10 @@ export default defineConfig({
 									"slug": "diseases/chest/congenital/scimitar-syndrome"
 								}
 							]
+						},
+						{
+							"label": "胸部MRIプロトコール",
+							"slug": "diseases/chest/chest-mri"
 						}
 					]
 				},
@@ -2980,6 +2984,10 @@ export default defineConfig({
 									"slug": "diseases/breast/inflammation-other/post-treatment-breast"
 								}
 							]
+						},
+						{
+							"label": "乳房MRIプロトコール",
+							"slug": "diseases/breast/breast-mri"
 						}
 					]
 				},
@@ -3340,6 +3348,10 @@ export default defineConfig({
 									"slug": "diseases/hepatobiliary/pancreas-congenital/ectopic-pancreas"
 								}
 							]
+						},
+						{
+							"label": "肝MRIプロトコール",
+							"slug": "diseases/hepatobiliary/liver-mri"
 						}
 					]
 				},
