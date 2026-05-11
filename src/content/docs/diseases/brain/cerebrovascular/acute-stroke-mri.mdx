@@ -1,0 +1,168 @@
+---
+title: 急性期脳卒中MRIプロトコール
+description: 急性期脳梗塞のMRIルーチンプロトコール。必須シーケンス(DWI/FLAIR/T2*/MRA)、DWI-FLAIRミスマッチ、灌流画像とASLによる虚血ペナンブラ評価
+references:
+  - id: 1
+    authors: "日本医学放射線学会(編)"
+    title: "画像診断ガイドライン2021年版(第3版)"
+    journal: "金原出版"
+    year: 2021
+    pmid: ""
+  - id: 2
+    authors: "日本脳卒中学会脳卒中ガイドライン委員会(編)"
+    title: "脳卒中治療ガイドライン2021[改訂2023]"
+    journal: "協和企画"
+    year: 2023
+    pmid: ""
+  - id: 3
+    authors: "Thomalla G, et al"
+    title: "DWI-FLAIR mismatch for the identification of patients with acute ischaemic stroke within 4.5h of symptom onset (PRE-FLAIR): a multicentre observational study"
+    journal: "Lancet Neurol"
+    year: 2011
+    pmid: "21978972"
+  - id: 4
+    authors: "Thomalla G, et al"
+    title: "MRI-guided thrombolysis for stroke with unknown time of onset"
+    journal: "N Engl J Med"
+    year: 2018
+    pmid: "29766770"
+  - id: 5
+    authors: "Nogueira RG, et al"
+    title: "Thrombectomy 6 to 24 hours after stroke with a mismatch between deficit and infarct"
+    journal: "N Engl J Med"
+    year: 2018
+    pmid: "29129157"
+  - id: 6
+    authors: "Albers GW, et al"
+    title: "Thrombectomy for stroke at 6 to 16 hours with selection by perfusion imaging"
+    journal: "N Engl J Med"
+    year: 2018
+    pmid: "29364767"
+  - id: 7
+    authors: "Powers WJ, et al"
+    title: "Guidelines for the Early Management of Patients with Acute Ischemic Stroke: 2019 Update to the 2018 Guidelines for the Early Management of Acute Ischemic Stroke"
+    journal: "Stroke"
+    year: 2019
+    pmid: "31662037"
+  - id: 8
+    authors: "Lyu J, et al"
+    title: "Arterial spin labeling-based MRI estimation of penumbral tissue in acute ischemic stroke"
+    journal: "J Magn Reson Imaging"
+    year: 2023
+    pmid: "35849055"
+---
+
+import Cite from '../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../components/ReferenceList.astro';
+
+## 概要
+
+急性期脳梗塞は "time is brain" を合言葉とする時間との戦いであり、迅速かつ正確な画像診断が予後を左右する。近年は血栓溶解療法(rt-PA静注療法)の適応時間拡大や機械的血栓回収療法の発展に伴い、画像診断の役割は梗塞巣の検出にとどまらず、治療適応の精密な判断や予後予測へと拡大している。
+
+本稿では、日本医学放射線学会『画像診断ガイドライン2021年版』<Cite id={1} />および日本脳卒中学会『脳卒中治療ガイドライン2021[改訂2023]』<Cite id={2} />に準拠した、急性期脳梗塞のMRIルーチンプロトコールを整理する。
+
+---
+
+## 画像診断の基本戦略
+
+脳卒中疑い患者で求められる画像情報は **頭蓋内出血の除外** と **早期虚血性変化の評価** の2つである。
+
+- **出血除外**:単純CTが迅速で第一選択
+- **早期虚血性変化**:MRI(特に拡散強調像)はCTより検出能が高く、発症数十分から梗塞巣を描出可能
+- 安全性に留意すればMRI施行が推奨され<Cite id={1} />、治療適応判断のためのより詳細な情報が得られる
+
+撮像シーケンスを増やせば検査時間が延びるため、治療方針決定に直結するシーケンスを絞り込み、撮像順序を工夫することが肝要である。
+
+---
+
+## 必須シーケンス
+
+| シーケンス | 主な役割 |
+|---|---|
+| 拡散強調像(DWI) | 超急性期虚血コアの検出、DWI-ASPECTSによる重症度評価 |
+| FLAIR像 | DWI-FLAIRミスマッチによる発症時刻推定、intra arterial sign |
+| T2*強調像/磁化率強調像 | 頭蓋内出血の除外、微小出血、susceptibility vessel sign |
+| MRA | 主幹動脈閉塞(LVO)の同定 |
+| T2強調像/T1強調像 | 脳実質形態評価、浮腫範囲、鑑別診断 |
+
+### 拡散強調像(DWI)
+
+急性期脳梗塞診断のゴールドスタンダードである。細胞性浮腫による水分子の拡散低下を鋭敏にとらえ、発症数十分から虚血コアを高信号(ADC低下域)として描出する。
+
+- ADCマップとの対比でT2 shine-through現象との鑑別が容易
+- 高信号域の容積・分布(DWI-ASPECTS)は治療後予後予測にも有用
+
+### FLAIR像
+
+急性期脳梗塞における意義は次の2点。
+
+**1. DWI-FLAIRミスマッチによる発症時刻推定**
+
+虚血組織はDWIで早期に高信号化するが、FLAIR像で高信号化するには数時間を要する。"DWIで高信号、FLAIRでは明らかな高信号を認めない" 状態(DWI-FLAIRミスマッチ)は、発症から4.5時間以内である可能性が高い<Cite id={3} />。発症時刻不明例(wake-up strokeなど)に対するrt-PA静注療法の適応判断において決定的な所見となる<Cite id={4} />。
+
+**2. intra arterial sign**
+
+主幹動脈閉塞(LVO)部位で停滞した血流がFLAIR像で高信号として描出される所見で、閉塞血管の同定に有用な補助的所見となる。
+
+FLAIR像はくも膜下出血の検出感度も高く、出血の除外にも貢献する。
+
+### T2*強調像/磁化率強調像
+
+局所的磁場不均一性を鋭敏にとらえ、ヘモジデリンを含む出血性病変を低信号として描出する。rt-PA静注療法の絶対禁忌である頭蓋内出血評価に必須。
+
+- 超急性期血腫はT2*で低信号を呈さないことがある点に注意
+- 磁化率強調像は微小出血検出能に優れ、脳アミロイドアンギオパチー評価にも有用
+- **susceptibility vessel sign**:閉塞血管内の血栓を低信号として直接描出
+
+### MRA
+
+内頸動脈や中大脳動脈近位部などの **主幹動脈閉塞(LVO)** を非侵襲的に評価する不可欠な検査である。LVOは機械的血栓回収療法の絶対的適応であり、閉塞部位の正確な同定が治療戦略の第一歩となる。通常は造影剤を用いないtime-of-flight (TOF) 法が用いられるが、遅い血流の描出に限界がある点を理解する。
+
+### T2強調像/T1強調像
+
+脳の基本的形態評価、浮腫範囲、脳梗塞以外の鑑別診断(腫瘍、炎症)、亜急性期出血の病期推定(T1高信号)などに用いられる。通常の脳プロトコールでは撮像されるが、脳卒中プロトコールでは必須ではない。
+
+---
+
+## 発展的撮像法:治療適応を拡大する
+
+発症から6時間を超える症例(late time window)や発症時刻不明例に対する機械的血栓回収療法の有効性が示され、灌流画像の重要性が増している。
+
+### 灌流画像(PWI)
+
+造影剤の脳内通過を撮像することで、CBF・CBV・MTT・TTPなどの血行動態マップを作成する。
+
+- **虚血コア**:不可逆的にダメージを受けた領域(CBFが著しく低下)
+- **虚血ペナンブラ**:救済可能な領域(MTTやTTPが延長)
+- "虚血コア小・虚血ペナンブラ広範" のミスマッチ症例は、発症最大24時間後まで血栓回収療法の適応となる<Cite id={5} /><Cite id={6} /><Cite id={7} />
+
+iSchema View RAPIDなどの自動解析ソフトが普及しつつあり、日常診療で灌流画像追加を検討すべき症例は今後さらに増加すると予想される。
+
+### ASL(arterial spin labeling)
+
+動脈血中の水分子を内因性トレーサとして利用し、非侵襲的に脳血流を描出する灌流撮像法である。
+
+- 造影剤不要:腎機能低下・アレルギー例にも安全
+- 撮像装置が限定される、空間分解能・S/Nが低いなどの限界
+- LVO例では標識血液の到達遅延に伴い、低灌流領域を過大評価する可能性
+- **PLD(post-labeling delay)を延長(例:2.5秒)** することでDSC-PWIとの相関が改善し、虚血ペナンブラ評価が向上<Cite id={8} />
+- 急性期脳梗塞スクリーニング、stroke mimicsの一つであるてんかんの焦点描出にも有用
+
+---
+
+## 撮像順序の工夫
+
+患者状態によっては検査中断もありうるため、治療方針決定に直結する **DWI・FLAIR・T2*/SWI・MRA** を優先的に撮像する。灌流画像の追加判断は、発症時刻や臨床経過と組み合わせて行う。
+
+---
+
+## 鑑別診断
+
+- **Stroke mimics**:てんかん発作後脳症、片頭痛、機能性疾患、低血糖、PRES、感染、腫瘍など
+- ASLによる脳血流評価や拡散強調像所見との総合判断が鑑別に有用
+
+---
+
+## 参考文献
+
+<ReferenceList />

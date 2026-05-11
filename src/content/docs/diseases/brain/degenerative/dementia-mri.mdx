@@ -1,0 +1,233 @@
+---
+title: 認知症MRIプロトコール
+description: 認知症診断における標準MRIプロトコール。3D-T1とVSRAD®による萎縮評価、脳小血管病、ARIA(amyloid-related imaging abnormalities)モニタリング
+references:
+  - id: 1
+    authors: "日本医学放射線学会・他"
+    title: "アルツハイマー病の抗Aβ抗体薬の投与に関する脳MRI診断指針"
+    journal: "日本医学放射線学会"
+    year: 2024
+    pmid: ""
+  - id: 2
+    authors: "戦略的国際脳科学研究プログラム"
+    title: "多機種調和MRI撮像プロトコール(HARP)"
+    journal: "Brain/MINDS Beyond"
+    year: 2024
+    pmid: ""
+  - id: 3
+    authors: "Kloppenborg RP, et al"
+    title: "Cerebral small-vessel disease and progression of brain atrophy: the SMART-MR study"
+    journal: "Neurology"
+    year: 2012
+    pmid: "23115210"
+  - id: 4
+    authors: "Hirata Y, et al"
+    title: "Voxel-based morphometry to discriminate early Alzheimer's disease from controls"
+    journal: "Neurosci Lett"
+    year: 2005
+    pmid: "15925102"
+  - id: 5
+    authors: "Clancy U, et al"
+    title: "Imaging biomarkers of VCI: a focused update"
+    journal: "Stroke"
+    year: 2024
+    pmid: "38445496"
+  - id: 6
+    authors: "Cogswell PM, et al"
+    title: "Population-based prevalence of infarctions on 3D fluid-attenuated inversion recovery (FLAIR) imaging"
+    journal: "J Stroke Cerebrovasc Dis"
+    year: 2022
+    pmid: "35689933"
+  - id: 7
+    authors: "Shintaku T, et al"
+    title: "Improved assessment of juxtacortical lesions in multiple sclerosis using highly-accelerated high-resolution double inversion recovery MR imaging with deep learning-based reconstruction"
+    journal: "Magn Reson Med Sci"
+    year: 2025
+    pmid: "39971311"
+  - id: 8
+    authors: "Kakeda S, et al"
+    title: "Pitfalls of 3D FLAIR brain imaging: a prospective comparison with 2D FLAIR"
+    journal: "Acad Radiol"
+    year: 2012
+    pmid: "22818791"
+  - id: 9
+    authors: "Charidimou A, et al"
+    title: "The Boston criteria version 2.0 for cerebral amyloid angiopathy: a multicentre, retrospective, MRI-neuropathology diagnostic accuracy study"
+    journal: "Lancet Neurol"
+    year: 2022
+    pmid: "35841910"
+  - id: 10
+    authors: "Suresh Paul J, et al"
+    title: "Comparative analysis of quantitative susceptibility mapping in preclinical dementia detection"
+    journal: "Eur J Radiol"
+    year: 2024
+    pmid: "38996737"
+  - id: 11
+    authors: "Dagher R, et al"
+    title: "Diagnostic performance of ASL-MRI and FDG-PET in frontotemporal dementia: a systematic review and meta-analysis"
+    journal: "AJNR"
+    year: 2025
+    pmid: "39134374"
+  - id: 12
+    authors: "Li M, et al"
+    title: "Increase of blood-brain barrier leakage is related to cognitive decline in vascular mild cognitive impairment"
+    journal: "BMC Neurol"
+    year: 2021
+    pmid: "33858381"
+---
+
+import Cite from '../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../components/ReferenceList.astro';
+
+## 概要
+
+近年、抗アミロイドβ(Aβ)抗体薬の登場により、Alzheimer病(AD)治療への期待と同時に、薬剤の治療適格性判定や経過観察におけるMRIの役割が増大している。脳血管性病変、特発性正常圧水頭症、プリオン病・感染症、ビタミン欠乏、慢性硬膜下血腫など、認知症様症状を呈する多様な病態の鑑別もMRIの中心的役割である。
+
+従来、認知症精査における明確なMRI撮像プロトコールはなかったが、日本医学放射線学会・日本神経放射線学会・日本磁気共鳴医学会が合同で『アルツハイマー病の抗Aβ抗体薬の投与に関する脳MRI診断指針』を発表し<Cite id={1} />、3学会推奨のプロトコールが示された。
+
+---
+
+## ルーチンプロトコールの構成
+
+基本シーケンス:**3D-T1強調像・拡散強調像・T2強調像・FLAIR像・T2*強調像/磁化率強調像・MRA**。必要に応じて造影T1強調像を追加する。
+
+### 3D-T1強調像
+
+MP-RAGEやFSPGRなどの3D撮像で取得し、冠状断・矢状断への再構成により海馬・嗅内皮質・脳梁などの形態評価を行う。多機種調和MRI撮像プロトコール(HARP)では装置間比較を可能にする標準条件として **0.8mm等方性ボクセル** を推奨<Cite id={2} />。
+
+**読影ポイント**
+
+- 海馬萎縮:ADの代表的所見
+- 軽度海馬萎縮:レビー小体型認知症(DLB)でみられる例もある
+- 前頭側頭葉変性症:前頭側頭葉の限局性萎縮(行動障害型/進行性非流暢性失語/意味性認知症の3型)
+- 高血圧などによる脳小血管病:大脳皮質のびまん性萎縮が主体<Cite id={3} />
+
+**VBM / VSRAD®**
+
+voxel-based morphometryは特定領域の萎縮を統計的に解析する手法で、軽微な萎縮の検出に有用。VSRAD®はわが国で開発されたソフトウェアで、海馬傍回・側頭葉内側の萎縮度をZスコアで定量評価する<Cite id={4} />。一般にZスコア2以上で海馬萎縮を疑うが、AD特異的ではなく海馬萎縮を伴うすべての疾患でZスコアが上昇しうる点に注意する。
+
+### 拡散強調像
+
+SE-EPIを基本とし、b=0およびb=1000s/mm²でADCマップを作成する。
+
+- 急性期脳梗塞の検出に最も有用、認知症の背景に血管性病態が関与するか判定
+- 細胞性浮腫(梗塞・びまん性軸索損傷・痙攣後脳症)と血管性浮腫(脳炎・PRES・CAA関連炎症)の鑑別にADCマップ併用
+- **疾患特異的高信号パターン**:
+  - プリオン病:皮質および基底核の高信号
+  - ALSP:深部白質の点状〜結節状高信号
+  - 神経核内封入体病:皮質下白質(U-fiber)に沿った高信号
+
+### T2強調像
+
+水分含量増加に鋭敏で、浮腫・梗塞・腫瘍・炎症・脱髄を高信号として描出する。HARP推奨の0.8mm等方性ボクセルが理想だが、2D撮像では全脳5mmスライス、海馬評価には冠状断3mmスライスを追加する。
+
+- 半卵円中心の血管周囲腔拡張:認知機能低下と関連<Cite id={5} />
+- 後頭蓋窩・視床・基底核病変ではFLAIRよりT2が高感度
+- 冠状断像で海馬硬化症、グリオーマ、脳炎の鑑別
+
+### FLAIR像
+
+脳脊髄液信号抑制によりT2高信号病変を高感度に描出。Binswanger病を含む慢性虚血性変化、ラクナ梗塞、脳腫瘍、脳炎・髄膜炎、脱髄性疾患などを明瞭に描出する。
+
+**3D-FLAIR vs 2D-FLAIR**
+
+3D-FLAIRは高空間分解能で任意断面再構成が可能、認知機能低下に関連する皮質梗塞の鮮明な描出に有用<Cite id={6} />。臨床では約1.3mm等方性ボクセルが推奨される<Cite id={7} />。3D撮像が第一選択だが、ivy signや軟髄膜病変の描出はやや低下する可能性があり、必要に応じて2D撮像を併用する<Cite id={8} />。
+
+**読影ポイント**
+
+- 白質病変分布(脳室周囲・深部白質・皮質下)とFazekasスコアの評価
+- ラクナ梗塞・皮質梗塞の有無、視床/海馬の戦略拠点型梗塞
+- 側頭極・外包の高信号:CADASIL/CARASILを示唆
+- 脳溝・脳室の異常高信号:くも膜下出血や閉塞性血管病変のivy sign
+- 2D-FLAIRでは磁化率アーチファクトや酸素投与でくも膜下腔が高信号化しうる点に注意
+
+### T2*強調像/磁化率強調像
+
+GRE法による磁化率強調シーケンスで、出血性病変・石灰化の描出に優れる。微小脳出血(CMB)と脳表ヘモジデリン沈着(SS)の評価に重要。
+
+- T2*強調像:TE 20ms以上、スライス厚5mm以下を推奨、短時間でスクリーニング向き<Cite id={9} />
+- 磁化率強調像:位相情報併用でCMB/SS検出感度が高い、3D撮像/スライス厚2mm再構成
+- 静脈の低信号がCMB/SSと紛らわしく、連続スライスで慎重に確認
+- 撮像時間が長く体動アーチファクトに弱い
+
+**読影ポイント**
+
+- CMBの数と分布:皮質・皮質下優位ならCAA、基底核・視床・脳幹優位なら高血圧性脳小血管病
+- **Boston基準Ver.2.0**:50歳以上で脳出血関連症状を呈し、①脳葉出血性病変(脳内出血/皮質下CMB/皮質表層ヘモジデローシス/円蓋部くも膜下出血)が2つ以上、または②これらが1つ存在し半卵円中心の高度血管周囲腔拡大もしくは白質FLAIR高信号(多点パターン)を認める場合、probable CAAと診断<Cite id={9} />
+- 動静脈奇形・海綿状血管奇形などの血管奇形、腫瘍性出血を除外
+- 外傷例ではびまん性軸索損傷・脳挫傷に伴うCMB分布を確認
+
+### MRA(TOF-MRA)
+
+主要脳動脈(内頸動脈系・椎骨脳底動脈系)の狭窄・閉塞・動脈瘤・血管奇形を非侵襲的に評価する。狭窄は脳血流低下や動脈原性塞栓を介して認知症の一因となる。
+
+**読影ポイント**
+
+- 主要脳動脈の狭窄・閉塞:低灌流や慢性虚血の評価
+- 動脈瘤好発部位:内頸動脈-後交通動脈分岐、前交通動脈、中大脳動脈分岐
+- 一般に5〜7mm以上で治療適応を検討、不整形瘤は破裂リスク高い
+- 動静脈奇形・硬膜動静脈瘻は脳浮腫・出血を介して認知機能低下を引き起こす
+- 副鼻腔粘液瘤・錐体尖部コレステリン肉芽腫は高信号を呈し動脈瘤との鑑別を要する
+
+### 造影T1強調像(必要時)
+
+他シーケンスで異常が示唆された場合の補足情報として用いる。脳腫瘍の検出・性状評価、髄膜炎・脳炎の活動性、白質病変の鑑別に有用。
+
+- 結節状/リング状/びまん性増強パターンで腫瘍・炎症性病変を推定
+- 白質病変の増強:脱髄や活動性炎症の評価
+- 軟髄膜増強:髄膜炎・サルコイドーシス・髄膜癌腫症の鑑別
+
+---
+
+## Advanced MRI
+
+### 定量的磁化率マッピング(QSM)
+
+脳内鉄沈着を可視化・定量化する手法で、ADやDLBの前臨床期診断に有望なツールとして注目されている。ADでは海馬・基底核、DLBでは黒質に特徴的な鉄増加パターンを示し、両者鑑別にも寄与する。アミロイドPET・タウPETやCSFバイオマーカーと良好な相関を示し、疾患進行予測にも有用<Cite id={10} />。
+
+### ASL(arterial spin labeling)
+
+非侵襲的に脳血流評価が可能で、構造MRIと同時取得できる。前頭側頭型認知症の診断でFDG-PET(感度0.88・特異度0.89)とASL(感度0.70・特異度0.81)を比較したメタアナリシスでは、ASLはやや劣るが、被ばくや造影剤投与を要さない利点があり、PET困難例の代替として期待される<Cite id={11} />。
+
+### DCE-MRI
+
+血液脳関門の透過性を非侵襲的に定量評価する手法。軽度血管性認知障害患者では白質・灰白質ともに透過性が高値であり、MoCAスコアと関連することが報告されている<Cite id={12} />。
+
+---
+
+## ARIA(amyloid-related imaging abnormalities)
+
+抗Aβ抗体治療に伴うMRI画像異常で、抗Aβ抗体が早期ADに承認された今、画像診断医に必須の知識となった。
+
+| 型 | 内容 | 評価シーケンス |
+|---|---|---|
+| ARIA-E | 脳浮腫/脳溝液貯留(edema/effusion) | FLAIR像 |
+| ARIA-H | 脳出血/表在性ヘモジデリン沈着(hemorrhage/siderosis) | T2*強調像/磁化率強調像 |
+
+ARIAは抗Aβ抗体薬だけでなく自然免疫でも生じうるとされ、CAA関連炎症と同様の病態と考えられている。
+
+**治療適格性と経過観察**
+
+- 初回MRIで治療前ARIA-E、5個以上のCMB、脳出血(≥1cm)、SSのいずれかを認める場合は治療適応外
+- 投与開始14週以内に発生しやすく、注意深いモニタリングが必要
+- ARIA-Eが中等度(5〜10cm、脳の1部位以上)、またはARIA-Hが中等度(新規CMB 5〜9個、皮質表層ヘモジデリン沈着2か所)以上で、症状の有無にかかわらず投与中断
+- 経過観察MRIは可能な限り同一装置・同一条件で撮像し再現性を確保<Cite id={1} />
+
+---
+
+## 鑑別診断
+
+- **Alzheimer病**:海馬・嗅内皮質を中心とする内側側頭葉萎縮、VSRAD®でZスコア上昇
+- **DLB**:海馬萎縮は軽度、MIBG心筋シンチでの取り込み低下
+- **前頭側頭葉変性症**:前頭側頭葉の限局性萎縮、3型に分類
+- **血管性認知症**:Fazekasスコア高値、ラクナ梗塞、皮質梗塞
+- **CAA**:皮質・皮質下のCMB、SS、Boston基準2.0
+- **プリオン病**:皮質・基底核の拡散制限
+- **ALSP・神経核内封入体病**:特徴的な白質高信号パターン
+- **正常圧水頭症**:DESH所見(高位円蓋部緊満・Sylvius裂開大)
+
+---
+
+## 参考文献
+
+<ReferenceList />

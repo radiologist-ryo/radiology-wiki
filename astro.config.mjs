@@ -608,6 +608,10 @@ export default defineConfig({
 								{
 									"label": "遺伝性脳小血管病",
 									"slug": "diseases/brain/cerebrovascular/hereditary-csvd"
+								},
+								{
+									"label": "急性期脳卒中MRIプロトコール",
+									"slug": "diseases/brain/cerebrovascular/acute-stroke-mri"
 								}
 							]
 						},
@@ -696,6 +700,10 @@ export default defineConfig({
 								{
 									"label": "筋萎縮性側索硬化症（ALS）",
 									"slug": "diseases/brain/degenerative/als"
+								},
+								{
+									"label": "認知症MRIプロトコール",
+									"slug": "diseases/brain/degenerative/dementia-mri"
 								}
 							]
 						},

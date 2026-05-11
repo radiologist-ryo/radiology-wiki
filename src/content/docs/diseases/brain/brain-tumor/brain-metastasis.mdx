@@ -1,0 +1,154 @@
+---
+title: 転移性脳腫瘍
+description: 転移性脳腫瘍のMRIルーチンプロトコール。造影3D-T1強調像を中心とした撮像戦略、読影ポイント、放射線壊死との鑑別
+references:
+  - id: 1
+    authors: "日本医学放射線学会(編)"
+    title: "画像診断ガイドライン2021年版(第3版)"
+    journal: "金原出版"
+    year: 2021
+    pmid: ""
+  - id: 2
+    authors: "National Comprehensive Cancer Network"
+    title: "NCCN Clinical Practice Guidelines in Oncology, Central Nervous System Cancers, Version 3"
+    journal: "NCCN"
+    year: 2024
+    pmid: ""
+  - id: 3
+    authors: "Le Rhun E, et al"
+    title: "EANO-ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up of patients with brain metastasis from solid tumours"
+    journal: "Ann Oncol"
+    year: 2021
+    pmid: "34364998"
+  - id: 4
+    authors: "Tong E, et al"
+    title: "Advanced imaging of brain metastases: from augmenting visualization and improving diagnosis to evaluating treatment response"
+    journal: "Front Neurol"
+    year: 2020
+    pmid: "32351445"
+  - id: 5
+    authors: "Ghaderi S, et al"
+    title: "A systematic review of brain metastases from lung cancer using magnetic resonance neuroimaging: Clinical and technical aspects"
+    journal: "J Med Radiat Sci"
+    year: 2024
+    pmid: "38234262"
+  - id: 6
+    authors: "Chakrabarty N, et al"
+    title: "Imaging of brain metastasis in non-small-cell lung cancer: indications, protocols, diagnosis, post-therapy imaging, and implications regarding management"
+    journal: "Clin Radiol"
+    year: 2023
+    pmid: "36503631"
+  - id: 7
+    authors: "鹿戸将史"
+    title: "大脳半球腫瘍. 細矢貴亮・他(編) 脳のMRI"
+    journal: "メディカル・サイエンス・インターナショナル"
+    year: 2015
+    pmid: ""
+  - id: 8
+    authors: "Ozkara BB, et al"
+    title: "Deep learning for detecting brain metastases on MRI: a systematic review and meta-analysis"
+    journal: "Cancers (Basel)"
+    year: 2023
+    pmid: "36672286"
+---
+
+import Cite from '../../../../../components/Cite.astro';
+import ReferenceList from '../../../../../components/ReferenceList.astro';
+
+## 概要
+
+転移性脳腫瘍は成人脳腫瘍の中で最も頻度が高く、原発巣の診断や治療戦略の決定に直結する重要な病態である。発生部位としては **80%が大脳半球**、**50%が単発** であることが知られている<Cite id={1} />。
+
+脳転移の診断においてMRIは最も感度に優れたモダリティであり、造影MRIの有用性は国内外のガイドラインで強調されている。日本医学放射線学会『画像診断ガイドライン2021年版』<Cite id={1} />、NCCN(National Comprehensive Cancer Network)<Cite id={2} />、EANO-ESMO<Cite id={3} />のいずれも、造影3D-T1強調像を中心とする高分解能MRIプロトコールを推奨している。
+
+---
+
+## MRIルーチンプロトコール
+
+| シーケンス | 役割 |
+|---|---|
+| 造影後3D-T1強調像 | **必須**。微小転移巣の検出 |
+| 造影後FLAIR像 | 血管との鑑別、軟膜転移の描出 |
+| T2強調像/FLAIR像 | 腫瘍周囲浮腫、嚢胞性成分の評価 |
+| 拡散強調像 | 膿瘍・虚血との鑑別、治療後変化の評価 |
+| 磁化率強調像/T2*強調像 | 出血性転移、石灰化の検出 |
+| 2D造影T1強調像 | 補助的、リファレンス像 |
+
+### 造影後3D-T1強調像
+
+最も重視されるシーケンスで、**等方性ボクセル(1mm推奨)** で高分解能撮像する。任意断面再構成により、横断像のみでは見逃しやすい矢状断・冠状断の微小病変も検出可能となる。
+
+- 径2〜3mmの小病変や後頭蓋窩病変で診断能が飛躍的に向上<Cite id={4} />
+- **3D-FSE法**(VISTA、CUBE、SPACE):血管信号が低く、微小転移と血管との鑑別に有利
+- **3D-GRE法**:撮像時間が短く、装置・時間制約下でのデフォルト選択肢
+- 一部施設ではGRE系とSE系(black blood imagingを併用したMSDEなど)を両方撮像し、確実な病変検出と血管鑑別を両立する運用もある
+
+### 造影後FLAIR像
+
+単独使用では転移巣検出感度は低いが、血管信号が低いため他シーケンスとの組み合わせで小転移と血管との鑑別に有用。軟膜転移など淡い造影増強効果の描出能に優れる。
+
+### T2強調像・FLAIR像
+
+腫瘍周囲浮腫の評価に必須で、原発性脳腫瘍との鑑別や放射線治療計画に重要な情報を与える<Cite id={5} />。T2強調像は腫瘍本体や嚢胞性成分の確認に有用で、嚢胞性転移や壊死傾向の強い腫瘍の性状把握に不可欠。
+
+### 拡散強調像
+
+膿瘍や虚血性病変との鑑別、治療後変化(放射線壊死など)の評価に有用。
+
+### 磁化率強調像/T2*強調像
+
+肝細胞癌・メラノーマ・腎癌・甲状腺癌など出血傾向の強い腫瘍では、微小出血を高感度に描出して診断の一助となる。実臨床ではCTでの石灰化評価と併用することも多い。
+
+### 2D造影T1強調像
+
+補助的に横断・冠状断の2D造影T1強調像を撮像する場合がある。3D撮像での体動の影響を補ったり、比較読影のリファレンス像として価値がある<Cite id={6} />。
+
+---
+
+## 読影のポイント
+
+### 検索の基本
+
+造影3D-T1強調像で全脳を詳細に観察し、多発病変の有無を確認する。**転移性脳腫瘍の好発部位は皮髄境界** であり、重点的にチェックする。小脳・脳幹・脳溝・側脳室周囲は見逃しやすく、任意断面(横断・矢状断・冠状断、必要に応じて斜位)を駆使して丁寧に評価する。
+
+### 形態的特徴
+
+- **小転移巣**:ほぼ均一に造影増強される結節
+- **増大例**:内部不均一なリング状の造影増強効果<Cite id={7} />
+- FLAIRを参照して腫瘍周囲浮腫の広がり、mass effectを把握
+- 磁化率強調像で出血・石灰化を、拡散強調像で治療後壊死との鑑別を補助的に評価
+
+### 原発巣別の特徴
+
+| 原発巣 | 特徴 |
+|---|---|
+| メラノーマ・肝細胞癌・腎癌 | 出血性転移が多い |
+| 乳癌・肺腺癌 | 小結節性で多発する傾向 |
+| 播種性病変 | 脳溝・小脳虫部表面に点状の造影増強効果 |
+
+### 治療後変化との鑑別
+
+- **再発**:辺縁の造影増強効果、進行性の拡大
+- **放射線壊死**:中心部低信号で造影増強効果に乏しく、拡散強調像で拡散制限を示さない
+
+---
+
+## 今後の展望
+
+人工知能による多発小病変の自動検出システムの臨床応用が始まりつつあり、見逃し防止に有用と報告されている<Cite id={8} />。ただし、現時点ではガイドラインの推奨には至っていない。
+
+---
+
+## 鑑別診断
+
+- **原発性脳腫瘍**(膠芽腫、悪性リンパ腫):単発で皮髄境界外、リング状増強でも壊死パターンが異なる
+- **脳膿瘍**:拡散強調像で著明な拡散制限、リング状増強の内側が滑らか
+- **放射線壊死**:中心部低信号、拡散制限なし、進行性拡大なし
+- **脱髄性病変**(腫瘤型MS、tumefactive demyelination):open ring様増強
+- **海綿状血管奇形・脳内出血**:T2*強調像でhemosiderin rim
+
+---
+
+## 参考文献
+
+<ReferenceList />
