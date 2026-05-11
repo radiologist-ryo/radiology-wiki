@@ -829,6 +829,14 @@ export default defineConfig({
 									"slug": "diseases/brain/congenital/vhl"
 								}
 							]
+						},
+						{
+							"label": "画像所見・サイン",
+							"collapsed": true,
+							"items": [
+								{ "label": "__group_index__", "slug": "diseases/brain/imaging-signs" },
+								{ "label": "Sulcal FLAIR hyperintensity (SFHI)", "slug": "diseases/brain/imaging-signs/sulcal-flair-hyperintensity" }
+							]
 						}
 					]
 				},
@@ -1123,6 +1131,10 @@ export default defineConfig({
 									"slug": "diseases/head-neck/neck-other/carotid-body-tumor"
 								}
 							]
+						},
+						{
+							"label": "頭頸部癌レポート作成の pearls",
+							"slug": "diseases/head-neck/head-neck-imaging-pearls"
 						}
 					]
 				},
@@ -1751,6 +1763,10 @@ export default defineConfig({
 										{
 											"label": "表在性CD34陽性線維芽細胞性腫瘍",
 											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/superficial-cd34-fibroblastic-tumour"
+										},
+										{
+											"label": "Cellular angiofibroma (CAF)",
+											"slug": "diseases/musculoskeletal/soft-tissue/fibroblastic/cellular-angiofibroma"
 										}
 									]
 								},
@@ -5114,7 +5130,17 @@ export default defineConfig({
 							},
 							{
 								"label": "自己免疫性疾患",
-								"slug": "diseases/systemic/autoimmune"
+								"collapsed": true,
+								"items": [
+									{
+										"label": "__group_index__",
+										"slug": "diseases/systemic/autoimmune"
+									},
+									{
+										"label": "全身性硬化症（強皮症）",
+										"slug": "diseases/systemic/autoimmune/systemic-sclerosis"
+									}
+								]
 							},
 							{
 								"label": "血管炎",
@@ -5138,6 +5164,14 @@ export default defineConfig({
 							}
 						]
 					},
+				{
+					label: '死後画像',
+					collapsed: true,
+					items: [
+						{ label: '__group_index__', slug: 'diseases/postmortem' },
+						{ label: '死後CT読影のエッセンス', slug: 'diseases/postmortem/postmortem-ct-essentials' },
+					],
+				},
 				{
 					label: '鑑別診断',
 					items: [

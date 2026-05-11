@@ -77,6 +77,8 @@ if (pathname.includes('/obgyn/')) {
 	filtered = filterTopLevel('核医学');
 } else if (pathname.includes('/diseases/systemic/') || pathname.endsWith('/diseases/systemic')) {
 	filtered = filterTopLevel('全身性疾患');
+} else if (pathname.includes('/diseases/postmortem/') || pathname.endsWith('/diseases/postmortem')) {
+	filtered = filterTopLevel('死後画像');
 }
 
 const displayEntries: SidebarEntry[] = filtered ?? sidebar;
