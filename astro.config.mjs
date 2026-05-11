@@ -2445,6 +2445,22 @@ export default defineConfig({
 								{
 									"label": "胸膜孤立性線維性腫瘍",
 									"slug": "diseases/chest/pleura/pleural-sft"
+								},
+								{
+									"label": "副葉間裂",
+									"slug": "diseases/chest/pleura/accessory-fissure"
+								},
+								{
+									"label": "葉間胸膜の脂肪織による偽病変",
+									"slug": "diseases/chest/pleura/intrafissural-fat"
+								},
+								{
+									"label": "胸膜播種",
+									"slug": "diseases/chest/pleura/pleural-dissemination"
+								},
+								{
+									"label": "胸腔内遊離体",
+									"slug": "diseases/chest/pleura/thoracolithiasis"
 								}
 							]
 						},
