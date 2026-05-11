@@ -2315,7 +2315,19 @@ export default defineConfig({
 							"items": [
 								{ "label": "__group_index__", "slug": "diseases/chest/lung-pearls" },
 								{ "label": "CTで見落としやすい肺癌の好発部位", "slug": "diseases/chest/lung-pearls/missed-lung-cancer-locations" },
-								{ "label": "胸椎骨棘による肺野の限局性線維化", "slug": "diseases/chest/lung-pearls/thoracic-spine-osteophyte-fibrosis" }
+								{ "label": "胸椎骨棘による肺野の限局性線維化", "slug": "diseases/chest/lung-pearls/thoracic-spine-osteophyte-fibrosis" },
+								{ "label": "炎症性瘢痕様の肺腺癌", "slug": "diseases/chest/lung-pearls/inflammatory-scar-like-adenocarcinoma" },
+								{ "label": "右下肺静脈心膜スリーブ陥凹による偽病変", "slug": "diseases/chest/lung-pearls/pericardial-sleeve-recess-pseudolesion" },
+								{ "label": "特発性胸膜肺実質線維弾性症(iPPFE)", "slug": "diseases/chest/lung-pearls/idiopathic-ppfe" }
+							]
+						},
+						{
+							"label": "縦隔:正常像と偽病変",
+							"collapsed": true,
+							"items": [
+								{ "label": "__group_index__", "slug": "diseases/chest/mediastinum-pearls" },
+								{ "label": "正常胸腺の加齢性変化", "slug": "diseases/chest/mediastinum-pearls/thymus-age-related-changes" },
+								{ "label": "前縦隔小病変のマネージメント", "slug": "diseases/chest/mediastinum-pearls/incidental-anterior-mediastinal-lesion" }
 							]
 						},
 						{
