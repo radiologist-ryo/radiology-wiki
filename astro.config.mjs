@@ -1027,6 +1027,10 @@ export default defineConfig({
 								{
 									"label": "エナメル上皮腫",
 									"slug": "diseases/head-neck/oral-mandible/ameloblastoma"
+								},
+								{
+									"label": "口腔癌（TNM分類）",
+									"slug": "diseases/head-neck/oral-mandible/oral-cavity-cancer"
 								}
 							]
 						},
