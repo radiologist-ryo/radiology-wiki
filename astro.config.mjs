@@ -198,6 +198,14 @@ export default defineConfig({
 									],
 								},
 								{
+									label: '子宮',
+									collapsed: true,
+									items: [
+										{ label: '__group_index__', slug: 'obgyn/gynecology/uterus' },
+										{ label: 'MRIによる子宮筋腫と子宮肉腫の鑑別', slug: 'obgyn/gynecology/uterus/uterine-sarcoma-vs-fibroid-mri' },
+									],
+								},
+								{
 									label: '子宮頸部',
 									collapsed: true,
 									items: [
@@ -1261,6 +1269,10 @@ export default defineConfig({
 								{
 									"label": "類骨骨腫（脊椎）",
 									"slug": "diseases/spine/tumor/spinal-osteoid-osteoma"
+								},
+								{
+									"label": "脊椎転移",
+									"slug": "diseases/spine/tumor/spinal-metastasis"
 								}
 							]
 						},
@@ -3153,7 +3165,7 @@ export default defineConfig({
 									"slug": "diseases/hepatobiliary/liver-tumor/hcc"
 								},
 								{
-									"label": "肝内胆管癌",
+									"label": "肝内胆管癌（腫瘤形成型）",
 									"slug": "diseases/hepatobiliary/liver-tumor/intrahepatic-cholangiocarcinoma"
 								},
 								{
@@ -3721,6 +3733,10 @@ export default defineConfig({
 								{
 									"label": "大腸イレウス",
 									"slug": "diseases/gi/colon/colonic-obstruction"
+								},
+								{
+									"label": "回盲弁脂肪過形成",
+									"slug": "diseases/gi/colon/ileocecal-valve-lipohyperplasia"
 								}
 							]
 						},
@@ -5263,6 +5279,10 @@ export default defineConfig({
 									{
 										"label": "全身性硬化症（強皮症）",
 										"slug": "diseases/systemic/autoimmune/systemic-sclerosis"
+									},
+									{
+										"label": "ヘパリン起因性血小板減少症（HIT）",
+										"slug": "diseases/systemic/autoimmune/heparin-induced-thrombocytopenia"
 									}
 								]
 							},
