@@ -2157,6 +2157,22 @@ export default defineConfig({
 								{
 									"label": "肺癌術後画像のピットフォール",
 									"slug": "diseases/chest/lung-tumor/post-operative-pitfalls"
+								},
+								{
+									"label": "SBRT後の腫瘤状線維化",
+									"slug": "diseases/chest/lung-tumor/sbrt-mass-like-fibrosis"
+								},
+								{
+									"label": "PET生理的集積のピットフォール",
+									"slug": "diseases/chest/lung-tumor/pet-physiological-uptake-pitfalls"
+								},
+								{
+									"label": "転移類似のFDG集積(PETミミッカー)",
+									"slug": "diseases/chest/lung-tumor/pet-metastasis-mimickers"
+								},
+								{
+									"label": "MTX関連OIIA-LPD",
+									"slug": "diseases/chest/lung-tumor/oiia-lpd-pet-pitfall"
 								}
 							]
 						},
@@ -3917,6 +3933,10 @@ export default defineConfig({
 								{
 									"label": "腎嚢胞(単純性・複雑性)",
 									"slug": "diseases/urinary/kidney-tumor/renal-cyst"
+								},
+								{
+									"label": "Bosniak分類(version 2019)",
+									"slug": "diseases/urinary/kidney-tumor/bosniak-classification"
 								}
 							]
 						},
