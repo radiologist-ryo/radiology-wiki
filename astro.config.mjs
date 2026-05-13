@@ -1153,6 +1153,10 @@ export default defineConfig({
 							]
 						},
 						{
+							"label": "頭頸部癌のTNM分類総論",
+							"slug": "diseases/head-neck/head-neck-cancer-tnm-overview"
+						},
+						{
 							"label": "頭頸部癌レポート作成の pearls",
 							"slug": "diseases/head-neck/head-neck-imaging-pearls"
 						}
