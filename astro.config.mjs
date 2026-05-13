@@ -1069,6 +1069,10 @@ export default defineConfig({
 								{
 									"label": "唾石症",
 									"slug": "diseases/head-neck/salivary/sialolithiasis"
+								},
+								{
+									"label": "唾液腺癌(TNM分類)",
+									"slug": "diseases/head-neck/salivary/salivary-gland-cancer"
 								}
 							]
 						},
@@ -1107,6 +1111,10 @@ export default defineConfig({
 								{
 									"label": "副甲状腺腺腫",
 									"slug": "diseases/head-neck/thyroid-parathyroid/parathyroid-adenoma"
+								},
+								{
+									"label": "甲状腺癌(TNM分類)",
+									"slug": "diseases/head-neck/thyroid-parathyroid/thyroid-cancer"
 								}
 							]
 						},
