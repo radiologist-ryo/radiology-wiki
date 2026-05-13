@@ -927,10 +927,6 @@ export default defineConfig({
 									"slug": "diseases/head-neck/sinonasal/esthesioneuroblastoma"
 								},
 								{
-									"label": "上咽頭癌",
-									"slug": "diseases/head-neck/sinonasal/nasopharyngeal-carcinoma"
-								},
-								{
 									"label": "鼻副鼻腔扁平上皮癌",
 									"slug": "diseases/head-neck/sinonasal/sinonasal-scc"
 								},
@@ -977,6 +973,10 @@ export default defineConfig({
 								{
 									"label": "__group_index__",
 									"slug": "diseases/head-neck/pharynx-larynx"
+								},
+								{
+									"label": "上咽頭癌",
+									"slug": "diseases/head-neck/pharynx-larynx/nasopharyngeal-carcinoma"
 								},
 								{
 									"label": "中咽頭癌",
